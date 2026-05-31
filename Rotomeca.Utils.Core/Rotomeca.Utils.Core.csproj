@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0;net9.0;net10.0</TargetFrameworks>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <!-- Analyse statique stricte -->
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <WarningsAsErrors />
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+        <!-- Source Link — navigation vers le code depuis le débogueur -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+        <!-- Métadonnées NuGet -->
+        <PackageId>Rotomeca.Utils</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Rotomeca</Authors>
+        <Copyright>© Rotomeca</Copyright>
+        <Description>.</Description>
+        <PackageTags></PackageTags>
+        <PackageLicenseExpression>ISC</PackageLicenseExpression>
+        <PackageProjectUrl></PackageProjectUrl>
+        <RepositoryUrl></RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <!--<ItemGroup>
+        --><!-- README affiché sur NuGet.org --><!--
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>-->
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+        <!--<ProjectReference Include="..\Rotomeca.Rop.Generators\Rotomeca.Rop.Generators.csproj"
+          OutputItemType="Analyzer"
+          ReferenceOutputAssembly="false" />-->
+    </ItemGroup>
+</Project>
