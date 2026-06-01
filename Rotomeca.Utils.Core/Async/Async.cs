@@ -9,6 +9,6 @@ namespace Rotomeca.Utils.Async
     /// </summary>
     public static partial class Async
     {
-
+        public static Task<T[]> Parallel<T>(params Func<Task<T>>[] tasks) => Task.WhenAll(tasks.Select(fn => fn()));
     }
 }

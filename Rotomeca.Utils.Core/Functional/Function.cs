@@ -100,22 +100,19 @@ namespace Rotomeca.Utils.Functional
         }
 
         /// <summary>
-        /// Retourne une action qui ne fait rien.
+        /// Ne fait rien.
         /// </summary>
-        /// <returns>
-        /// Une <see cref="Action"/> vide, sans effet de bord.
-        /// </returns>
         /// <remarks>
-        /// Utile comme valeur par défaut, placeholder ou argument neutre
-        /// là où une <see cref="Action"/> est requise.
+        /// Utile comme callback vide, placeholder ou implémentation neutre
+        /// là où une méthode est syntaxiquement requise.
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action callback = condition ? DoSomething : Function.Noop();
-        /// callback(); // ne fait rien si condition est false
+        /// Action callback = condition ? DoSomething : Function.Noop;
+        /// callback();
         /// </code>
         /// </example>
-        public static Action Noop() => () => { };
+        public static void Noop() { }
 
         /// <summary>
         /// Retourne la valeur reçue sans modification.

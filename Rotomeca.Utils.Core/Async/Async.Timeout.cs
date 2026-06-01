@@ -46,5 +46,65 @@
         /// </example>
         /// <seealso cref="SetTimeout"/>
         public static void ClearTimeout(int number) => Internal.SetTimeout.Instance.ClearTimeOut(number);
+
+        /// <summary>
+        /// Exécute <paramref name="task"/> avec une limite de temps.
+        /// Lance une exception si la tâche ne se termine pas dans le délai imparti.
+        /// </summary>
+        /// <typeparam name="T">Type du résultat retourné par <paramref name="task"/>.</typeparam>
+        /// <param name="task">Tâche à surveiller.</param>
+        /// <param name="timeout">Délai maximal accordé à <paramref name="task"/> pour se terminer.</param>
+        /// <returns>Le résultat de <paramref name="task"/> si elle se termine avant <paramref name="timeout"/>.</returns>
+        /// <exception cref="TimeoutException">
+        /// Levée si <paramref name="task"/> ne se termine pas dans le délai imparti.
+        /// </exception>
+        /// <remarks>
+        /// <para>
+        /// Implémenté via <see cref="System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])"/> — aucun thread n'est bloqué pendant l'attente.
+        /// </para>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// // Lance une TimeoutException si FetchDataAsync dépasse 3 secondes
+        /// var result = await Async.Timeout(FetchDataAsync(), TimeSpan.FromSeconds(3));
+        /// </code>
+        /// </example>
+        /// <seealso cref="Timeout{T}(Task{T}, uint)"/>
+        public static async Task<T> Timeout<T>(Task<T> task, TimeSpan timeout)
+        {
+            using var cts = new CancellationTokenSource();
+            var delay = Task.Delay(timeout, cts.Token);
+
+            if (await Task.WhenAny(task, delay) != task)
+                throw new TimeoutException($"L'opération a dépassé le délai imparti.");
+
+            cts.Cancel();
+            return await task;
+        }
+
+        /// <summary>
+        /// Exécute <paramref name="task"/> avec une limite de temps en millisecondes.
+        /// Lance une exception si la tâche ne se termine pas dans le délai imparti.
+        /// </summary>
+        /// <typeparam name="T">Type du résultat retourné par <paramref name="task"/>.</typeparam>
+        /// <param name="task">Tâche à surveiller.</param>
+        /// <param name="ms">Délai maximal en millisecondes accordé à <paramref name="task"/>.</param>
+        /// <returns>Le résultat de <paramref name="task"/> si elle se termine avant <paramref name="ms"/> millisecondes.</returns>
+        /// <exception cref="TimeoutException">
+        /// Levée si <paramref name="task"/> ne se termine pas dans le délai imparti.
+        /// </exception>
+        /// <remarks>
+        /// Surcharge de convenance — convertit <paramref name="ms"/> en <see cref="TimeSpan"/>
+        /// et délègue à <see cref="Timeout{T}(Task{T}, TimeSpan)"/>.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// var result = await Async.Timeout(FetchDataAsync(), 3000);
+        /// </code>
+        /// </example>
+        /// <seealso cref="Timeout{T}(Task{T}, TimeSpan)"/>
+        public static Task<T> Timeout<T>(Task<T> task, uint ms)
+            => Timeout(task, TimeSpan.FromMilliseconds(ms));
+
     }
 }
