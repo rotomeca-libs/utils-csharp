@@ -22,11 +22,11 @@
         <Version>1.0.0</Version>
         <Authors>Rotomeca</Authors>
         <Copyright>© Rotomeca</Copyright>
-        <Description>.</Description>
+        <Description></Description>
         <PackageTags></PackageTags>
         <PackageLicenseExpression>ISC</PackageLicenseExpression>
         <PackageProjectUrl></PackageProjectUrl>
-        <RepositoryUrl></RepositoryUrl>
+        <RepositoryUrl>https://github.com/rotomeca-libs/utils-csharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
