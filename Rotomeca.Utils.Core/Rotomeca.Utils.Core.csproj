@@ -18,6 +18,7 @@
 
         <!-- Métadonnées NuGet -->
         <PackageId>Rotomeca.Utils</PackageId>
+        <PackageIcon>icon.png</PackageIcon>
         <Version>1.0.0</Version>
         <Authors>Rotomeca</Authors>
         <Copyright>© Rotomeca</Copyright>
