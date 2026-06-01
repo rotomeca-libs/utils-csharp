@@ -27,7 +27,7 @@ namespace Rotomeca.Utils.Async.Helpers
     /// <seealso cref="Rotomeca.Utils.Types.ClampedValue{T}"/>
     public readonly struct AttemptNumber(uint value = 1) : IClampedValue<uint>
     {
-        private ClampedValue<uint> _internal = new(1, uint.MaxValue, value);
+        private readonly ClampedValue<uint> _internal = new(1, uint.MaxValue, value);
 
         /// <inheritdoc/>
         public uint Min => _internal.Min;
