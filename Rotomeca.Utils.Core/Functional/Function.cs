@@ -98,5 +98,44 @@ namespace Rotomeca.Utils.Functional
                 }
             };
         }
+
+        /// <summary>
+        /// Retourne une action qui ne fait rien.
+        /// </summary>
+        /// <returns>
+        /// Une <see cref="Action"/> vide, sans effet de bord.
+        /// </returns>
+        /// <remarks>
+        /// Utile comme valeur par défaut, placeholder ou argument neutre
+        /// là où une <see cref="Action"/> est requise.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// Action callback = condition ? DoSomething : Function.Noop();
+        /// callback(); // ne fait rien si condition est false
+        /// </code>
+        /// </example>
+        public static Action Noop() => () => { };
+
+        /// <summary>
+        /// Retourne la valeur reçue sans modification.
+        /// </summary>
+        /// <typeparam name="T">Type de la valeur.</typeparam>
+        /// <param name="value">Valeur à retourner.</param>
+        /// <returns>
+        /// <paramref name="value"/> inchangé.
+        /// </returns>
+        /// <remarks>
+        /// Utile comme transformateur neutre dans un pipeline ou comme
+        /// valeur par défaut d'un paramètre de type <see cref="Func{T, TResult}"/>.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// var result = Pipeline.Start(42)
+        ///     .Pipe(Function.Identity) // aucune transformation
+        ///     .Pipe(n => n * 2);       // 84
+        /// </code>
+        /// </example>
+        public static T Identity<T>(T value) => value;
     }
 }
