@@ -51,7 +51,40 @@
         public static IAsyncEnumerable<T> SequentialGenerator<T>(Func<Task<T>>[] fns)
             => SequentialGenerator(fns.AsEnumerable());
 
+
+#if !NETSTANDARD2_0
         /// <summary>
+        /// Retourne un flux asynchrone exécutant chaque fonction séquentiellement,
+        /// en émettant les résultats au fur et à mesure.
+        /// </summary>
+        /// <typeparam name="T">Type du résultat de chaque fonction.</typeparam>
+        /// <param name="fns">Fonctions asynchrones à exécuter dans l'ordre.</param>
+        /// <returns>
+        /// Un <see cref="IAsyncEnumerable{T}"/> émettant chaque résultat
+        /// dès qu'il est disponible, sans attendre les suivants.
+        /// </returns>
+        /// <remarks>
+        /// <para>
+        /// Contrairement à <see cref="Sequential{T}(IEnumerable{Func{Task{T}}})"/>
+        /// qui attend toutes les tâches avant de retourner, ce générateur permet
+        /// de traiter chaque résultat dès sa disponibilité via <c>await foreach</c>.
+        /// </para>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// await foreach (var result in Async.SequentialGenerator(fns))
+        ///     Console.WriteLine(result);
+        /// </code>
+        /// </example>
+        /// <seealso cref="Sequential{T}(IEnumerable{Func{Task{T}}})"/>
+        public static async IAsyncEnumerable<T> SequentialGenerator<T>(
+            IEnumerable<Func<Task<T>>> fns)
+        {
+            foreach (var fn in fns)
+                yield return await fn();
+        }
+#else
+       /// <summary>
         /// Retourne un flux asynchrone exécutant chaque fonction séquentiellement,
         /// en émettant les résultats au fur et à mesure.
         /// </summary>
@@ -80,14 +113,6 @@
         /// </code>
         /// </example>
         /// <seealso cref="Sequential{T}(IEnumerable{Func{Task{T}}})"/>
-#if !NETSTANDARD2_0
-        public static async IAsyncEnumerable<T> SequentialGenerator<T>(
-            IEnumerable<Func<Task<T>>> fns)
-        {
-            foreach (var fn in fns)
-                yield return await fn();
-        }
-#else
         public static IAsyncEnumerable<T> SequentialGenerator<T>(
             IEnumerable<Func<Task<T>>> fns)
             => new Internal.AsyncEnumerable<T>(fns);
