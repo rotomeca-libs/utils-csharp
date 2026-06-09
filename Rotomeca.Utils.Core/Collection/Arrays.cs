@@ -1,12 +1,12 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using Rotomeca.Core.Collections;
 
-namespace Rotomeca.Utils.Array
+namespace Rotomeca.Utils.Collections
 {
     /// <summary>
     /// Fournit des utilitaires tableaux inspirés des API JavaScript,
     /// portés pour un usage idiomatique en C#.
     /// </summary>
-    public static partial class Array
+    public static partial class Arrays
     {
         /// <summary>
         /// Divise un tableau en plusieurs sous-tableaux (chunks) d'une taille donnée.
@@ -14,7 +14,7 @@ namespace Rotomeca.Utils.Array
         /// un multiple de <paramref name="size"/>.
         /// </summary>
         /// <typeparam name="T">Le type des éléments du tableau.</typeparam>
-        /// <param name="array">Le tableau source à découper.</param>
+        /// <param name="original">Le tableau source à découper.</param>
         /// <param name="size">La taille maximale de chaque chunk.</param>
         /// <returns>
         /// Un tableau de sous-tableaux de type <typeparamref name="T"/>.
@@ -27,20 +27,20 @@ namespace Rotomeca.Utils.Array
         /// // chunks => [[1, 2], [3, 4], [5]]
         /// </code>
         /// </example>
-        public static T[][] Chunck<T>(T[] array, uint size)
+        public static RArray<RArray<T>> Chunk<T>(this IEnumerable<T> original, uint size)
         {
             if (size == 0) return [];
 
-#if NET5_0_OR_GREATER
-            return [.. array.Chunk((int)size)];
+#if NET6_0_OR_GREATER
+            return original.Chunk((int)size).Select(c => new RArray<T>(c)).ToRArray();
 #else
+            RArray<T> array = new(original);
             var length = array.Length;
 
             // Calcule le nombre de chunks nécessaires (arrondi à l'entier supérieur)
             var chunkCount = Math.Ceiling(length / (double)size);
-            var result = new T[(int)chunkCount][];
+            var result = new List<RArray<T>>((int)chunkCount);
 
-            var resultIndex = 0;
             var arrIndex = 0;
 
             while (arrIndex < length)
@@ -54,11 +54,11 @@ namespace Rotomeca.Utils.Array
                     subArray[i] = array[arrIndex + i];
                 }
 
-                result[resultIndex++] = subArray;
+                result.Add(new(subArray));
                 arrIndex += (int)size;
             }
 
-            return result;
+            return new(result);
 #endif
         }
 
@@ -78,7 +78,7 @@ namespace Rotomeca.Utils.Array
         /// // unique => [1, 2, 3, 4]
         /// </code>
         /// </example>
-        public static T[] Unique<T>(T[] array) => [.. array.Distinct()];
+        public static RArray<T> Unique<T>(this IEnumerable<T> array) => array.Distinct().ToRArray();
 
         /// <summary>
         /// Retourne un tableau ne contenant que des éléments distincts,
@@ -90,7 +90,7 @@ namespace Rotomeca.Utils.Array
         /// Le type de la clé utilisée pour comparer les éléments.
         /// Doit être non-nullable.
         /// </typeparam>
-        /// <param name="array">Le tableau source.</param>
+        /// <param name="original">Le tableau source.</param>
         /// <param name="fn">Fonction qui extrait la clé de comparaison depuis un élément.</param>
         /// <returns>
         /// Un nouveau tableau contenant uniquement les éléments dont la clé est unique.
@@ -107,11 +107,12 @@ namespace Rotomeca.Utils.Array
         /// // unique => [{ "Alice", 30 }, { "Bob", 25 }]
         /// </code>
         /// </example>
-        public static T[] UniqueBy<T, TResult>(T[] array, Func<T, TResult> fn) where TResult : notnull
+        public static RArray<T> UniqueBy<T, TResult>(this IEnumerable<T> original, Func<T, TResult> fn) where TResult : notnull
         {
-#if NET5_0_OR_GREATER
-            return [.. array.DistinctBy(fn)];
+#if NET6_0_OR_GREATER
+            return original.DistinctBy(fn).ToRArray();
 #else
+            var array = new RArray<T>(original);
             var length = array.Length;
             Dictionary<TResult, object?> seen = [];
             List<T> result = [];
@@ -128,7 +129,7 @@ namespace Rotomeca.Utils.Array
                 }
             }
 
-            return [.. result];
+            return result.ToRArray();
 #endif
         }
     }
