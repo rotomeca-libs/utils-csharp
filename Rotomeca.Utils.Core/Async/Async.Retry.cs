@@ -76,7 +76,7 @@ namespace Rotomeca.Utils.Async
             TimeSpan delay,
             CancellationToken? cancellationToken = null)
         {
-            uint @try = 0;
+            uint attemptCount = 0;
 
             while (true)
             {
@@ -89,7 +89,7 @@ namespace Rotomeca.Utils.Async
                 }
                 catch (Exception e)
                 {
-                    if (++@try >= attempts)
+                    if (++attemptCount >= attempts)
                         throw new AggregateException(
                             $"Failed to execute the function after {attempts} attempts.", e);
                 }
