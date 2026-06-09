@@ -1,4 +1,4 @@
-﻿using Rotomeca.Utils.Types;
+﻿using Rotomeca.Core.Optionals;
 using System.Collections.Concurrent;
 
 namespace Rotomeca.Utils.Functional
