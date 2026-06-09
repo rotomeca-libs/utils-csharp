@@ -57,7 +57,7 @@ namespace Rotomeca.Utils.Async.Internal
         /// <param name="delay">Délai en millisecondes avant l'exécution de <paramref name="fn"/>.</param>
         /// <returns>
         /// Identifiant unique du timeout, utilisable pour l'annuler via
-        /// <see cref="ClearTimeOut"/>.
+        /// <see cref="ClearTimeout"/>.
         /// </returns>
         /// <remarks>
         /// <para>
@@ -119,7 +119,7 @@ namespace Rotomeca.Utils.Async.Internal
         /// Async.ClearTimeout(id); // Annulation avant déclenchement
         /// </code>
         /// </example>
-        public void ClearTimeOut(int number)
+        public void ClearTimeout(int number)
         {
             if (_timeOuts.TryRemove(number, out var timer))
             {

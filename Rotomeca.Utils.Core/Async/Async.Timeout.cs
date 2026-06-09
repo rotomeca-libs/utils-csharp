@@ -45,7 +45,7 @@
         /// </code>
         /// </example>
         /// <seealso cref="SetTimeout"/>
-        public static void ClearTimeout(int number) => Internal.SetTimeout.Instance.ClearTimeOut(number);
+        public static void ClearTimeout(int number) => Internal.SetTimeout.Instance.ClearTimeout(number);
 
         /// <summary>
         /// Exécute <paramref name="task"/> avec une limite de temps.
