@@ -125,19 +125,6 @@ namespace Rotomeca.Utils.Async.Internal
             return true;
         }
 
-        /// <summary>
-        /// Sera supprimé, pour test
-        /// </summary>
-        /// <returns></returns>
-        public async Task Test()
-        {
-            var tmp = new AsyncEnumerable<int>([async () => 0, async () => 1, async () => 2]);
-            await foreach (var item in tmp)
-            {
-
-            }
-        }
-
         public System.Threading.Tasks.IValueTask DisposeAsync()
         {
             _inner.Dispose();
