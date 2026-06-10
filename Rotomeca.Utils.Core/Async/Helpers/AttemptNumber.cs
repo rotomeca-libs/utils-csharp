@@ -39,11 +39,11 @@ namespace Rotomeca.Utils.Async.Helpers
         public uint Value => _internal.Value;
 
         /// <summary>
-        /// Retourne un <see cref="ClampedValue{T}"/> avec <paramref name="value"/>
+        /// Retourne un <see cref="IClampedValue{T}"/> avec <paramref name="value"/>
         /// clampée dans [1, <see cref="uint.MaxValue"/>].
         /// </summary>
         /// <param name="value">Nouveau nombre de tentatives.</param>
-        public ClampedValue<uint> WithValue(uint value) => new(1, uint.MaxValue, value);
+        public IClampedValue<uint> WithValue(uint value) => new AttemptNumber(value);
 
         /// <inheritdoc/>
         public override string ToString() => Value.ToString();
