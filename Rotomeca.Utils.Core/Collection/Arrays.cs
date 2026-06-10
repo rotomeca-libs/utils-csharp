@@ -1,4 +1,6 @@
 ﻿using Rotomeca.Core.Collections;
+using Rotomeca.Core.Optionals;
+using System.Numerics;
 
 namespace Rotomeca.Utils.Collections
 {
@@ -132,5 +134,43 @@ namespace Rotomeca.Utils.Collections
             return result.ToRArray();
 #endif
         }
+
+        public static Dictionary<TKey, RArray<T>> GroupTo<TKey, T>(this IEnumerable<T> original, Func<T, TKey> fn) where TKey : notnull
+        {
+            Dictionary<TKey, RArray<T>> result = [];
+
+            foreach (var item in original.GroupBy(fn))
+            {
+                result.Add(item.Key, item.ToRArray());
+            }
+
+            return result;
+        }
+
+        public static MayBe<T> First<T>(IEnumerable<T> values)
+        {
+            if (values.Any()) return values.First();
+            else return MayBe<T>.Null;
+        }
+
+        public static MayBe<T> Last<T>(IEnumerable<T> values)
+        {
+            if (values.Any()) return values.Last();
+            else return MayBe<T>.Null;
+        }
+
+#if NET7_0_OR_GREATER
+        public static T Sum<T>(this IEnumerable<T> values) where T : INumber<T>
+            => values.Aggregate(T.Zero, (a, b) => a + b);
+#else
+        public static T       Sum<T>(this IEnumerable<T> values) where T : Interfaces.IAggregable<T> => values.Aggregate(default(T)!, (a, b) => a.Add(b));
+        public static int     Sum(this IEnumerable<int> values) => values.Aggregate(0, (a, b) => a + b);
+        public static long    Sum(this IEnumerable<long> values) => values.Aggregate(0L, (a, b) => a + b);
+        public static float   Sum(this IEnumerable<float> values) => values.Aggregate(0f, (a, b) => a + b);
+        public static double  Sum(this IEnumerable<double> values) => values.Aggregate(0.0, (a, b) => a + b);
+        public static decimal Sum(this IEnumerable<decimal> values) => values.Aggregate(0m, (a, b) => a + b);
+#endif
+
+        public static RArray<T> SortBy<T, TSort>(this IEnumerable<T> value, Func<T, TSort> fn) => value.OrderBy(fn).ToRArray();
     }
 }
