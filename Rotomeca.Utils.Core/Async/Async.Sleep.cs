@@ -46,7 +46,6 @@
         /// <param name="duration">Durée de la suspension.</param>
         /// <param name="cancellationToken">
         /// Token optionnel permettant d'annuler la suspension avant son terme.
-        /// Si <see langword="null"/>, aucune annulation n'est possible.
         /// </param>
         /// <returns>
         /// Une <see cref="Task"/> qui se termine après <paramref name="duration"/>,
@@ -64,9 +63,8 @@
         /// </code>
         /// </example>
         /// <seealso cref="Sleep(uint)"/>
-        public static Task Sleep(TimeSpan duration, CancellationToken? cancellationToken = null)
-            => cancellationToken.HasValue
-                ? Task.Delay(duration, cancellationToken.Value)
-                : Task.Delay(duration);
+        public static Task Sleep(TimeSpan duration, CancellationToken cancellationToken = default)
+            => Task.Delay(duration, cancellationToken);
+
     }
 }

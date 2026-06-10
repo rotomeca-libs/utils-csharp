@@ -22,7 +22,7 @@ namespace Rotomeca.Utils.Async
         /// <remarks>
         /// Surcharge de convenance — convertit <paramref name="delay"/> en
         /// <see cref="TimeSpan"/> et délègue à
-        /// <see cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken?)"/>.
+        /// <see cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken)"/>.
         /// </remarks>
         /// <exception cref="OperationCanceledException">
         /// Levée si <paramref name="cancellationToken"/> est annulé avant une tentative.
@@ -30,12 +30,12 @@ namespace Rotomeca.Utils.Async
         /// <exception cref="AggregateException">
         /// Levée si toutes les tentatives échouent.
         /// </exception>
-        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken?)"/>
+        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken)"/>
         public static Task<T> Retry<T>(
             Func<Task<T>> fn,
             AttemptNumber attempts,
             uint delay,
-            CancellationToken? cancellationToken = null)
+            CancellationToken cancellationToken = default)
             => Retry(fn, attempts, TimeSpan.FromMilliseconds(delay), cancellationToken);
 
         /// <summary>
@@ -69,19 +69,18 @@ namespace Rotomeca.Utils.Async
         ///     delay: TimeSpan.FromMilliseconds(500));
         /// </code>
         /// </example>
-        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, uint, CancellationToken?)"/>
+        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, uint, CancellationToken)"/>
         public static async Task<T> Retry<T>(
             Func<Task<T>> fn,
             AttemptNumber attempts,
             TimeSpan delay,
-            CancellationToken? cancellationToken = null)
+            CancellationToken cancellationToken = default)
         {
             uint attemptCount = 0;
 
             while (true)
             {
-                if (cancellationToken.HasValue && cancellationToken.Value.IsCancellationRequested)
-                    throw new OperationCanceledException();
+                cancellationToken.ThrowIfCancellationRequested();
 
                 try
                 {
