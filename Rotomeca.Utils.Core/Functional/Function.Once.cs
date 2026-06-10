@@ -115,7 +115,7 @@ namespace Rotomeca.Utils.Functional
 #if NET9_0_OR_GREATER
             Lock _lock = new();
 #else
-    object _lock = new();
+            object _lock = new();
 #endif
 
             return (TArg1 a, TArg2 b, TArg3 c) =>

@@ -194,9 +194,9 @@
                 return hash;
             }
 #else
-    return _hasValue
-        ? HashCode.Combine(true, _value)
-        : HashCode.Combine(false);
+            return _hasValue
+                ? HashCode.Combine(true, _value)
+                : HashCode.Combine(false);
 #endif
         }
 
