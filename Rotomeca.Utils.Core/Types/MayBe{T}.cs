@@ -21,7 +21,7 @@
     /// <code>
     /// MayBe&lt;string&gt; withValue = "hello";       // présent
     /// MayBe&lt;string&gt; withNull  = (string?)null; // présent, valeur nulle
-    /// MayBe&lt;string&gt; empty     = MayBe&lt;string&gt;.None; // absent
+    /// MayBe&lt;string&gt; empty     = MayBe&lt;string&gt;.Null; // absent
     ///
     /// if (withValue.HasValue)
     ///     Console.WriteLine(withValue.Value); // → hello
