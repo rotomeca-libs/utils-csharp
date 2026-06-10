@@ -2,7 +2,7 @@
 
 namespace Rotomeca.Utils.Async
 {
-    public static partial class Tasks
+    public static partial class Asynchronous
     {
         /// <summary>
         /// Exécute <paramref name="fn"/> de manière répétée jusqu'à ce qu'elle réussisse
@@ -63,7 +63,7 @@ namespace Rotomeca.Utils.Async
         /// </exception>
         /// <example>
         /// <code>
-        /// var result = await Async.Retry(
+        /// var result = await Asynchronous.Retry(
         ///     () => FetchDataAsync(),
         ///     attempts: 3,
         ///     delay: TimeSpan.FromMilliseconds(500));

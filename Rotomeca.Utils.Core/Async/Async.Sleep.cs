@@ -1,6 +1,6 @@
 ﻿namespace Rotomeca.Utils.Async
 {
-    public static partial class Tasks
+    public static partial class Asynchronous
     {
         /// <summary>
         /// Suspend l'exécution asynchrone pendant le délai spécifié.
@@ -9,7 +9,7 @@
         /// <returns>Une <see cref="Task"/> qui se termine après <paramref name="ms"/> millisecondes.</returns>
         /// <example>
         /// <code>
-        /// await Async.Sleep(500); // attend 500ms
+        /// await Asynchronous.Sleep(500); // attend 500ms
         /// </code>
         /// </example>
         /// <seealso cref="Sleep(uint, CancellationToken)"/>
@@ -32,7 +32,7 @@
         /// <code>
         /// var cts = new CancellationTokenSource();
         /// cts.CancelAfter(200);
-        /// await Async.Sleep(1000, cts.Token); // annulé après 200ms
+        /// await Asynchronous.Sleep(1000, cts.Token); // annulé après 200ms
         /// </code>
         /// </example>
         /// <seealso cref="Sleep(uint)"/>
@@ -57,10 +57,10 @@
         /// </exception>
         /// <example>
         /// <code>
-        /// await Async.Sleep(TimeSpan.FromSeconds(2));
+        /// await Asynchronous.Sleep(TimeSpan.FromSeconds(2));
         ///
         /// var cts = new CancellationTokenSource();
-        /// await Async.Sleep(TimeSpan.FromSeconds(2), cts.Token);
+        /// await Asynchronous.Sleep(TimeSpan.FromSeconds(2), cts.Token);
         /// </code>
         /// </example>
         /// <seealso cref="Sleep(uint)"/>

@@ -4,7 +4,7 @@
     /// Fournit des utilitaires asynchrones inspirés des API JavaScript,
     /// portés pour un usage idiomatique en C#.
     /// </summary>
-    public static partial class Tasks
+    public static partial class Asynchronous
     {
         /// <summary>
         /// Exécute toutes les fonctions en parallèle et retourne leurs résultats.
@@ -22,7 +22,7 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// var results = await Async.Parallel(
+        /// var results = await Asynchronous.Parallel(
         ///     () => FetchUserAsync(1),
         ///     () => FetchUserAsync(2),
         ///     () => FetchUserAsync(3)
@@ -72,7 +72,7 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// await foreach (var result in Async.SequentialGenerator(fns))
+        /// await foreach (var result in Asynchronous.SequentialGenerator(fns))
         ///     Console.WriteLine(result);
         /// </code>
         /// </example>
@@ -108,7 +108,7 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// await foreach (var result in Async.SequentialGenerator(fns))
+        /// await foreach (var result in Asynchronous.SequentialGenerator(fns))
         ///     Console.WriteLine(result);
         /// </code>
         /// </example>
@@ -157,7 +157,7 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// var results = await Async.Sequential(
+        /// var results = await Asynchronous.Sequential(
         ///     () => StepOneAsync(),
         ///     () => StepTwoAsync(),
         ///     () => StepThreeAsync()

@@ -1,5 +1,5 @@
 ﻿using Rotomeca.Utils.Types;
-using static Rotomeca.Utils.Async.Tasks;
+using static Rotomeca.Utils.Async.Asynchronous;
 
 namespace Rotomeca.Utils.Functional
 {
@@ -32,7 +32,7 @@ namespace Rotomeca.Utils.Functional
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action onSearch = Async.Debounce(() => FetchResults(), 300);
+        /// Action onSearch = Asynchronous.Debounce(() => FetchResults(), 300);
         /// // Chaque frappe remet le timer à zéro — FetchResults n'est appelé
         /// // qu'après 300ms sans nouvelle frappe.
         /// </code>
@@ -70,7 +70,7 @@ namespace Rotomeca.Utils.Functional
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action onScroll = Async.Throttle(() => UpdateScrollbar(), 100);
+        /// Action onScroll = Asynchronous.Throttle(() => UpdateScrollbar(), 100);
         /// // UpdateScrollbar ne s'exécute qu'une fois toutes les 100ms,
         /// // même si l'événement scroll se déclenche des centaines de fois.
         /// </code>

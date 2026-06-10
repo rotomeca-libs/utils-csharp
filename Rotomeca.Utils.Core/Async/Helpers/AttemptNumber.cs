@@ -21,7 +21,7 @@ namespace Rotomeca.Utils.Async.Helpers
     /// AttemptNumber attempts = 3;
     /// AttemptNumber zero     = 0; // clampée à 1 silencieusement
     ///
-    /// await Async.Retry(fn, attempts, delay: 500);
+    /// await Asynchronous.Retry(fn, attempts, delay: 500);
     /// </code>
     /// </example>
     /// <seealso cref="Rotomeca.Utils.Types.ClampedValue{T}"/>
