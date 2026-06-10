@@ -22,7 +22,7 @@ namespace Rotomeca.Utils.Async.Internal
     /// </para>
     /// </remarks>
     /// <seealso cref="Rotomeca.Utils.Async.Tasks"/>
-    internal sealed class SetTimeout
+    internal sealed class SetTimeout: IDisposable
     {
         /// <summary>
         /// Dictionnaire thread-safe associant chaque identifiant de timeout à son timer.
@@ -126,6 +126,17 @@ namespace Rotomeca.Utils.Async.Internal
                 timer.Stop();
                 timer.Dispose();
             }
+        }
+
+        public void Dispose()
+        {
+            foreach (var timer in _timeOuts)
+            {
+                timer.Value.Stop();
+                timer.Value.Dispose();
+            }
+
+            _timeOuts.Clear();
         }
     }
 }
