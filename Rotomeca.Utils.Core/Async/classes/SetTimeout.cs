@@ -17,11 +17,11 @@ namespace Rotomeca.Utils.Async.Internal
     /// sur des threads du pool.
     /// </para>
     /// <para>
-    /// Cette classe est à usage interne uniquement. Utilisez <see cref="Rotomeca.Utils.Async.Async"/>
+    /// Cette classe est à usage interne uniquement. Utilisez <see cref="Rotomeca.Utils.Async.Tasks"/>
     /// pour accéder aux fonctionnalités exposées publiquement.
     /// </para>
     /// </remarks>
-    /// <seealso cref="Rotomeca.Utils.Async.Async"/>
+    /// <seealso cref="Rotomeca.Utils.Async.Tasks"/>
     internal sealed class SetTimeout
     {
         /// <summary>

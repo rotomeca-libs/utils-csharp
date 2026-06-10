@@ -1,6 +1,6 @@
 ﻿namespace Rotomeca.Utils.Async
 {
-    public static partial class Async
+    public static partial class Tasks
     {
         /// <summary>
         /// Planifie l'exécution d'une action après un délai donné, sans bloquer le thread courant.

@@ -2,7 +2,7 @@
 
 namespace Rotomeca.Utils.Async
 {
-    public static partial class Async
+    public static partial class Tasks
     {
         /// <summary>
         /// Exécute <paramref name="fn"/> de manière répétée jusqu'à ce qu'elle réussisse

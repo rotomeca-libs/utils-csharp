@@ -4,7 +4,7 @@
     /// Fournit des utilitaires asynchrones inspirés des API JavaScript,
     /// portés pour un usage idiomatique en C#.
     /// </summary>
-    public static partial class Async
+    public static partial class Tasks
     {
         /// <summary>
         /// Exécute toutes les fonctions en parallèle et retourne leurs résultats.
