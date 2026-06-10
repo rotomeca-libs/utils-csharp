@@ -74,7 +74,7 @@ namespace Rotomeca.Utils.Functional
         /// Sur les cibles antérieures, utilise un <see langword="object"/> standard.
         /// </para>
         /// </remarks>
-         private static Func<TArg1, TArg2, TArg3, TResult> _Once<TArg1, TArg2, TArg3, TResult>(
+        private static Func<TArg1, TArg2, TArg3, TResult> _Once<TArg1, TArg2, TArg3, TResult>(
         Func<TArg1, TArg2, TArg3, TResult> fn)
 #else
         /// <summary>
