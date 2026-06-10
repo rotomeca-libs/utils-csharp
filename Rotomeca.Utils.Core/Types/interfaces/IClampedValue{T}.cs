@@ -25,9 +25,9 @@ namespace Rotomeca.Utils.Types.Interfaces
         /// </summary>
         /// <param name="value">Nouvelle valeur à appliquer.</param>
         /// <returns>
-        /// Un <see cref="Rotomeca.Utils.Types.ClampedValue{T}"/> contenant
+        /// Un <see cref="IClampedValue{T}"/> contenant
         /// <paramref name="value"/> clampée.
         /// </returns>
-        ClampedValue<T> WithValue(T value);
+        IClampedValue<T> WithValue(T value);
     }
 }

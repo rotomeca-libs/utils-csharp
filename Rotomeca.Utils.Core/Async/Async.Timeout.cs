@@ -1,6 +1,6 @@
 ﻿namespace Rotomeca.Utils.Async
 {
-    public static partial class Async
+    public static partial class Asynchronous
     {
         /// <summary>
         /// Planifie l'exécution d'une action après un délai donné, sans bloquer le thread courant.
@@ -17,9 +17,9 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// int id = Async.SetTimeout(() => Console.WriteLine("Déclenché !"), 2000);
+        /// int id = Asynchronous.SetTimeout(() => Console.WriteLine("Déclenché !"), 2000);
         /// // ...
-        /// Async.ClearTimeout(id); // Annulation si nécessaire
+        /// Asynchronous.ClearTimeout(id); // Annulation si nécessaire
         /// </code>
         /// </example>
         /// <seealso cref="ClearTimeout"/>
@@ -40,12 +40,12 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// int id = Async.SetTimeout(() => Console.WriteLine("Ne s'affichera pas"), 5000);
-        /// Async.ClearTimeout(id);
+        /// int id = Asynchronous.SetTimeout(() => Console.WriteLine("Ne s'affichera pas"), 5000);
+        /// Asynchronous.ClearTimeout(id);
         /// </code>
         /// </example>
         /// <seealso cref="SetTimeout"/>
-        public static void ClearTimeout(int number) => Internal.SetTimeout.Instance.ClearTimeOut(number);
+        public static void ClearTimeout(int number) => Internal.SetTimeout.Instance.ClearTimeout(number);
 
         /// <summary>
         /// Exécute <paramref name="task"/> avec une limite de temps.
@@ -66,7 +66,7 @@
         /// <example>
         /// <code>
         /// // Lance une TimeoutException si FetchDataAsync dépasse 3 secondes
-        /// var result = await Async.Timeout(FetchDataAsync(), TimeSpan.FromSeconds(3));
+        /// var result = await Asynchronous.Timeout(FetchDataAsync(), TimeSpan.FromSeconds(3));
         /// </code>
         /// </example>
         /// <seealso cref="Timeout{T}(Task{T}, uint)"/>
@@ -99,7 +99,7 @@
         /// </remarks>
         /// <example>
         /// <code>
-        /// var result = await Async.Timeout(FetchDataAsync(), 3000);
+        /// var result = await Asynchronous.Timeout(FetchDataAsync(), 3000);
         /// </code>
         /// </example>
         /// <seealso cref="Timeout{T}(Task{T}, TimeSpan)"/>

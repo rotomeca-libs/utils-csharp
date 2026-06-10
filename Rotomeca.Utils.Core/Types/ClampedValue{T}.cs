@@ -27,7 +27,7 @@ namespace Rotomeca.Utils.Types
     /// int raw = speed; // conversion implicite → 100
     /// </code>
     /// </example>
-    public readonly struct ClampedValue<T> : IEquatable<ClampedValue<T>>
+    public readonly struct ClampedValue<T> : IEquatable<ClampedValue<T>>, Interfaces.IClampedValue<T>
         where T : IComparable<T>
     {
         /// <summary>Borne inférieure de l'intervalle.</summary>
@@ -72,7 +72,7 @@ namespace Rotomeca.Utils.Types
         /// </summary>
         /// <param name="newValue">Nouvelle valeur à appliquer.</param>
         /// <returns>Nouvelle instance avec la valeur mise à jour.</returns>
-        public ClampedValue<T> WithValue(T newValue) => new(Min, Max, newValue);
+        public Interfaces.IClampedValue<T> WithValue(T newValue) => new ClampedValue<T>(Min, Max, newValue);
 
         /// <summary>
         /// Convertit implicitement en <typeparamref name="T"/>.

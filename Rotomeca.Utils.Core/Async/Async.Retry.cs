@@ -2,7 +2,7 @@
 
 namespace Rotomeca.Utils.Async
 {
-    public static partial class Async
+    public static partial class Asynchronous
     {
         /// <summary>
         /// Exécute <paramref name="fn"/> de manière répétée jusqu'à ce qu'elle réussisse
@@ -22,7 +22,7 @@ namespace Rotomeca.Utils.Async
         /// <remarks>
         /// Surcharge de convenance — convertit <paramref name="delay"/> en
         /// <see cref="TimeSpan"/> et délègue à
-        /// <see cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken?)"/>.
+        /// <see cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken)"/>.
         /// </remarks>
         /// <exception cref="OperationCanceledException">
         /// Levée si <paramref name="cancellationToken"/> est annulé avant une tentative.
@@ -30,12 +30,12 @@ namespace Rotomeca.Utils.Async
         /// <exception cref="AggregateException">
         /// Levée si toutes les tentatives échouent.
         /// </exception>
-        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken?)"/>
+        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, TimeSpan, CancellationToken)"/>
         public static Task<T> Retry<T>(
             Func<Task<T>> fn,
             AttemptNumber attempts,
             uint delay,
-            CancellationToken? cancellationToken = null)
+            CancellationToken cancellationToken = default)
             => Retry(fn, attempts, TimeSpan.FromMilliseconds(delay), cancellationToken);
 
         /// <summary>
@@ -63,25 +63,24 @@ namespace Rotomeca.Utils.Async
         /// </exception>
         /// <example>
         /// <code>
-        /// var result = await Async.Retry(
+        /// var result = await Asynchronous.Retry(
         ///     () => FetchDataAsync(),
         ///     attempts: 3,
         ///     delay: TimeSpan.FromMilliseconds(500));
         /// </code>
         /// </example>
-        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, uint, CancellationToken?)"/>
+        /// <seealso cref="Retry{T}(Func{Task{T}}, AttemptNumber, uint, CancellationToken)"/>
         public static async Task<T> Retry<T>(
             Func<Task<T>> fn,
             AttemptNumber attempts,
             TimeSpan delay,
-            CancellationToken? cancellationToken = null)
+            CancellationToken cancellationToken = default)
         {
-            uint @try = 0;
+            uint attemptCount = 0;
 
             while (true)
             {
-                if (cancellationToken.HasValue && cancellationToken.Value.IsCancellationRequested)
-                    throw new OperationCanceledException();
+                cancellationToken.ThrowIfCancellationRequested();
 
                 try
                 {
@@ -89,7 +88,7 @@ namespace Rotomeca.Utils.Async
                 }
                 catch (Exception e)
                 {
-                    if (++@try >= attempts)
+                    if (++attemptCount >= attempts)
                         throw new AggregateException(
                             $"Failed to execute the function after {attempts} attempts.", e);
                 }
