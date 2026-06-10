@@ -9,12 +9,14 @@
         /// Représente une chaîne de caractères vide (<c>""</c>).
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Analogue à <see cref="string.Empty"/>, fourni pour assurer
         /// la cohérence avec les packages Rotomeca en TypeScript et PHP.
-        /// </remarks>
-        /// <remarks>
+        /// </para>
+        /// <para>
         /// Miroir TypeScript :
         /// <see href="https://github.com/Rotomeca/node-utils/blob/main/lib/constants.ts#L9"/>
+        /// </para>
         /// </remarks>
         public const string EMPTY_STRING = "";
 
