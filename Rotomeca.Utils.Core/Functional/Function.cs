@@ -32,7 +32,7 @@ namespace Rotomeca.Utils.Functional
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action onSearch = Asynchronous.Debounce(() => FetchResults(), 300);
+        /// Action onSearch = Function.Debounce(() => FetchResults(), 300);
         /// // Chaque frappe remet le timer à zéro — FetchResults n'est appelé
         /// // qu'après 300ms sans nouvelle frappe.
         /// </code>
@@ -70,7 +70,7 @@ namespace Rotomeca.Utils.Functional
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action onScroll = Asynchronous.Throttle(() => UpdateScrollbar(), 100);
+        /// Action onScroll = Function.Throttle(() => UpdateScrollbar(), 100);
         /// // UpdateScrollbar ne s'exécute qu'une fois toutes les 100ms,
         /// // même si l'événement scroll se déclenche des centaines de fois.
         /// </code>
