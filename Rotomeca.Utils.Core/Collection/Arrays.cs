@@ -148,15 +148,15 @@ namespace Rotomeca.Utils.Collections
             return result;
         }
 
-        public static MayBe<T> First<T>(IEnumerable<T> values)
+        public static MayBe<T> First<T>(this IEnumerable<T> values)
         {
-            if (values.Any()) return values.First();
+            if (values.Any()) return Enumerable.First(values);
             else return MayBe<T>.Null;
         }
 
-        public static MayBe<T> Last<T>(IEnumerable<T> values)
+        public static MayBe<T> Last<T>(this IEnumerable<T> values)
         {
-            if (values.Any()) return values.Last();
+            if (values.Any()) return Enumerable.Last(values);
             else return MayBe<T>.Null;
         }
 
@@ -164,11 +164,11 @@ namespace Rotomeca.Utils.Collections
         public static T Sum<T>(this IEnumerable<T> values) where T : INumber<T>
             => values.Aggregate(T.Zero, (a, b) => a + b);
 #else
-        public static T       Sum<T>(this IEnumerable<T> values) where T : Interfaces.IAggregable<T> => values.Aggregate(default(T)!, (a, b) => a.Add(b));
-        public static int     Sum(this IEnumerable<int> values) => values.Aggregate(0, (a, b) => a + b);
-        public static long    Sum(this IEnumerable<long> values) => values.Aggregate(0L, (a, b) => a + b);
-        public static float   Sum(this IEnumerable<float> values) => values.Aggregate(0f, (a, b) => a + b);
-        public static double  Sum(this IEnumerable<double> values) => values.Aggregate(0.0, (a, b) => a + b);
+        public static T Sum<T>(this IEnumerable<T> values) where T : Interfaces.IAggregable<T> => values.Aggregate(default(T)!, (a, b) => a.Add(b));
+        public static int Sum(this IEnumerable<int> values) => values.Aggregate(0, (a, b) => a + b);
+        public static long Sum(this IEnumerable<long> values) => values.Aggregate(0L, (a, b) => a + b);
+        public static float Sum(this IEnumerable<float> values) => values.Aggregate(0f, (a, b) => a + b);
+        public static double Sum(this IEnumerable<double> values) => values.Aggregate(0.0, (a, b) => a + b);
         public static decimal Sum(this IEnumerable<decimal> values) => values.Aggregate(0m, (a, b) => a + b);
 #endif
 
@@ -183,7 +183,7 @@ namespace Rotomeca.Utils.Collections
             foreach (var item in values)
             {
                 if (item is T value) result.Push(value);
-                else if (item is IEnumerable innerValues) result.Push(FlattenDeep<T>(innerValues));         
+                else if (item is IEnumerable innerValues) result.Push(FlattenDeep<T>(innerValues));
             }
 
             return result;
@@ -216,5 +216,88 @@ namespace Rotomeca.Utils.Collections
                 ["falsy"] = falsy
             };
         }
+
+        public static RArray<T> Intersection<T>(this IEnumerable<T> values, IEnumerable<T> others) => values.Intersect(others).ToRArray();
+
+        public static RArray<T> Difference<T>(this IEnumerable<T> values, IEnumerable<T> others) => values.Except(others).ToRArray();
+
+        public static RArray<T> Union<T>(IEnumerable<T> values, IEnumerable<T> others) => values.Union(others).Unique();
+
+#if NETSTANDARD2_0 || NETSTANDARD2_1
+        public static RArray<(T, Y)> Zip<T, Y>(this IEnumerable<T> a, IEnumerable<Y> b)
+            => Enumerable.Zip(a, b, (x, y) => (x, y)).ToRArray();
+#else
+        public static RArray<(T, Y)> Zip<T, Y>(this IEnumerable<T> a, IEnumerable<Y> b)
+            => Enumerable.Zip(a, b).ToRArray();
+#endif
+
+        public static RArray<T> Take<T>(this IEnumerable<T> a, uint nb) => Enumerable.Take(a, (int)nb).ToRArray();
+
+        public static RArray<T> Drop<T>(this IEnumerable<T> a, uint nb) => a.Skip((int)nb).ToRArray();
+
+        public static RArray<T> Shuffle<T>(this IEnumerable<T> a)
+#if NET10_0_OR_GREATER
+            => Enumerable.Shuffle(a).ToRArray();
+#else
+        {
+            var result = a.ToRArray();
+
+            var random = new System.Random();
+            for (int i = result.Length - 1; i > 0; --i)
+            {
+                var j = random.Next(0, i + 1);
+                (result[j], result[i]) = (result[i], result[j]);
+            }
+
+            return result;
+        }
+#endif
+
+        public static MayBe<T> MinBy<T>(this IEnumerable<T> values, Func<T, long> fn)
+#if NETSTANDARD2_0 || NETSTANDARD2_1
+        {
+            MayBe<T> value = MayBe<T>.Null;
+            MayBe<long> last = MayBe<long>.Null;
+
+            foreach (var val in values)
+            {
+                var tmp = fn(val);
+
+                if (last.IsEmpty || tmp < last)
+                {
+                    last = tmp;
+                    value = val;
+                }
+            }
+
+            return value;
+        }
+#else
+        => Enumerable.MinBy<T, long>(values, fn);
+#endif
+
+        public static MayBe<T> MaxBy<T>(this IEnumerable<T> values, Func<T, long> fn)
+#if NETSTANDARD2_0 || NETSTANDARD2_1
+        {
+            MayBe<T> value = MayBe<T>.Null;
+            MayBe<long> last = MayBe<long>.Null;
+
+            foreach (var val in values)
+            {
+                var tmp = fn(val);
+
+                if (last.IsEmpty || tmp > last)
+                {
+                    last = tmp;
+                    value = val;
+                }
+            }
+
+            return value;
+        }
+#else
+        => Enumerable.MaxBy<T, long>(values, fn);
+#endif
+
     }
 }
