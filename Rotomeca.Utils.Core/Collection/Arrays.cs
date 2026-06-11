@@ -1,5 +1,6 @@
 ﻿using Rotomeca.Core.Collections;
 using Rotomeca.Core.Optionals;
+using System.Collections;
 using System.Numerics;
 
 namespace Rotomeca.Utils.Collections
@@ -172,5 +173,48 @@ namespace Rotomeca.Utils.Collections
 #endif
 
         public static RArray<T> SortBy<T, TSort>(this IEnumerable<T> value, Func<T, TSort> fn) => value.OrderBy(fn).ToRArray();
+
+        public static RArray<T> Flatten<T>(this IEnumerable<IEnumerable<T>> value) => value.SelectMany(x => x).ToRArray();
+
+        public static RArray<T> FlattenDeep<T>(this IEnumerable values)
+        {
+            RArray<T> result = [];
+
+            foreach (var item in values)
+            {
+                if (item is T value) result.Push(value);
+                else if (item is IEnumerable innerValues) result.Push(FlattenDeep<T>(innerValues));         
+            }
+
+            return result;
+        }
+
+        public static RArray<T> Compact<T>(this IEnumerable<T> values) where T : class
+            => values.Where(v => v != null).ToRArray();
+
+        public static RArray<T> Compact<T>(this IEnumerable<MayBe<T>> values)
+            => values.Where(v => v.HasValue).Select(x => x.Value!).ToRArray();
+
+        public static (RArray<T> truthy, RArray<T> falsy) Partition<T>(this IEnumerable<T> values, Func<T, bool> predicate)
+        {
+            RArray<T> truthy = [];
+            RArray<T> falsy = [];
+            foreach (var item in values)
+            {
+                if (predicate(item)) truthy.Push(item);
+                else falsy.Push(item);
+            }
+            return (truthy, falsy);
+        }
+
+        public static Types.JsObject PartitionToObject<T>(this IEnumerable<T> values, Func<T, bool> predicate)
+        {
+            var (truthy, falsy) = values.Partition(predicate);
+            return new Types.JsObject
+            {
+                ["truthy"] = truthy,
+                ["falsy"] = falsy
+            };
+        }
     }
 }
