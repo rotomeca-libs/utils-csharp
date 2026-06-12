@@ -1,5 +1,5 @@
-﻿using Rotomeca.Utils.Types;
 using static Rotomeca.Utils.Async.Asynchronous;
+using Rotomeca.Core.Optionals;
 
 namespace Rotomeca.Utils.Functional
 {

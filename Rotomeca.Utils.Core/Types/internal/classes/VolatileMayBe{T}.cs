@@ -7,7 +7,7 @@
     /// <typeparam name="T">Type de la valeur encapsulée.</typeparam>
     /// <remarks>
     /// <para>
-    /// Contrairement à <see cref="Rotomeca.Utils.Types.MayBe{T}"/> (struct),
+    /// Contrairement à <see cref="Rotomeca.Core.Optionals.MayBe{T}"/> (struct),
     /// <see cref="VolatileMayBe{T}"/> est une classe — ce qui permet d'utiliser
     /// sa référence comme sentinelle volatile : <see langword="null"/> signifie
     /// "non initialisé", une référence non-nulle signifie "valeur prête".
