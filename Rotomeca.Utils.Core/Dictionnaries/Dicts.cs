@@ -272,16 +272,44 @@ namespace Rotomeca.Utils.Dictionaries
             foreach (var item in source)
             {
                 if (results.TryGetValue(item.Key, out TValue? value)
-                    && value is IDictionary<TKey, TValue> targetNested
-                    && item.Value is IDictionary<TKey, TValue> sourceNested)
+                    && value is IDictionary targetNested
+                    && item.Value is IDictionary sourceNested)
                 {
-                    results[item.Key] = (TValue)DeepMerge(targetNested, sourceNested);
+                    results[item.Key] = (TValue)_DeepMergeNonGeneric(targetNested, sourceNested);
                 }
-                else results[item.Key] = item.Value;
-
+                else
+                {
+                    results[item.Key] = item.Value;
+                }
             }
 
             return results;
+        }
+
+        private static IDictionary _DeepMergeNonGeneric(IDictionary target, IDictionary source)
+        {
+            IDictionary result;
+            try { result = (IDictionary)Activator.CreateInstance(target.GetType())!; }
+            catch { result = new Dictionary<object, object?>(); }
+
+            foreach (DictionaryEntry entry in target)
+                result[entry.Key] = entry.Value;
+
+            foreach (DictionaryEntry entry in source)
+            {
+                if (result.Contains(entry.Key)
+                    && result[entry.Key] is IDictionary nestedTarget
+                    && entry.Value is IDictionary nestedSource)
+                {
+                    result[entry.Key] = _DeepMergeNonGeneric(nestedTarget, nestedSource);
+                }
+                else
+                {
+                    result[entry.Key] = entry.Value;
+                }
+            }
+
+            return result;
         }
 
         /// <summary>

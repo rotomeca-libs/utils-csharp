@@ -48,7 +48,7 @@ namespace Rotomeca.Utils.Validators
         /// </remarks>
         /// <param name="str">La chaîne à valider.</param>
         /// <returns><c>true</c> si la chaîne est un nombre décimal valide ; <c>false</c> sinon.</returns>
-        public static bool IsNumeric(this string str) => decimal.TryParse(str, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal _);
+        public static bool IsNumeric(this string str) => decimal.TryParse(str, NumberStyles.Float, CultureInfo.InvariantCulture, out decimal _);
 
         /// <summary>
         /// Vérifie que la chaîne ne contient que des lettres,

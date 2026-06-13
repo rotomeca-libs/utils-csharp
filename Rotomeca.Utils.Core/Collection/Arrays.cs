@@ -30,7 +30,7 @@ namespace Rotomeca.Utils.Collections
         /// // chunks => [[1, 2], [3, 4], [5]]
         /// </code>
         /// </example>
-        public static RArray<RArray<T>> Chunk<T>(this IEnumerable<T> original, uint size)
+        public static RArray<RArray<T>> Chunk<T>(this RArray<T> original, uint size)
         {
             if (size == 0) return [];
 
@@ -187,9 +187,9 @@ namespace Rotomeca.Utils.Collections
         /// MayBe&lt;int&gt; none = empty.First(); // HasValue = false
         /// </code>
         /// </example>
-        public static MayBe<T> First<T>(this IEnumerable<T> values)
+        public static MayBe<T> First<T>(this RArray<T> values)
         {
-            if (values.Any()) return Enumerable.First(values);
+            if (values.Length != 0) return Enumerable.First(values);
             else return MayBe<T>.Null;
         }
 
@@ -212,9 +212,9 @@ namespace Rotomeca.Utils.Collections
         /// MayBe&lt;int&gt; none = empty.Last(); // HasValue = false
         /// </code>
         /// </example>
-        public static MayBe<T> Last<T>(this IEnumerable<T> values)
+        public static MayBe<T> Last<T>(this RArray<T> values)
         {
-            if (values.Any()) return Enumerable.Last(values);
+            if (values.Length != 0) return Enumerable.Last(values);
             else return MayBe<T>.Null;
         }
 
@@ -465,7 +465,7 @@ namespace Rotomeca.Utils.Collections
         /// // union => [1, 2, 3, 4, 5]
         /// </code>
         /// </example>
-        public static RArray<T> Union<T>(this IEnumerable<T> values, IEnumerable<T> others) => Enumerable.Union(values, others).Unique();
+        public static RArray<T> Union<T>(this RArray<T> values, IEnumerable<T> others) => Enumerable.Union(values, others).Unique();
 
 #if NETSTANDARD2_0 || NETSTANDARD2_1
         /// <summary>
@@ -488,7 +488,7 @@ namespace Rotomeca.Utils.Collections
         /// // zipped => [(1, "un"), (2, "deux")]
         /// </code>
         /// </example>
-        public static RArray<(T, Y)> Zip<T, Y>(this IEnumerable<T> a, IEnumerable<Y> b)
+        public static RArray<(T, Y)> Zip<T, Y>(this RArray<T> a, IEnumerable<Y> b)
             => Enumerable.Zip(a, b, (x, y) => (x, y)).ToRArray();
 #else
         /// <summary>
@@ -511,7 +511,7 @@ namespace Rotomeca.Utils.Collections
         /// // zipped => [(1, "un"), (2, "deux")]
         /// </code>
         /// </example>
-        public static RArray<(T, Y)> Zip<T, Y>(this IEnumerable<T> a, IEnumerable<Y> b)
+        public static RArray<(T, Y)> Zip<T, Y>(this RArray<T> a, IEnumerable<Y> b)
             => Enumerable.Zip(a, b).ToRArray();
 #endif
 
@@ -623,7 +623,7 @@ namespace Rotomeca.Utils.Collections
             return value;
         }
 #else
-        => Enumerable.MinBy<T, long>(values, fn);
+        => values.Any() ? Enumerable.MinBy(values, fn) : MayBe<T>.Null;
 #endif
 
         /// <summary>
@@ -664,7 +664,7 @@ namespace Rotomeca.Utils.Collections
             return value;
         }
 #else
-        => Enumerable.MaxBy<T, long>(values, fn);
+        => values.Any() ?  Enumerable.MaxBy(values, fn) : MayBe<T>.Null;
 #endif
 
     }
