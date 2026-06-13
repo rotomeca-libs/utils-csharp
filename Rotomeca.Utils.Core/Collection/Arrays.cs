@@ -575,10 +575,9 @@ namespace Rotomeca.Utils.Collections
         {
             var result = a.ToRArray();
 
-            var random = new System.Random();
             for (int i = result.Length - 1; i > 0; --i)
             {
-                var j = random.Next(0, i + 1);
+                var j = Types.Random.Range(0, i + 1);
                 (result[j], result[i]) = (result[i], result[j]);
             }
 

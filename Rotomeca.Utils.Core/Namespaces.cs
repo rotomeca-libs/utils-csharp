@@ -10,5 +10,4 @@ namespace Rotomeca.Utils.Async { }
 namespace Rotomeca.Utils.Collections { }
 namespace Rotomeca.Utils.Numerics { }
 namespace Rotomeca.Utils.Validation { }
-namespace Rotomeca.Utils.Random { }
 namespace Rotomeca.Utils.Dictionaries { }
