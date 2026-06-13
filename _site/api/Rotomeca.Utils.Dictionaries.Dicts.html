@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Dicts | Rotomeca.Utils </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Dicts | Rotomeca.Utils ">
+      
+      <meta name="description" content="Fournit des m&#233;thodes d&#39;extension utilitaires pour les dictionnaires.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rotomeca-libs/utils-csharp/new/develop/apiSpec/new?filename=Rotomeca_Utils_Dictionaries_Dicts.md&amp;value=---%0Auid%3A%20Rotomeca.Utils.Dictionaries.Dicts%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rotomeca.Utils">
+            Rotomeca.Utils
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Rotomeca.Utils.Dictionaries.Dicts">
+
+
+
+  <h1 id="Rotomeca_Utils_Dictionaries_Dicts" data-uid="Rotomeca.Utils.Dictionaries.Dicts" class="text-break">
+Class Dicts  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Rotomeca.html">Rotomeca</a>.<a class="xref" href="Rotomeca.Utils.html">Utils</a>.<a class="xref" href="Rotomeca.Utils.Dictionaries.html">Dictionaries</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Rotomeca.Utils.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Fournit des méthodes d'extension utilitaires pour les dictionnaires.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Dicts</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Dicts</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_DeepClone_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.DeepClone*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})">
+  DeepClone&lt;T&gt;(T, Action&lt;string&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Effectue un clonage profond de l'objet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T DeepClone&lt;T&gt;(this T obj, Action&lt;string&gt;? logger = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <span class="xref">T</span></dt>
+    <dd><p>L'objet à cloner.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Action de journalisation appelée en cas de fallback JSON.
+Par défaut : écriture sur <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console.error">Error</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Un clone profond de <code class="paramref">obj</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Le type de l'objet à cloner.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Sur .NET 5+ : utilise la réflexion pour parcourir tous les champs (y compris privés et hérités),
+avec détection des références circulaires. En cas d'échec, bascule automatiquement
+sur un clonage JSON (voir <code>JsonClone</code>).
+</p>
+<p>
+Sur .NET Standard 2.0 : utilise uniquement la réflexion, sans fallback JSON.
+</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_DeepMerge_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.DeepMerge*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_DeepMerge__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IDictionary___0___1__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.DeepMerge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})">
+  DeepMerge&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IDictionary&lt;TKey, TValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fusionne profondément deux dictionnaires.
+Les entrées de <code class="paramref">source</code> sont fusionnées récursivement dans <code class="paramref">target</code>.
+En cas de conflit sur une clé, la valeur de <code class="paramref">source</code> est prioritaire,
+sauf si les deux valeurs sont elles-mêmes des dictionnaires, auquel cas la fusion est récursive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TKey, TValue&gt; DeepMerge&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; target, IDictionary&lt;TKey, TValue&gt; source) where TKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire de base. N'est pas modifié.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire à fusionner dans <code class="paramref">target</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire résultant de la fusion profonde.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_FilterKeys_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.FilterKeys*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_FilterKeys__2_System_Collections_Generic_IDictionary___0___1__System_Func___0_System_Boolean__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.FilterKeys``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,System.Boolean})">
+  FilterKeys&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, Func&lt;TKey, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Filtre les entrées du dictionnaire en ne conservant que celles dont la clé satisfait le prédicat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TKey, TValue&gt; FilterKeys&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; dict, Func&lt;TKey, bool&gt; fn) where TKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dict</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire source.</p>
+</dd>
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TKey, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Prédicat appliqué à chaque clé. Retourne <code>true</code> pour conserver l'entrée.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire contenant uniquement les entrées dont la clé satisfait <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_FilterValues_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.FilterValues*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_FilterValues__2_System_Collections_Generic_IDictionary___0___1__System_Func___1_System_Boolean__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.FilterValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,System.Boolean})">
+  FilterValues&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, Func&lt;TValue, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Filtre les entrées du dictionnaire en ne conservant que celles dont la valeur satisfait le prédicat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TKey, TValue&gt; FilterValues&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; dict, Func&lt;TValue, bool&gt; fn) where TKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dict</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire source.</p>
+</dd>
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TValue, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Prédicat appliqué à chaque valeur. Retourne <code>true</code> pour conserver l'entrée.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire contenant uniquement les entrées dont la valeur satisfait <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.FlattenObject*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+  FlattenObject(IDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Aplatit un dictionnaire imbriqué en un dictionnaire à un seul niveau,
+en concaténant les clés avec le séparateur spécifié.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;string, object?&gt; FlattenObject(this IDictionary&lt;string, object?&gt; obj, string separator = &quot;.&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Le dictionnaire imbriqué à aplatir.</p>
+</dd>
+    <dt><code>separator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Le séparateur utilisé pour construire les clés composées. Par défaut : <code>&quot;.&quot;</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Un nouveau dictionnaire plat dont les clés représentent les chemins vers chaque valeur feuille.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String__examples">Examples</h4>
+  <pre><code class="lang-csharp">// { "a": { "b": { "c": 1 } } } → { "a.b.c": 1 }
+var flat = nested.FlattenObject();</code></pre>
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_Invert_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.Invert*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_Invert__2_System_Collections_Generic_IDictionary___0___1__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.Invert``2(System.Collections.Generic.IDictionary{``0,``1})">
+  Invert&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne un nouveau dictionnaire dont les clés et les valeurs sont inversées.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TValue, TKey&gt; Invert&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; dict) where TKey : notnull where TValue : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dict</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire à inverser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TValue, TKey&gt;</dt>
+    <dd><p>Un nouveau dictionnaire avec les clés et valeurs permutées.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés sources, qui devient le type des valeurs résultantes.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs sources, qui devient le type des clés résultantes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Dictionaries_Dicts_Invert__2_System_Collections_Generic_IDictionary___0___1___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Si le dictionnaire source contient des valeurs dupliquées, une exception sera levée
+lors de la construction du dictionnaire résultant (clés dupliquées).</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_IsEmpty_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.IsEmpty*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_IsEmpty__2_System_Collections_Generic_IDictionary___0___1__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.IsEmpty``2(System.Collections.Generic.IDictionary{``0,``1})">
+  IsEmpty&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indique si le dictionnaire est vide.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; dict)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dict</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire à tester.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> si le dictionnaire ne contient aucune entrée ; <code>false</code> sinon.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_MapKeys_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.MapKeys*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_MapKeys__3_System_Collections_Generic_IDictionary___0___1__System_Func___0___1___2__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.MapKeys``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,``1,``2})">
+  MapKeys&lt;TKey, TValue, TNewKey&gt;(IDictionary&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, TNewKey&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne un nouveau dictionnaire dont les clés ont été transformées par la fonction <code class="paramref">fn</code>.
+Les valeurs sont conservées à l'identique.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TNewKey, TValue&gt; MapKeys&lt;TKey, TValue, TNewKey&gt;(this IDictionary&lt;TKey, TValue&gt; dict, Func&lt;TKey, TValue, TNewKey&gt; fn) where TNewKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dict</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire source.</p>
+</dd>
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TKey, TValue, TNewKey&gt;</dt>
+    <dd><p>Fonction de transformation appelée avec la clé et la valeur courantes.
+Retourne la nouvelle clé à utiliser pour cette entrée.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TNewKey, TValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire avec les clés transformées et les mêmes valeurs.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés sources.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+    <dt><code>TNewKey</code></dt>
+    <dd><p>Le type des clés résultantes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Dictionaries_Dicts_MapKeys__3_System_Collections_Generic_IDictionary___0___1__System_Func___0___1___2___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Si <code class="paramref">fn</code> produit des clés dupliquées, une exception sera levée lors de la construction du dictionnaire résultant.</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_MapValues_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.MapValues*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_MapValues__3_System_Collections_Generic_IDictionary___0___1__System_Func___1___0___2__" data-uid="Rotomeca.Utils.Dictionaries.Dicts.MapValues``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,``0,``2})">
+  MapValues&lt;TKey, TValue, TNewValue&gt;(IDictionary&lt;TKey, TValue&gt;, Func&lt;TValue, TKey, TNewValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne un nouveau dictionnaire dont les valeurs ont été transformées par la fonction <code class="paramref">fn</code>.
+Les clés sont conservées à l'identique.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TKey, TNewValue&gt; MapValues&lt;TKey, TValue, TNewValue&gt;(this IDictionary&lt;TKey, TValue&gt; dict, Func&lt;TValue, TKey, TNewValue&gt; fn) where TKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dict</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire source.</p>
+</dd>
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TValue, TKey, TNewValue&gt;</dt>
+    <dd><p>Fonction de transformation appelée avec la valeur et la clé courantes.
+Retourne la nouvelle valeur associée à cette clé.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TNewValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire avec les mêmes clés et les valeurs transformées.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs sources.</p>
+</dd>
+    <dt><code>TNewValue</code></dt>
+    <dd><p>Le type des valeurs résultantes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_Omit_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.Omit*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_Omit__2_System_Collections_Generic_IDictionary___0___1____0___" data-uid="Rotomeca.Utils.Dictionaries.Dicts.Omit``2(System.Collections.Generic.IDictionary{``0,``1},``0[])">
+  Omit&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, params TKey[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne un nouveau dictionnaire excluant les clés spécifiées.
+Les clés absentes du dictionnaire source sont silencieusement ignorées.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TKey, TValue&gt; Omit&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; obj, params TKey[] keys) where TKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire source.</p>
+</dd>
+    <dt><code>keys</code> TKey[]</dt>
+    <dd><p>Les clés à exclure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire contenant toutes les entrées sauf celles dont la clé figure dans <code class="paramref">keys</code>.
+Retourne une copie complète du dictionnaire source si <code class="paramref">keys</code> est vide.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_Pick_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.Pick*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_Pick__2_System_Collections_Generic_IDictionary___0___1____0___" data-uid="Rotomeca.Utils.Dictionaries.Dicts.Pick``2(System.Collections.Generic.IDictionary{``0,``1},``0[])">
+  Pick&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, params TKey[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne un nouveau dictionnaire contenant uniquement les clés spécifiées.
+Les clés absentes du dictionnaire source sont silencieusement ignorées.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;TKey, TValue&gt; Pick&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; obj, params TKey[] keys) where TKey : notnull</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Le dictionnaire source.</p>
+</dd>
+    <dt><code>keys</code> TKey[]</dt>
+    <dd><p>Les clés à conserver.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</dt>
+    <dd><p>Un nouveau dictionnaire contenant uniquement les entrées dont la clé figure dans <code class="paramref">keys</code>.
+Retourne un dictionnaire vide si <code class="paramref">keys</code> est vide.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>Le type des clés.</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>Le type des valeurs.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Dictionaries_Dicts_UnflattenObject_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject*"></a>
+
+  <h3 id="Rotomeca_Utils_Dictionaries_Dicts_UnflattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+  UnflattenObject(IDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reconstruit un dictionnaire imbriqué à partir d'un dictionnaire plat
+dont les clés encodent la profondeur via un séparateur.
+Opération inverse de <a class="xref" href="Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_">FlattenObject(IDictionary&lt;string, object?&gt;, string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;string, object?&gt; UnflattenObject(this IDictionary&lt;string, object?&gt; obj, string separator = &quot;.&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Le dictionnaire plat à reconstruire.</p>
+</dd>
+    <dt><code>separator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Le séparateur utilisé pour découper les clés. Par défaut : <code>&quot;.&quot;</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Un nouveau dictionnaire imbriqué reconstruit à partir des chemins de clés.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Dictionaries_Dicts_UnflattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String__examples">Examples</h4>
+  <pre><code class="lang-csharp">// { "a.b.c": 1 } → { "a": { "b": { "c": 1 } } }
+var nested = flat.UnflattenObject();</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Dictionaries_Dicts_UnflattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Si une clé intermédiaire existe déjà avec une valeur qui n'est pas un dictionnaire,
+elle est écrasée par un nouveau dictionnaire.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Dictionnaries/Dicts.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

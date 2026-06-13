@@ -1,0 +1,1719 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Types.Random
+  commentId: T:Rotomeca.Utils.Types.Random
+  id: Random
+  parent: Rotomeca.Utils.Types
+  children:
+  - Rotomeca.Utils.Types.Random.IntRange(System.Int32,System.Int32,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Next
+  - Rotomeca.Utils.Types.Random.Next(System.Int32,System.Int32)
+  - Rotomeca.Utils.Types.Random.NextDouble
+  - Rotomeca.Utils.Types.Random.RandomString(System.UInt32,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.RandomStringBMP(System.UInt32,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.RandomStringUnicode(System.UInt32,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range(System.Double,System.Double,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range(System.Int64,System.Int64,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range(System.Single,System.Single,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range(System.UInt32,System.UInt32,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range(System.UInt64,System.UInt64,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.Range``1(``0,``0,System.Nullable{System.Int32})
+  - Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Random
+  nameWithType: Random
+  fullName: Rotomeca.Utils.Types.Random
+  type: Class
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Random
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 21
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Générateur de nombres aléatoires singleton.
+
+    Encapsule <xref href="System.Random" data-throw-if-not-resolved="false"></xref> en exposant des méthodes statiques utilitaires
+
+    avec support optionnel de graine (<code>seed</code>).
+  example: []
+  syntax:
+    content: public class Random
+    content.vb: Public Class Random
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Rotomeca.Utils.Types.Random.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Types.Random.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Types.Random.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Types.Random,{TResult}})
+  - Rotomeca.Utils.Types.Random.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Types.Random,{TResult}})
+- uid: Rotomeca.Utils.Types.Random.Next
+  commentId: M:Rotomeca.Utils.Types.Random.Next
+  id: Next
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Next()
+  nameWithType: Random.Next()
+  fullName: Rotomeca.Utils.Types.Random.Next()
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Next
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 45
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire non négatif.
+  example: []
+  syntax:
+    content: public int Next()
+    return:
+      type: System.Int32
+      description: Un entier aléatoire dans l'intervalle [0, <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref>).
+    content.vb: Public Function [Next]() As Integer
+  overload: Rotomeca.Utils.Types.Random.Next*
+- uid: Rotomeca.Utils.Types.Random.Next(System.Int32,System.Int32)
+  commentId: M:Rotomeca.Utils.Types.Random.Next(System.Int32,System.Int32)
+  id: Next(System.Int32,System.Int32)
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Next(int, int)
+  nameWithType: Random.Next(int, int)
+  fullName: Rotomeca.Utils.Types.Random.Next(int, int)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Next
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 56
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire dans l'intervalle spécifié.
+  example: []
+  syntax:
+    content: public int Next(int min, int max)
+    parameters:
+    - id: min
+      type: System.Int32
+      description: Borne inférieure inclusive.
+    - id: max
+      type: System.Int32
+      description: Borne supérieure exclusive.
+    return:
+      type: System.Int32
+      description: Un entier aléatoire dans l'intervalle [<code class="paramref">min</code>, <code class="paramref">max</code>).
+    content.vb: Public Function [Next](min As Integer, max As Integer) As Integer
+  overload: Rotomeca.Utils.Types.Random.Next*
+  nameWithType.vb: Random.Next(Integer, Integer)
+  fullName.vb: Rotomeca.Utils.Types.Random.Next(Integer, Integer)
+  name.vb: Next(Integer, Integer)
+- uid: Rotomeca.Utils.Types.Random.NextDouble
+  commentId: M:Rotomeca.Utils.Types.Random.NextDouble
+  id: NextDouble
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: NextDouble()
+  nameWithType: Random.NextDouble()
+  fullName: Rotomeca.Utils.Types.Random.NextDouble()
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: NextDouble
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 65
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un nombre à virgule flottante aléatoire.
+  example: []
+  syntax:
+    content: public double NextDouble()
+    return:
+      type: System.Double
+      description: Un <xref href="System.Double" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle [0.0, 1.0).
+    content.vb: Public Function NextDouble() As Double
+  overload: Rotomeca.Utils.Types.Random.NextDouble*
+- uid: Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+  commentId: M:Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+  id: UpdateSeed(System.Int32)
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: UpdateSeed(int)
+  nameWithType: Random.UpdateSeed(int)
+  fullName: Rotomeca.Utils.Types.Random.UpdateSeed(int)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: UpdateSeed
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 76
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Met à jour la graine du générateur sous-jacent.
+
+    Si la graine fournie est identique à la dernière appliquée, l'opération est ignorée.
+  example: []
+  syntax:
+    content: public Random UpdateSeed(int seed)
+    parameters:
+    - id: seed
+      type: System.Int32
+      description: La nouvelle graine à appliquer.
+    return:
+      type: Rotomeca.Utils.Types.Random
+      description: L'instance courante, pour permettre le chaînage.
+    content.vb: Public Function UpdateSeed(seed As Integer) As Random
+  overload: Rotomeca.Utils.Types.Random.UpdateSeed*
+  nameWithType.vb: Random.UpdateSeed(Integer)
+  fullName.vb: Rotomeca.Utils.Types.Random.UpdateSeed(Integer)
+  name.vb: UpdateSeed(Integer)
+- uid: Rotomeca.Utils.Types.Random.IntRange(System.Int32,System.Int32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.IntRange(System.Int32,System.Int32,System.Nullable{System.Int32})
+  id: IntRange(System.Int32,System.Int32,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: IntRange(int, int, int?)
+  nameWithType: Random.IntRange(int, int, int?)
+  fullName: Rotomeca.Utils.Types.Random.IntRange(int, int, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IntRange
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 103
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Retourne un entier aléatoire dans l'intervalle spécifié.
+
+    Alias typé de <xref href="Rotomeca.Utils.Types.Random.Range(System.Int32%2cSystem.Int32%2cSystem.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static int IntRange(int min, int max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.Int32
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.Int32
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.Int32
+      description: Un entier aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function IntRange(min As Integer, max As Integer, seed As Integer? = Nothing) As Integer
+  overload: Rotomeca.Utils.Types.Random.IntRange*
+  nameWithType.vb: Random.IntRange(Integer, Integer, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.IntRange(Integer, Integer, Integer?)
+  name.vb: IntRange(Integer, Integer, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+  id: Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range(int, int, int?)
+  nameWithType: Random.Range(int, int, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(int, int, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Range
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 144
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire dans l'intervalle spécifié.
+  example: []
+  syntax:
+    content: public static int Range(int min, int max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.Int32
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.Int32
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.Int32
+      description: Un <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(min As Integer, max As Integer, seed As Integer? = Nothing) As Integer
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(Integer, Integer, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(Integer, Integer, Integer?)
+  name.vb: Range(Integer, Integer, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range(System.UInt32,System.UInt32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.UInt32,System.UInt32,System.Nullable{System.Int32})
+  id: Range(System.UInt32,System.UInt32,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range(uint, uint, int?)
+  nameWithType: Random.Range(uint, uint, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(uint, uint, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Range
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 148
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire dans l'intervalle spécifié.
+  example: []
+  syntax:
+    content: public static uint Range(uint min, uint max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.UInt32
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.UInt32
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.UInt32
+      description: Un <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(min As UInteger, max As UInteger, seed As Integer? = Nothing) As UInteger
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(UInteger, UInteger, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(UInteger, UInteger, Integer?)
+  name.vb: Range(UInteger, UInteger, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range(System.Int64,System.Int64,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.Int64,System.Int64,System.Nullable{System.Int32})
+  id: Range(System.Int64,System.Int64,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range(long, long, int?)
+  nameWithType: Random.Range(long, long, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(long, long, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Range
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 152
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire dans l'intervalle spécifié.
+  example: []
+  syntax:
+    content: public static long Range(long min, long max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.Int64
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.Int64
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.Int64
+      description: Un <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(min As Long, max As Long, seed As Integer? = Nothing) As Long
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(Long, Long, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(Long, Long, Integer?)
+  name.vb: Range(Long, Long, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range(System.UInt64,System.UInt64,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.UInt64,System.UInt64,System.Nullable{System.Int32})
+  id: Range(System.UInt64,System.UInt64,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range(ulong, ulong, int?)
+  nameWithType: Random.Range(ulong, ulong, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(ulong, ulong, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Range
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 156
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire dans l'intervalle spécifié.
+  example: []
+  syntax:
+    content: public static ulong Range(ulong min, ulong max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.UInt64
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.UInt64
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.UInt64
+      description: Un <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(min As ULong, max As ULong, seed As Integer? = Nothing) As ULong
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(ULong, ULong, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(ULong, ULong, Integer?)
+  name.vb: Range(ULong, ULong, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range(System.Single,System.Single,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.Single,System.Single,System.Nullable{System.Int32})
+  id: Range(System.Single,System.Single,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range(float, float, int?)
+  nameWithType: Random.Range(float, float, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(float, float, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Range
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 160
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Retourne un entier aléatoire dans l'intervalle spécifié.
+  example: []
+  syntax:
+    content: public static float Range(float min, float max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.Single
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.Single
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.Single
+      description: Un <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(min As Single, max As Single, seed As Integer? = Nothing) As Single
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(Single, Single, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(Single, Single, Integer?)
+  name.vb: Range(Single, Single, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range(System.Double,System.Double,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.Double,System.Double,System.Nullable{System.Int32})
+  id: Range(System.Double,System.Double,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range(double, double, int?)
+  nameWithType: Random.Range(double, double, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(double, double, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Range
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 170
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Retourne un nombre à virgule flottante double précision aléatoire dans l'intervalle spécifié.
+
+    Toutes les surcharges numériques de <code>Range</code> délèguent à cette méthode.
+  example: []
+  syntax:
+    content: public static double Range(double min, double max, int? seed = null)
+    parameters:
+    - id: min
+      type: System.Double
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: System.Double
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    return:
+      type: System.Double
+      description: Un <xref href="System.Double" data-throw-if-not-resolved="false"></xref> aléatoire dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(min As Double, max As Double, seed As Integer? = Nothing) As Double
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(Double, Double, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(Double, Double, Integer?)
+  name.vb: Range(Double, Double, Integer?)
+- uid: Rotomeca.Utils.Types.Random.RandomString(System.UInt32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.RandomString(System.UInt32,System.Nullable{System.Int32})
+  id: RandomString(System.UInt32,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: RandomString(uint, int?)
+  nameWithType: Random.RandomString(uint, int?)
+  fullName: Rotomeca.Utils.Types.Random.RandomString(uint, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: RandomString
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 194
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Génère une chaîne aléatoire composée de lettres minuscules de l'alphabet latin (a–z).
+  remarks: >-
+    Si une graine est fournie, elle est transmise à chaque appel de <code>Range</code> dans la boucle.
+
+    La protection anti-double-seed d'<xref href="Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)" data-throw-if-not-resolved="false"></xref> garantit que la réinitialisation
+
+    n'a lieu qu'une seule fois, produisant une séquence déterministe reproductible.
+  example: []
+  syntax:
+    content: public static string RandomString(uint size, int? seed = null)
+    parameters:
+    - id: size
+      type: System.UInt32
+      description: Longueur de la chaîne à générer.
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle pour une séquence reproductible.
+    return:
+      type: System.String
+      description: Une chaîne aléatoire de longueur <code class="paramref">size</code>.
+    content.vb: Public Shared Function RandomString(size As UInteger, seed As Integer? = Nothing) As String
+  overload: Rotomeca.Utils.Types.Random.RandomString*
+  nameWithType.vb: Random.RandomString(UInteger, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.RandomString(UInteger, Integer?)
+  name.vb: RandomString(UInteger, Integer?)
+- uid: Rotomeca.Utils.Types.Random.RandomStringBMP(System.UInt32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.RandomStringBMP(System.UInt32,System.Nullable{System.Int32})
+  id: RandomStringBMP(System.UInt32,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: RandomStringBMP(uint, int?)
+  nameWithType: Random.RandomStringBMP(uint, int?)
+  fullName: Rotomeca.Utils.Types.Random.RandomStringBMP(uint, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: RandomStringBMP
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 228
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Génère une chaîne aléatoire composée de caractères tirés du Plan Multilingue de Base (BMP) Unicode,
+
+    couvrant l'intégralité des points de code U+0000 à U+FFFF, à l'exclusion des surrogates.
+  remarks: >-
+    <p>
+
+    Les surrogates (U+D800–U+DFFF) sont exclus car ils ne sont pas des caractères Unicode valides seuls.
+
+    L'espace valide couvre 63 488 caractères : U+0000–U+D7FF et U+E000–U+FFFF.
+
+    </p>
+
+    <p>
+
+    Chaque caractère généré occupe exactement un <xref href="System.Char" data-throw-if-not-resolved="false"></xref> en mémoire.
+
+    La longueur de la chaîne retournée est donc toujours égale à <code class="paramref">size</code>.
+
+    </p>
+  example: []
+  syntax:
+    content: public static string RandomStringBMP(uint size, int? seed = null)
+    parameters:
+    - id: size
+      type: System.UInt32
+      description: Nombre de caractères à générer.
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle pour une séquence reproductible.
+    return:
+      type: System.String
+      description: Une chaîne de longueur <code class="paramref">size</code> composée de caractères BMP valides.
+    content.vb: Public Shared Function RandomStringBMP(size As UInteger, seed As Integer? = Nothing) As String
+  overload: Rotomeca.Utils.Types.Random.RandomStringBMP*
+  nameWithType.vb: Random.RandomStringBMP(UInteger, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.RandomStringBMP(UInteger, Integer?)
+  name.vb: RandomStringBMP(UInteger, Integer?)
+- uid: Rotomeca.Utils.Types.Random.RandomStringUnicode(System.UInt32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.RandomStringUnicode(System.UInt32,System.Nullable{System.Int32})
+  id: RandomStringUnicode(System.UInt32,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: RandomStringUnicode(uint, int?)
+  nameWithType: Random.RandomStringUnicode(uint, int?)
+  fullName: Rotomeca.Utils.Types.Random.RandomStringUnicode(uint, int?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/Random.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: RandomStringUnicode
+    path: Rotomeca.Utils.Core/Types/Random.cs
+    startLine: 273
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Génère une chaîne aléatoire composée de caractères tirés de l'intégralité
+
+    de l'espace Unicode (U+0000 à U+10FFFF), à l'exclusion des surrogates.
+  remarks: >-
+    <p>
+
+    Les surrogates (U+D800–U+DFFF) sont exclus. L'espace valide couvre 1 112 064 scalaires :
+
+    U+0000–U+D7FF et U+E000–U+10FFFF.
+
+    </p>
+
+    <p>
+
+    Les points de code au-delà de U+FFFF (plans supplémentaires : emojis, caractères historiques, etc.)
+
+    sont encodés en UTF-16 sous forme de paires surrogate, ce qui signifie que la longueur
+
+    de la chaîne en <xref href="System.Char" data-throw-if-not-resolved="false"></xref> peut être supérieure à <code class="paramref">size</code>.
+
+    </p>
+
+    <p>
+
+    <xref href="System.Char.ConvertFromUtf32(System.Int32)" data-throw-if-not-resolved="false"></xref> est utilisé pour garantir la compatibilité avec
+
+    NETSTANDARD2.0 sans dépendance à <code>System.Text.Rune</code>.
+
+    </p>
+  example: []
+  syntax:
+    content: public static string RandomStringUnicode(uint size, int? seed = null)
+    parameters:
+    - id: size
+      type: System.UInt32
+      description: Nombre de points de code (scalaires Unicode) à générer.
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle pour une séquence reproductible.
+    return:
+      type: System.String
+      description: >-
+        Une chaîne composée de <code class="paramref">size</code> scalaires Unicode valides.
+
+        Sa longueur en <xref href="System.Char" data-throw-if-not-resolved="false"></xref> peut dépasser <code class="paramref">size</code>
+
+        si des caractères hors-BMP sont générés.
+    content.vb: Public Shared Function RandomStringUnicode(size As UInteger, seed As Integer? = Nothing) As String
+  overload: Rotomeca.Utils.Types.Random.RandomStringUnicode*
+  nameWithType.vb: Random.RandomStringUnicode(UInteger, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.RandomStringUnicode(UInteger, Integer?)
+  name.vb: RandomStringUnicode(UInteger, Integer?)
+- uid: Rotomeca.Utils.Types.Random.Range``1(``0,``0,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range``1(``0,``0,System.Nullable{System.Int32})
+  id: Range``1(``0,``0,System.Nullable{System.Int32})
+  parent: Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Range<T>(T, T, int?)
+  nameWithType: Random.Range<T>(T, T, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range<T>(T, T, int?)
+  type: Method
+  source:
+    href: https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Types/Random.cs
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Retourne une valeur aléatoire de type <code class="typeparamref">T</code> dans l'intervalle spécifié.
+
+    Les bornes sont automatiquement normalisées si <code class="paramref">min</code> &gt; <code class="paramref">max</code>.
+  remarks: >-
+    Le calcul est effectué en <xref href="System.Double" data-throw-if-not-resolved="false"></xref> puis converti vers <code class="typeparamref">T</code> via
+
+    <code>T.CreateChecked</code>, ce qui garantit la précision
+
+    pour les types entiers comme virgule flottante.
+  example: []
+  syntax:
+    content: 'public static T Range<T>(T min, T max, int? seed = null) where T : INumber<T>'
+    parameters:
+    - id: min
+      type: '{T}'
+      description: Borne inférieure (inclusive après normalisation).
+    - id: max
+      type: '{T}'
+      description: Borne supérieure (exclusive après normalisation).
+    - id: seed
+      type: System.Nullable{System.Int32}
+      description: Graine optionnelle. Si fournie, réinitialise le générateur avant la génération.
+    typeParameters:
+    - id: T
+      description: Le type numérique de la valeur retournée. Doit implémenter <xref href="System.Numerics.INumber%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: '{T}'
+      description: Une valeur de type <code class="typeparamref">T</code> dans l'intervalle normalisé [min, max).
+    content.vb: Public Shared Function Range(Of T As INumber(Of T))(min As T, max As T, seed As Integer? = Nothing) As T
+  overload: Rotomeca.Utils.Types.Random.Range*
+  nameWithType.vb: Random.Range(Of T)(T, T, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(Of T)(T, T, Integer?)
+  name.vb: Range(Of T)(T, T, Integer?)
+references:
+- uid: System.Random
+  commentId: T:System.Random
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: Rotomeca.Utils.Types
+  commentId: N:Rotomeca.Utils.Types
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Types
+  nameWithType: Rotomeca.Utils.Types
+  fullName: Rotomeca.Utils.Types
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Rotomeca.Utils.Types.Random.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  definition: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<Random>(Random, Action<string>)
+  nameWithType: Dicts.DeepClone<Random>(Random, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<Rotomeca.Utils.Types.Random>(Rotomeca.Utils.Types.Random, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of Random)(Random, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of Rotomeca.Utils.Types.Random)(Rotomeca.Utils.Types.Random, System.Action(Of String))
+  name.vb: DeepClone(Of Random)(Random, Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Types.Random,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Types.Random,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Types.Random.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Types.Random,{TResult}})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  parent: Rotomeca.Utils._____StPipeExtensions
+  definition: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<Random, TResult>(Random, Func<Random, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<Random, TResult>(Random, Func<Random, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<Rotomeca.Utils.Types.Random, TResult>(Rotomeca.Utils.Types.Random, System.Func<Rotomeca.Utils.Types.Random, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of Random, TResult)(Random, Func(Of Random, TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of Rotomeca.Utils.Types.Random, TResult)(Rotomeca.Utils.Types.Random, System.Func(Of Rotomeca.Utils.Types.Random, TResult))
+  name.vb: Pipe(Of Random, TResult)(Random, Func(Of Random, TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Types.Random,System.Func{Rotomeca.Utils.Types.Random,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Types.Random,System.Func{Rotomeca.Utils.Types.Random,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.Random
+    name: Random
+    href: Rotomeca.Utils.Types.Random.html
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  isExternal: true
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<T>(T, Action<string>)
+  nameWithType: Dicts.DeepClone<T>(T, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<T>(T, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of T)(T, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of T)(T, System.Action(Of String))
+  name.vb: DeepClone(Of T)(T, Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts
+  commentId: T:Rotomeca.Utils.Dictionaries.Dicts
+  parent: Rotomeca.Utils.Dictionaries
+  href: Rotomeca.Utils.Dictionaries.Dicts.html
+  name: Dicts
+  nameWithType: Dicts
+  fullName: Rotomeca.Utils.Dictionaries.Dicts
+- uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<T, TResult>(T, Func<T, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<T, TResult>(T, Func<T, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<T, TResult>(T, System.Func<T, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of T, TResult)(T, System.Func(Of T, TResult))
+  name.vb: Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils._____StPipeExtensions
+  commentId: T:Rotomeca.Utils._____StPipeExtensions
+  parent: Rotomeca.Utils
+  href: Rotomeca.Utils._____StPipeExtensions.html
+  name: _____StPipeExtensions
+  nameWithType: _____StPipeExtensions
+  fullName: Rotomeca.Utils._____StPipeExtensions
+- uid: Rotomeca.Utils.Dictionaries
+  commentId: N:Rotomeca.Utils.Dictionaries
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Dictionaries
+  nameWithType: Rotomeca.Utils.Dictionaries
+  fullName: Rotomeca.Utils.Dictionaries
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+- uid: Rotomeca.Utils
+  commentId: N:Rotomeca.Utils
+  href: Rotomeca.html
+  name: Rotomeca.Utils
+  nameWithType: Rotomeca.Utils
+  fullName: Rotomeca.Utils
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+- uid: System.Int32.MaxValue
+  commentId: F:System.Int32.MaxValue
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32.maxvalue
+  name: MaxValue
+  nameWithType: int.MaxValue
+  fullName: int.MaxValue
+  nameWithType.vb: Integer.MaxValue
+  fullName.vb: Integer.MaxValue
+- uid: Rotomeca.Utils.Types.Random.Next*
+  commentId: Overload:Rotomeca.Utils.Types.Random.Next
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_Next
+  name: Next
+  nameWithType: Random.Next
+  fullName: Rotomeca.Utils.Types.Random.Next
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Rotomeca.Utils.Types.Random.NextDouble*
+  commentId: Overload:Rotomeca.Utils.Types.Random.NextDouble
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_NextDouble
+  name: NextDouble
+  nameWithType: Random.NextDouble
+  fullName: Rotomeca.Utils.Types.Random.NextDouble
+- uid: Rotomeca.Utils.Types.Random.UpdateSeed*
+  commentId: Overload:Rotomeca.Utils.Types.Random.UpdateSeed
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_UpdateSeed_System_Int32_
+  name: UpdateSeed
+  nameWithType: Random.UpdateSeed
+  fullName: Rotomeca.Utils.Types.Random.UpdateSeed
+- uid: Rotomeca.Utils.Types.Random
+  commentId: T:Rotomeca.Utils.Types.Random
+  parent: Rotomeca.Utils.Types
+  href: Rotomeca.Utils.Types.Random.html
+  name: Random
+  nameWithType: Random
+  fullName: Rotomeca.Utils.Types.Random
+- uid: Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+  commentId: M:Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+  isExternal: true
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_Range_System_Int32_System_Int32_System_Nullable_System_Int32__
+  name: Range(int, int, int?)
+  nameWithType: Random.Range(int, int, int?)
+  fullName: Rotomeca.Utils.Types.Random.Range(int, int, int?)
+  nameWithType.vb: Random.Range(Integer, Integer, Integer?)
+  fullName.vb: Rotomeca.Utils.Types.Random.Range(Integer, Integer, Integer?)
+  name.vb: Range(Integer, Integer, Integer?)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+    name: Range
+    href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_Range_System_Int32_System_Int32_System_Nullable_System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Random.Range(System.Int32,System.Int32,System.Nullable{System.Int32})
+    name: Range
+    href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_Range_System_Int32_System_Int32_System_Nullable_System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: )
+- uid: Rotomeca.Utils.Types.Random.IntRange*
+  commentId: Overload:Rotomeca.Utils.Types.Random.IntRange
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_IntRange_System_Int32_System_Int32_System_Nullable_System_Int32__
+  name: IntRange
+  nameWithType: Random.IntRange
+  fullName: Rotomeca.Utils.Types.Random.IntRange
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.Random.Range*
+  commentId: Overload:Rotomeca.Utils.Types.Random.Range
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_Range_System_Int32_System_Int32_System_Nullable_System_Int32__
+  name: Range
+  nameWithType: Random.Range
+  fullName: Rotomeca.Utils.Types.Random.Range
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+  commentId: M:Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+  isExternal: true
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_UpdateSeed_System_Int32_
+  name: UpdateSeed(int)
+  nameWithType: Random.UpdateSeed(int)
+  fullName: Rotomeca.Utils.Types.Random.UpdateSeed(int)
+  nameWithType.vb: Random.UpdateSeed(Integer)
+  fullName.vb: Rotomeca.Utils.Types.Random.UpdateSeed(Integer)
+  name.vb: UpdateSeed(Integer)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+    name: UpdateSeed
+    href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_UpdateSeed_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Random.UpdateSeed(System.Int32)
+    name: UpdateSeed
+    href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_UpdateSeed_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Rotomeca.Utils.Types.Random.RandomString*
+  commentId: Overload:Rotomeca.Utils.Types.Random.RandomString
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_RandomString_System_UInt32_System_Nullable_System_Int32__
+  name: RandomString
+  nameWithType: Random.RandomString
+  fullName: Rotomeca.Utils.Types.Random.RandomString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Char
+  commentId: T:System.Char
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Rotomeca.Utils.Types.Random.RandomStringBMP*
+  commentId: Overload:Rotomeca.Utils.Types.Random.RandomStringBMP
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_RandomStringBMP_System_UInt32_System_Nullable_System_Int32__
+  name: RandomStringBMP
+  nameWithType: Random.RandomStringBMP
+  fullName: Rotomeca.Utils.Types.Random.RandomStringBMP
+- uid: System.Char.ConvertFromUtf32(System.Int32)
+  commentId: M:System.Char.ConvertFromUtf32(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char.convertfromutf32
+  name: ConvertFromUtf32(int)
+  nameWithType: char.ConvertFromUtf32(int)
+  fullName: char.ConvertFromUtf32(int)
+  nameWithType.vb: Char.ConvertFromUtf32(Integer)
+  fullName.vb: Char.ConvertFromUtf32(Integer)
+  name.vb: ConvertFromUtf32(Integer)
+  spec.csharp:
+  - uid: System.Char.ConvertFromUtf32(System.Int32)
+    name: ConvertFromUtf32
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char.convertfromutf32
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Char.ConvertFromUtf32(System.Int32)
+    name: ConvertFromUtf32
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char.convertfromutf32
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Rotomeca.Utils.Types.Random.RandomStringUnicode*
+  commentId: Overload:Rotomeca.Utils.Types.Random.RandomStringUnicode
+  href: Rotomeca.Utils.Types.Random.html#Rotomeca_Utils_Types_Random_RandomStringUnicode_System_UInt32_System_Nullable_System_Int32__
+  name: RandomStringUnicode
+  nameWithType: Random.RandomStringUnicode
+  fullName: Rotomeca.Utils.Types.Random.RandomStringUnicode
+- uid: System.Numerics.INumber`1
+  commentId: T:System.Numerics.INumber`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<TSelf>
+  nameWithType: INumber<TSelf>
+  fullName: System.Numerics.INumber<TSelf>
+  nameWithType.vb: INumber(Of TSelf)
+  fullName.vb: System.Numerics.INumber(Of TSelf)
+  name.vb: INumber(Of TSelf)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

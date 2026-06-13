@@ -1,0 +1,604 @@
+### YamlMime:ManagedReference
+items:
+- uid: System.Threading.Tasks.IValueTask`1
+  commentId: T:System.Threading.Tasks.IValueTask`1
+  id: IValueTask`1
+  parent: System.Threading.Tasks
+  children:
+  - System.Threading.Tasks.IValueTask`1.GetAwaiter
+  langs:
+  - csharp
+  - vb
+  name: IValueTask<T>
+  nameWithType: IValueTask<T>
+  fullName: System.Threading.Tasks.IValueTask<T>
+  type: Interface
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Polyfills.AsyncEnumerable.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IValueTask
+    path: Rotomeca.Utils.Core/Polyfills.AsyncEnumerable.cs
+    startLine: 75
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: System.Threading.Tasks
+  summary: >-
+    Contrat minimal permettant d'awaiter un <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref> avec résultat
+
+    sur netstandard2.0.
+  example: []
+  syntax:
+    content: public interface IValueTask<T>
+    typeParameters:
+    - id: T
+      description: Le type du résultat.
+    content.vb: Public Interface IValueTask(Of T)
+  extensionMethods:
+  - System.Threading.Tasks.IValueTask`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - System.Threading.Tasks.IValueTask`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - System.Threading.Tasks.IValueTask`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{System.Threading.Tasks.IValueTask{{T}},{TResult}})
+  - System.Threading.Tasks.IValueTask`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{System.Threading.Tasks.IValueTask{{T}},{TResult}})
+  nameWithType.vb: IValueTask(Of T)
+  fullName.vb: System.Threading.Tasks.IValueTask(Of T)
+  name.vb: IValueTask(Of T)
+- uid: System.Threading.Tasks.IValueTask`1.GetAwaiter
+  commentId: M:System.Threading.Tasks.IValueTask`1.GetAwaiter
+  id: GetAwaiter
+  parent: System.Threading.Tasks.IValueTask`1
+  langs:
+  - csharp
+  - vb
+  name: GetAwaiter()
+  nameWithType: IValueTask<T>.GetAwaiter()
+  fullName: System.Threading.Tasks.IValueTask<T>.GetAwaiter()
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Polyfills.AsyncEnumerable.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: GetAwaiter
+    path: Rotomeca.Utils.Core/Polyfills.AsyncEnumerable.cs
+    startLine: 78
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: System.Threading.Tasks
+  summary: Retourne l'awaiter de la tâche.
+  example: []
+  syntax:
+    content: TaskAwaiter<T> GetAwaiter()
+    return:
+      type: System.Runtime.CompilerServices.TaskAwaiter{{T}}
+    content.vb: Function GetAwaiter() As TaskAwaiter(Of T)
+  overload: System.Threading.Tasks.IValueTask`1.GetAwaiter*
+  nameWithType.vb: IValueTask(Of T).GetAwaiter()
+  fullName.vb: System.Threading.Tasks.IValueTask(Of T).GetAwaiter()
+references:
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  name: ValueTask<T>
+  nameWithType: ValueTask<T>
+  fullName: System.Threading.Tasks.ValueTask<T>
+  nameWithType.vb: ValueTask(Of T)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of T)
+  name.vb: ValueTask(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Threading.Tasks.IValueTask`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  definition: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<IValueTask<T>>(IValueTask<T>, Action<string>)
+  nameWithType: Dicts.DeepClone<IValueTask<T>>(IValueTask<T>, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<System.Threading.Tasks.IValueTask<T>>(System.Threading.Tasks.IValueTask<T>, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of IValueTask(Of T))(IValueTask(Of T), Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of System.Threading.Tasks.IValueTask(Of T))(System.Threading.Tasks.IValueTask(Of T), System.Action(Of String))
+  name.vb: DeepClone(Of IValueTask(Of T))(IValueTask(Of T), Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Threading.Tasks.IValueTask{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Threading.Tasks.IValueTask{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.IValueTask`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{System.Threading.Tasks.IValueTask{{T}},{TResult}})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  parent: Rotomeca.Utils._____StPipeExtensions
+  definition: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<IValueTask<T>, TResult>(IValueTask<T>, Func<IValueTask<T>, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<IValueTask<T>, TResult>(IValueTask<T>, Func<IValueTask<T>, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<System.Threading.Tasks.IValueTask<T>, TResult>(System.Threading.Tasks.IValueTask<T>, System.Func<System.Threading.Tasks.IValueTask<T>, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of IValueTask(Of T), TResult)(IValueTask(Of T), Func(Of IValueTask(Of T), TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of System.Threading.Tasks.IValueTask(Of T), TResult)(System.Threading.Tasks.IValueTask(Of T), System.Func(Of System.Threading.Tasks.IValueTask(Of T), TResult))
+  name.vb: Pipe(Of IValueTask(Of T), TResult)(IValueTask(Of T), Func(Of IValueTask(Of T), TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Threading.Tasks.IValueTask{`0},System.Func{System.Threading.Tasks.IValueTask{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Threading.Tasks.IValueTask{`0},System.Func{System.Threading.Tasks.IValueTask{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Threading.Tasks.IValueTask`1
+    name: IValueTask
+    href: System.Threading.Tasks.IValueTask-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  isExternal: true
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<T>(T, Action<string>)
+  nameWithType: Dicts.DeepClone<T>(T, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<T>(T, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of T)(T, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of T)(T, System.Action(Of String))
+  name.vb: DeepClone(Of T)(T, Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts
+  commentId: T:Rotomeca.Utils.Dictionaries.Dicts
+  parent: Rotomeca.Utils.Dictionaries
+  href: Rotomeca.Utils.Dictionaries.Dicts.html
+  name: Dicts
+  nameWithType: Dicts
+  fullName: Rotomeca.Utils.Dictionaries.Dicts
+- uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<T, TResult>(T, Func<T, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<T, TResult>(T, Func<T, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<T, TResult>(T, System.Func<T, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of T, TResult)(T, System.Func(Of T, TResult))
+  name.vb: Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils._____StPipeExtensions
+  commentId: T:Rotomeca.Utils._____StPipeExtensions
+  parent: Rotomeca.Utils
+  href: Rotomeca.Utils._____StPipeExtensions.html
+  name: _____StPipeExtensions
+  nameWithType: _____StPipeExtensions
+  fullName: Rotomeca.Utils._____StPipeExtensions
+- uid: Rotomeca.Utils.Dictionaries
+  commentId: N:Rotomeca.Utils.Dictionaries
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Dictionaries
+  nameWithType: Rotomeca.Utils.Dictionaries
+  fullName: Rotomeca.Utils.Dictionaries
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+- uid: Rotomeca.Utils
+  commentId: N:Rotomeca.Utils
+  href: Rotomeca.html
+  name: Rotomeca.Utils
+  nameWithType: Rotomeca.Utils
+  fullName: Rotomeca.Utils
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+- uid: System.Threading.Tasks.IValueTask`1.GetAwaiter*
+  commentId: Overload:System.Threading.Tasks.IValueTask`1.GetAwaiter
+  href: System.Threading.Tasks.IValueTask-1.html#System_Threading_Tasks_IValueTask_1_GetAwaiter
+  name: GetAwaiter
+  nameWithType: IValueTask<T>.GetAwaiter
+  fullName: System.Threading.Tasks.IValueTask<T>.GetAwaiter
+  nameWithType.vb: IValueTask(Of T).GetAwaiter
+  fullName.vb: System.Threading.Tasks.IValueTask(Of T).GetAwaiter
+- uid: System.Runtime.CompilerServices.TaskAwaiter{{T}}
+  commentId: T:System.Runtime.CompilerServices.TaskAwaiter{`0}
+  parent: System.Runtime.CompilerServices
+  definition: System.Runtime.CompilerServices.TaskAwaiter`1
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  name: TaskAwaiter<T>
+  nameWithType: TaskAwaiter<T>
+  fullName: System.Runtime.CompilerServices.TaskAwaiter<T>
+  nameWithType.vb: TaskAwaiter(Of T)
+  fullName.vb: System.Runtime.CompilerServices.TaskAwaiter(Of T)
+  name.vb: TaskAwaiter(Of T)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Runtime.CompilerServices.TaskAwaiter`1
+  commentId: T:System.Runtime.CompilerServices.TaskAwaiter`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  name: TaskAwaiter<TResult>
+  nameWithType: TaskAwaiter<TResult>
+  fullName: System.Runtime.CompilerServices.TaskAwaiter<TResult>
+  nameWithType.vb: TaskAwaiter(Of TResult)
+  fullName.vb: System.Runtime.CompilerServices.TaskAwaiter(Of TResult)
+  name.vb: TaskAwaiter(Of TResult)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.TaskAwaiter`1
+    name: TaskAwaiter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices.taskawaiter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
+  fullName: System.Runtime.CompilerServices
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.CompilerServices
+    name: CompilerServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.CompilerServices
+    name: CompilerServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.compilerservices

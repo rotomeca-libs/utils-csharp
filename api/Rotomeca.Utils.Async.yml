@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Async
+  commentId: N:Rotomeca.Utils.Async
+  id: Rotomeca.Utils.Async
+  children:
+  - Rotomeca.Utils.Async.Asynchronous
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Async
+  nameWithType: Rotomeca.Utils.Async
+  fullName: Rotomeca.Utils.Async
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Async.Asynchronous
+  commentId: T:Rotomeca.Utils.Async.Asynchronous
+  href: Rotomeca.Utils.Async.Asynchronous.html
+  name: Asynchronous
+  nameWithType: Asynchronous
+  fullName: Rotomeca.Utils.Async.Asynchronous

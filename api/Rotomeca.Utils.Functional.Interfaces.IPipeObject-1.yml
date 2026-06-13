@@ -1,0 +1,751 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  commentId: T:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  id: IPipeObject`1
+  parent: Rotomeca.Utils.Functional.Interfaces
+  children:
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Pipe``1(System.Func{`0,``0})
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Unpipe
+  langs:
+  - csharp
+  - vb
+  name: IPipeObject<T>
+  nameWithType: IPipeObject<T>
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>
+  type: Interface
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Functional/Pipe/interfaces/IPipeObject{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IPipeObject
+    path: Rotomeca.Utils.Core/Functional/Pipe/interfaces/IPipeObject{T}.cs
+    startLine: 8
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Functional.Interfaces
+  summary: >-
+    Définit le contrat d'un objet pipeline fonctionnel permettant
+
+    d'enchaîner des transformations successives sur une valeur.
+  example: []
+  syntax:
+    content: public interface IPipeObject<T>
+    typeParameters:
+    - id: T
+      description: Type de la valeur encapsulée par le pipeline.
+    content.vb: Public Interface IPipeObject(Of T)
+  seealso:
+  - linkId: Rotomeca.Utils.Functional.PipeObject`1
+    commentId: T:Rotomeca.Utils.Functional.PipeObject`1
+  derivedClasses:
+  - Rotomeca.Utils.Functional.PipeObject`1
+  extensionMethods:
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Functional.Interfaces.IPipeObject{{T}},{TResult}})
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Functional.Interfaces.IPipeObject{{T}},{TResult}})
+  nameWithType.vb: IPipeObject(Of T)
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T)
+  name.vb: IPipeObject(Of T)
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Pipe``1(System.Func{`0,``0})
+  commentId: M:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Pipe``1(System.Func{`0,``0})
+  id: Pipe``1(System.Func{`0,``0})
+  parent: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  langs:
+  - csharp
+  - vb
+  name: Pipe<Y>(Func<T, Y>)
+  nameWithType: IPipeObject<T>.Pipe<Y>(Func<T, Y>)
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>.Pipe<Y>(System.Func<T, Y>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Functional/Pipe/interfaces/IPipeObject{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Pipe
+    path: Rotomeca.Utils.Core/Functional/Pipe/interfaces/IPipeObject{T}.cs
+    startLine: 20
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Functional.Interfaces
+  summary: >-
+    Applique une fonction de transformation à la valeur courante
+
+    et retourne un nouveau pipeline contenant le résultat.
+  example: []
+  syntax:
+    content: IPipeObject<Y> Pipe<Y>(Func<T, Y> fn)
+    parameters:
+    - id: fn
+      type: System.Func{{T},{Y}}
+      description: Fonction de transformation à appliquer.
+    typeParameters:
+    - id: Y
+      description: Type produit par <code class="paramref">fn</code>.
+    return:
+      type: Rotomeca.Utils.Functional.Interfaces.IPipeObject{{Y}}
+      description: >-
+        Un nouveau <xref href="Rotomeca.Utils.Functional.Interfaces.IPipeObject%601" data-throw-if-not-resolved="false"></xref> encapsulant le résultat,
+
+        prêt pour une transformation supplémentaire.
+    content.vb: Function Pipe(Of Y)(fn As Func(Of T, Y)) As IPipeObject(Of Y)
+  overload: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Pipe*
+  nameWithType.vb: IPipeObject(Of T).Pipe(Of Y)(Func(Of T, Y))
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T).Pipe(Of Y)(System.Func(Of T, Y))
+  name.vb: Pipe(Of Y)(Func(Of T, Y))
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Unpipe
+  commentId: M:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Unpipe
+  id: Unpipe
+  parent: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  langs:
+  - csharp
+  - vb
+  name: Unpipe()
+  nameWithType: IPipeObject<T>.Unpipe()
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>.Unpipe()
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Functional/Pipe/interfaces/IPipeObject{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Unpipe
+    path: Rotomeca.Utils.Core/Functional/Pipe/interfaces/IPipeObject{T}.cs
+    startLine: 26
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Functional.Interfaces
+  summary: Termine le pipeline et retourne la valeur finale.
+  example: []
+  syntax:
+    content: T Unpipe()
+    return:
+      type: '{T}'
+      description: La valeur après toutes les transformations appliquées.
+    content.vb: Function Unpipe() As T
+  overload: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Unpipe*
+  nameWithType.vb: IPipeObject(Of T).Unpipe()
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T).Unpipe()
+references:
+- uid: Rotomeca.Utils.Functional.PipeObject`1
+  commentId: T:Rotomeca.Utils.Functional.PipeObject`1
+  parent: Rotomeca.Utils.Functional
+  href: Rotomeca.Utils.Functional.PipeObject-1.html
+  name: PipeObject<T>
+  nameWithType: PipeObject<T>
+  fullName: Rotomeca.Utils.Functional.PipeObject<T>
+  nameWithType.vb: PipeObject(Of T)
+  fullName.vb: Rotomeca.Utils.Functional.PipeObject(Of T)
+  name.vb: PipeObject(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Functional.PipeObject`1
+    name: PipeObject
+    href: Rotomeca.Utils.Functional.PipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Functional.PipeObject`1
+    name: PipeObject
+    href: Rotomeca.Utils.Functional.PipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Functional.Interfaces
+  commentId: N:Rotomeca.Utils.Functional.Interfaces
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Functional.Interfaces
+  nameWithType: Rotomeca.Utils.Functional.Interfaces
+  fullName: Rotomeca.Utils.Functional.Interfaces
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional
+    name: Functional
+    href: Rotomeca.Utils.Functional.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Functional.Interfaces.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional
+    name: Functional
+    href: Rotomeca.Utils.Functional.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Functional.Interfaces.html
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  definition: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<IPipeObject<T>>(IPipeObject<T>, Action<string>)
+  nameWithType: Dicts.DeepClone<IPipeObject<T>>(IPipeObject<T>, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>>(Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of IPipeObject(Of T))(IPipeObject(Of T), Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T))(Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T), System.Action(Of String))
+  name.vb: DeepClone(Of IPipeObject(Of T))(IPipeObject(Of T), Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Functional.Interfaces.IPipeObject{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Functional.Interfaces.IPipeObject{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Functional.Interfaces.IPipeObject{{T}},{TResult}})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  parent: Rotomeca.Utils._____StPipeExtensions
+  definition: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<IPipeObject<T>, TResult>(IPipeObject<T>, Func<IPipeObject<T>, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<IPipeObject<T>, TResult>(IPipeObject<T>, Func<IPipeObject<T>, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>, TResult>(Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>, System.Func<Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of IPipeObject(Of T), TResult)(IPipeObject(Of T), Func(Of IPipeObject(Of T), TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T), TResult)(Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T), System.Func(Of Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T), TResult))
+  name.vb: Pipe(Of IPipeObject(Of T), TResult)(IPipeObject(Of T), Func(Of IPipeObject(Of T), TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Functional.Interfaces.IPipeObject{`0},System.Func{Rotomeca.Utils.Functional.Interfaces.IPipeObject{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Functional.Interfaces.IPipeObject{`0},System.Func{Rotomeca.Utils.Functional.Interfaces.IPipeObject{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Functional
+  commentId: N:Rotomeca.Utils.Functional
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Functional
+  nameWithType: Rotomeca.Utils.Functional
+  fullName: Rotomeca.Utils.Functional
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional
+    name: Functional
+    href: Rotomeca.Utils.Functional.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional
+    name: Functional
+    href: Rotomeca.Utils.Functional.html
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  isExternal: true
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<T>(T, Action<string>)
+  nameWithType: Dicts.DeepClone<T>(T, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<T>(T, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of T)(T, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of T)(T, System.Action(Of String))
+  name.vb: DeepClone(Of T)(T, Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts
+  commentId: T:Rotomeca.Utils.Dictionaries.Dicts
+  parent: Rotomeca.Utils.Dictionaries
+  href: Rotomeca.Utils.Dictionaries.Dicts.html
+  name: Dicts
+  nameWithType: Dicts
+  fullName: Rotomeca.Utils.Dictionaries.Dicts
+- uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<T, TResult>(T, Func<T, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<T, TResult>(T, Func<T, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<T, TResult>(T, System.Func<T, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of T, TResult)(T, System.Func(Of T, TResult))
+  name.vb: Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils._____StPipeExtensions
+  commentId: T:Rotomeca.Utils._____StPipeExtensions
+  parent: Rotomeca.Utils
+  href: Rotomeca.Utils._____StPipeExtensions.html
+  name: _____StPipeExtensions
+  nameWithType: _____StPipeExtensions
+  fullName: Rotomeca.Utils._____StPipeExtensions
+- uid: Rotomeca.Utils.Dictionaries
+  commentId: N:Rotomeca.Utils.Dictionaries
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Dictionaries
+  nameWithType: Rotomeca.Utils.Dictionaries
+  fullName: Rotomeca.Utils.Dictionaries
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+- uid: Rotomeca.Utils
+  commentId: N:Rotomeca.Utils
+  href: Rotomeca.html
+  name: Rotomeca.Utils
+  nameWithType: Rotomeca.Utils
+  fullName: Rotomeca.Utils
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  commentId: T:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  name: IPipeObject<T>
+  nameWithType: IPipeObject<T>
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>
+  nameWithType.vb: IPipeObject(Of T)
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T)
+  name.vb: IPipeObject(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Pipe*
+  commentId: Overload:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Pipe
+  href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html#Rotomeca_Utils_Functional_Interfaces_IPipeObject_1_Pipe__1_System_Func__0___0__
+  name: Pipe
+  nameWithType: IPipeObject<T>.Pipe
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>.Pipe
+  nameWithType.vb: IPipeObject(Of T).Pipe
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T).Pipe
+- uid: System.Func{{T},{Y}}
+  commentId: T:System.Func{`0,``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, Y>
+  nameWithType: Func<T, Y>
+  fullName: System.Func<T, Y>
+  nameWithType.vb: Func(Of T, Y)
+  fullName.vb: System.Func(Of T, Y)
+  name.vb: Func(Of T, Y)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: Y
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: Y
+  - name: )
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject{{Y}}
+  commentId: T:Rotomeca.Utils.Functional.Interfaces.IPipeObject{``0}
+  parent: Rotomeca.Utils.Functional.Interfaces
+  definition: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  name: IPipeObject<Y>
+  nameWithType: IPipeObject<Y>
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<Y>
+  nameWithType.vb: IPipeObject(Of Y)
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of Y)
+  name.vb: IPipeObject(Of Y)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: Y
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: Y
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Unpipe*
+  commentId: Overload:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1.Unpipe
+  href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html#Rotomeca_Utils_Functional_Interfaces_IPipeObject_1_Unpipe
+  name: Unpipe
+  nameWithType: IPipeObject<T>.Unpipe
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>.Unpipe
+  nameWithType.vb: IPipeObject(Of T).Unpipe
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T).Unpipe
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

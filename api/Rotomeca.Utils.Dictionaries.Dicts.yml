@@ -1,0 +1,1691 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Dictionaries.Dicts
+  commentId: T:Rotomeca.Utils.Dictionaries.Dicts
+  id: Dicts
+  parent: Rotomeca.Utils.Dictionaries
+  children:
+  - Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  - Rotomeca.Utils.Dictionaries.Dicts.DeepMerge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  - Rotomeca.Utils.Dictionaries.Dicts.FilterKeys``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,System.Boolean})
+  - Rotomeca.Utils.Dictionaries.Dicts.FilterValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,System.Boolean})
+  - Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  - Rotomeca.Utils.Dictionaries.Dicts.Invert``2(System.Collections.Generic.IDictionary{``0,``1})
+  - Rotomeca.Utils.Dictionaries.Dicts.IsEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  - Rotomeca.Utils.Dictionaries.Dicts.MapKeys``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,``1,``2})
+  - Rotomeca.Utils.Dictionaries.Dicts.MapValues``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,``0,``2})
+  - Rotomeca.Utils.Dictionaries.Dicts.Omit``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  - Rotomeca.Utils.Dictionaries.Dicts.Pick``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  - Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  langs:
+  - csharp
+  - vb
+  name: Dicts
+  nameWithType: Dicts
+  fullName: Rotomeca.Utils.Dictionaries.Dicts
+  type: Class
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Dicts
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 15
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: Fournit des méthodes d'extension utilitaires pour les dictionnaires.
+  example: []
+  syntax:
+    content: public static class Dicts
+    content.vb: Public Module Dicts
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Rotomeca.Utils.Dictionaries.Dicts.Pick``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.Pick``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  id: Pick``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: Pick<TKey, TValue>(IDictionary<TKey, TValue>, params TKey[])
+  nameWithType: Dicts.Pick<TKey, TValue>(IDictionary<TKey, TValue>, params TKey[])
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.Pick<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, params TKey[])
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Pick
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 29
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Retourne un nouveau dictionnaire contenant uniquement les clés spécifiées.
+
+    Les clés absentes du dictionnaire source sont silencieusement ignorées.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TValue> Pick<TKey, TValue>(this IDictionary<TKey, TValue> obj, params TKey[] keys) where TKey : notnull'
+    parameters:
+    - id: obj
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire source.
+    - id: keys
+      type: '{TKey}[]'
+      description: Les clés à conserver.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: >-
+        Un nouveau dictionnaire contenant uniquement les entrées dont la clé figure dans <code class="paramref">keys</code>.
+
+        Retourne un dictionnaire vide si <code class="paramref">keys</code> est vide.
+    content.vb: Public Shared Function Pick(Of TKey, TValue)(obj As IDictionary(Of TKey, TValue), ParamArray keys As TKey()) As IDictionary(Of TKey, TValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.Pick*
+  nameWithType.vb: Dicts.Pick(Of TKey, TValue)(IDictionary(Of TKey, TValue), ParamArray TKey())
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.Pick(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), ParamArray TKey())
+  name.vb: Pick(Of TKey, TValue)(IDictionary(Of TKey, TValue), ParamArray TKey())
+- uid: Rotomeca.Utils.Dictionaries.Dicts.Omit``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.Omit``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  id: Omit``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: Omit<TKey, TValue>(IDictionary<TKey, TValue>, params TKey[])
+  nameWithType: Dicts.Omit<TKey, TValue>(IDictionary<TKey, TValue>, params TKey[])
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.Omit<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, params TKey[])
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Omit
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 60
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Retourne un nouveau dictionnaire excluant les clés spécifiées.
+
+    Les clés absentes du dictionnaire source sont silencieusement ignorées.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TValue> Omit<TKey, TValue>(this IDictionary<TKey, TValue> obj, params TKey[] keys) where TKey : notnull'
+    parameters:
+    - id: obj
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire source.
+    - id: keys
+      type: '{TKey}[]'
+      description: Les clés à exclure.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: >-
+        Un nouveau dictionnaire contenant toutes les entrées sauf celles dont la clé figure dans <code class="paramref">keys</code>.
+
+        Retourne une copie complète du dictionnaire source si <code class="paramref">keys</code> est vide.
+    content.vb: Public Shared Function Omit(Of TKey, TValue)(obj As IDictionary(Of TKey, TValue), ParamArray keys As TKey()) As IDictionary(Of TKey, TValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.Omit*
+  nameWithType.vb: Dicts.Omit(Of TKey, TValue)(IDictionary(Of TKey, TValue), ParamArray TKey())
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.Omit(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), ParamArray TKey())
+  name.vb: Omit(Of TKey, TValue)(IDictionary(Of TKey, TValue), ParamArray TKey())
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  id: DeepClone``1(``0,System.Action{System.String})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: DeepClone<T>(T, Action<string>?)
+  nameWithType: Dicts.DeepClone<T>(T, Action<string>?)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<T>(T, System.Action<string>?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: DeepClone
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 184
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: Effectue un clonage profond de l'objet.
+  remarks: >-
+    <p>
+
+    Sur .NET 5+ : utilise la réflexion pour parcourir tous les champs (y compris privés et hérités),
+
+    avec détection des références circulaires. En cas d'échec, bascule automatiquement
+
+    sur un clonage JSON (voir <code>JsonClone</code>).
+
+    </p>
+
+    <p>
+
+    Sur .NET Standard 2.0 : utilise uniquement la réflexion, sans fallback JSON.
+
+    </p>
+  example: []
+  syntax:
+    content: public static T DeepClone<T>(this T obj, Action<string>? logger = null)
+    parameters:
+    - id: obj
+      type: '{T}'
+      description: L'objet à cloner.
+    - id: logger
+      type: System.Action{System.String}
+      description: >-
+        Action de journalisation appelée en cas de fallback JSON.
+
+        Par défaut : écriture sur <xref href="System.Console.Error" data-throw-if-not-resolved="false"></xref>.
+    typeParameters:
+    - id: T
+      description: Le type de l'objet à cloner.
+    return:
+      type: '{T}'
+      description: Un clone profond de <code class="paramref">obj</code>.
+    content.vb: Public Shared Function DeepClone(Of T)(obj As T, logger As Action(Of String) = Nothing) As T
+  overload: Rotomeca.Utils.Dictionaries.Dicts.DeepClone*
+  nameWithType.vb: Dicts.DeepClone(Of T)(T, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of T)(T, System.Action(Of String))
+  name.vb: DeepClone(Of T)(T, Action(Of String))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.IsEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.IsEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  id: IsEmpty``2(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty<TKey, TValue>(IDictionary<TKey, TValue>)
+  nameWithType: Dicts.IsEmpty<TKey, TValue>(IDictionary<TKey, TValue>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.IsEmpty<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsEmpty
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 209
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: Indique si le dictionnaire est vide.
+  example: []
+  syntax:
+    content: public static bool IsEmpty<TKey, TValue>(this IDictionary<TKey, TValue> dict)
+    parameters:
+    - id: dict
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire à tester.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs.
+    return:
+      type: System.Boolean
+      description: <code>true</code> si le dictionnaire ne contient aucune entrée ; <code>false</code> sinon.
+    content.vb: Public Shared Function IsEmpty(Of TKey, TValue)(dict As IDictionary(Of TKey, TValue)) As Boolean
+  overload: Rotomeca.Utils.Dictionaries.Dicts.IsEmpty*
+  nameWithType.vb: Dicts.IsEmpty(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.IsEmpty(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: IsEmpty(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.MapValues``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,``0,``2})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.MapValues``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,``0,``2})
+  id: MapValues``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,``0,``2})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: MapValues<TKey, TValue, TNewValue>(IDictionary<TKey, TValue>, Func<TValue, TKey, TNewValue>)
+  nameWithType: Dicts.MapValues<TKey, TValue, TNewValue>(IDictionary<TKey, TValue>, Func<TValue, TKey, TNewValue>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.MapValues<TKey, TValue, TNewValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Func<TValue, TKey, TNewValue>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: MapValues
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 224
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Retourne un nouveau dictionnaire dont les valeurs ont été transformées par la fonction <code class="paramref">fn</code>.
+
+    Les clés sont conservées à l'identique.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TNewValue> MapValues<TKey, TValue, TNewValue>(this IDictionary<TKey, TValue> dict, Func<TValue, TKey, TNewValue> fn) where TKey : notnull'
+    parameters:
+    - id: dict
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire source.
+    - id: fn
+      type: System.Func{{TValue},{TKey},{TNewValue}}
+      description: >-
+        Fonction de transformation appelée avec la valeur et la clé courantes.
+
+        Retourne la nouvelle valeur associée à cette clé.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs sources.
+    - id: TNewValue
+      description: Le type des valeurs résultantes.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TNewValue}}
+      description: Un nouveau dictionnaire avec les mêmes clés et les valeurs transformées.
+    content.vb: Public Shared Function MapValues(Of TKey, TValue, TNewValue)(dict As IDictionary(Of TKey, TValue), fn As Func(Of TValue, TKey, TNewValue)) As IDictionary(Of TKey, TNewValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.MapValues*
+  nameWithType.vb: Dicts.MapValues(Of TKey, TValue, TNewValue)(IDictionary(Of TKey, TValue), Func(Of TValue, TKey, TNewValue))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.MapValues(Of TKey, TValue, TNewValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Func(Of TValue, TKey, TNewValue))
+  name.vb: MapValues(Of TKey, TValue, TNewValue)(IDictionary(Of TKey, TValue), Func(Of TValue, TKey, TNewValue))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.MapKeys``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,``1,``2})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.MapKeys``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,``1,``2})
+  id: MapKeys``3(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,``1,``2})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: MapKeys<TKey, TValue, TNewKey>(IDictionary<TKey, TValue>, Func<TKey, TValue, TNewKey>)
+  nameWithType: Dicts.MapKeys<TKey, TValue, TNewKey>(IDictionary<TKey, TValue>, Func<TKey, TValue, TNewKey>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.MapKeys<TKey, TValue, TNewKey>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Func<TKey, TValue, TNewKey>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: MapKeys
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 247
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Retourne un nouveau dictionnaire dont les clés ont été transformées par la fonction <code class="paramref">fn</code>.
+
+    Les valeurs sont conservées à l'identique.
+  remarks: Si <code class="paramref">fn</code> produit des clés dupliquées, une exception sera levée lors de la construction du dictionnaire résultant.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TNewKey, TValue> MapKeys<TKey, TValue, TNewKey>(this IDictionary<TKey, TValue> dict, Func<TKey, TValue, TNewKey> fn) where TNewKey : notnull'
+    parameters:
+    - id: dict
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire source.
+    - id: fn
+      type: System.Func{{TKey},{TValue},{TNewKey}}
+      description: >-
+        Fonction de transformation appelée avec la clé et la valeur courantes.
+
+        Retourne la nouvelle clé à utiliser pour cette entrée.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés sources.
+    - id: TValue
+      description: Le type des valeurs.
+    - id: TNewKey
+      description: Le type des clés résultantes.
+    return:
+      type: System.Collections.Generic.IDictionary{{TNewKey},{TValue}}
+      description: Un nouveau dictionnaire avec les clés transformées et les mêmes valeurs.
+    content.vb: Public Shared Function MapKeys(Of TKey, TValue, TNewKey)(dict As IDictionary(Of TKey, TValue), fn As Func(Of TKey, TValue, TNewKey)) As IDictionary(Of TNewKey, TValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.MapKeys*
+  nameWithType.vb: Dicts.MapKeys(Of TKey, TValue, TNewKey)(IDictionary(Of TKey, TValue), Func(Of TKey, TValue, TNewKey))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.MapKeys(Of TKey, TValue, TNewKey)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Func(Of TKey, TValue, TNewKey))
+  name.vb: MapKeys(Of TKey, TValue, TNewKey)(IDictionary(Of TKey, TValue), Func(Of TKey, TValue, TNewKey))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepMerge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepMerge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  id: DeepMerge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: DeepMerge<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  nameWithType: Dicts.DeepMerge<TKey, TValue>(IDictionary<TKey, TValue>, IDictionary<TKey, TValue>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepMerge<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: DeepMerge
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 265
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Fusionne profondément deux dictionnaires.
+
+    Les entrées de <code class="paramref">source</code> sont fusionnées récursivement dans <code class="paramref">target</code>.
+
+    En cas de conflit sur une clé, la valeur de <code class="paramref">source</code> est prioritaire,
+
+    sauf si les deux valeurs sont elles-mêmes des dictionnaires, auquel cas la fusion est récursive.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TValue> DeepMerge<TKey, TValue>(this IDictionary<TKey, TValue> target, IDictionary<TKey, TValue> source) where TKey : notnull'
+    parameters:
+    - id: target
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire de base. N'est pas modifié.
+    - id: source
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire à fusionner dans <code class="paramref">target</code>.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Un nouveau dictionnaire résultant de la fusion profonde.
+    content.vb: Public Shared Function DeepMerge(Of TKey, TValue)(target As IDictionary(Of TKey, TValue), source As IDictionary(Of TKey, TValue)) As IDictionary(Of TKey, TValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.DeepMerge*
+  nameWithType.vb: Dicts.DeepMerge(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepMerge(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: DeepMerge(Of TKey, TValue)(IDictionary(Of TKey, TValue), IDictionary(Of TKey, TValue))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  id: FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: FlattenObject(IDictionary<string, object?>, string)
+  nameWithType: Dicts.FlattenObject(IDictionary<string, object?>, string)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary<string, object?>, string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: FlattenObject
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 349
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Aplatit un dictionnaire imbriqué en un dictionnaire à un seul niveau,
+
+    en concaténant les clés avec le séparateur spécifié.
+  example:
+  - >-
+    <pre><code class="lang-csharp">// { "a": { "b": { "c": 1 } } } → { "a.b.c": 1 }
+
+    var flat = nested.FlattenObject();</code></pre>
+  syntax:
+    content: public static IDictionary<string, object?> FlattenObject(this IDictionary<string, object?> obj, string separator = ".")
+    parameters:
+    - id: obj
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+      description: Le dictionnaire imbriqué à aplatir.
+    - id: separator
+      type: System.String
+      description: 'Le séparateur utilisé pour construire les clés composées. Par défaut : <code>"."</code>.'
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+      description: Un nouveau dictionnaire plat dont les clés représentent les chemins vers chaque valeur feuille.
+    content.vb: Public Shared Function FlattenObject(obj As IDictionary(Of String, Object), separator As String = ".") As IDictionary(Of String, Object)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject*
+  nameWithType.vb: Dicts.FlattenObject(IDictionary(Of String, Object), String)
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary(Of String, Object), String)
+  name.vb: FlattenObject(IDictionary(Of String, Object), String)
+- uid: Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  id: UnflattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: UnflattenObject(IDictionary<string, object?>, string)
+  nameWithType: Dicts.UnflattenObject(IDictionary<string, object?>, string)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject(System.Collections.Generic.IDictionary<string, object?>, string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: UnflattenObject
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 377
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: >-
+    Reconstruit un dictionnaire imbriqué à partir d'un dictionnaire plat
+
+    dont les clés encodent la profondeur via un séparateur.
+
+    Opération inverse de <xref href="Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary%7bSystem.String%2cSystem.Object%7d%2cSystem.String)" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    Si une clé intermédiaire existe déjà avec une valeur qui n'est pas un dictionnaire,
+
+    elle est écrasée par un nouveau dictionnaire.
+  example:
+  - >-
+    <pre><code class="lang-csharp">// { "a.b.c": 1 } → { "a": { "b": { "c": 1 } } }
+
+    var nested = flat.UnflattenObject();</code></pre>
+  syntax:
+    content: public static IDictionary<string, object?> UnflattenObject(this IDictionary<string, object?> obj, string separator = ".")
+    parameters:
+    - id: obj
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+      description: Le dictionnaire plat à reconstruire.
+    - id: separator
+      type: System.String
+      description: 'Le séparateur utilisé pour découper les clés. Par défaut : <code>"."</code>.'
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+      description: Un nouveau dictionnaire imbriqué reconstruit à partir des chemins de clés.
+    content.vb: Public Shared Function UnflattenObject(obj As IDictionary(Of String, Object), separator As String = ".") As IDictionary(Of String, Object)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject*
+  nameWithType.vb: Dicts.UnflattenObject(IDictionary(Of String, Object), String)
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject(System.Collections.Generic.IDictionary(Of String, Object), String)
+  name.vb: UnflattenObject(IDictionary(Of String, Object), String)
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FilterKeys``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,System.Boolean})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.FilterKeys``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,System.Boolean})
+  id: FilterKeys``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: FilterKeys<TKey, TValue>(IDictionary<TKey, TValue>, Func<TKey, bool>)
+  nameWithType: Dicts.FilterKeys<TKey, TValue>(IDictionary<TKey, TValue>, Func<TKey, bool>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FilterKeys<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Func<TKey, bool>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: FilterKeys
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 420
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: Filtre les entrées du dictionnaire en ne conservant que celles dont la clé satisfait le prédicat.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TValue> FilterKeys<TKey, TValue>(this IDictionary<TKey, TValue> dict, Func<TKey, bool> fn) where TKey : notnull'
+    parameters:
+    - id: dict
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire source.
+    - id: fn
+      type: System.Func{{TKey},System.Boolean}
+      description: Prédicat appliqué à chaque clé. Retourne <code>true</code> pour conserver l'entrée.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Un nouveau dictionnaire contenant uniquement les entrées dont la clé satisfait <code class="paramref">fn</code>.
+    content.vb: Public Shared Function FilterKeys(Of TKey, TValue)(dict As IDictionary(Of TKey, TValue), fn As Func(Of TKey, Boolean)) As IDictionary(Of TKey, TValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.FilterKeys*
+  nameWithType.vb: Dicts.FilterKeys(Of TKey, TValue)(IDictionary(Of TKey, TValue), Func(Of TKey, Boolean))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.FilterKeys(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Func(Of TKey, Boolean))
+  name.vb: FilterKeys(Of TKey, TValue)(IDictionary(Of TKey, TValue), Func(Of TKey, Boolean))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FilterValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,System.Boolean})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.FilterValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,System.Boolean})
+  id: FilterValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Func{``1,System.Boolean})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: FilterValues<TKey, TValue>(IDictionary<TKey, TValue>, Func<TValue, bool>)
+  nameWithType: Dicts.FilterValues<TKey, TValue>(IDictionary<TKey, TValue>, Func<TValue, bool>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FilterValues<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Func<TValue, bool>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: FilterValues
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 431
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: Filtre les entrées du dictionnaire en ne conservant que celles dont la valeur satisfait le prédicat.
+  example: []
+  syntax:
+    content: 'public static IDictionary<TKey, TValue> FilterValues<TKey, TValue>(this IDictionary<TKey, TValue> dict, Func<TValue, bool> fn) where TKey : notnull'
+    parameters:
+    - id: dict
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire source.
+    - id: fn
+      type: System.Func{{TValue},System.Boolean}
+      description: Prédicat appliqué à chaque valeur. Retourne <code>true</code> pour conserver l'entrée.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés.
+    - id: TValue
+      description: Le type des valeurs.
+    return:
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Un nouveau dictionnaire contenant uniquement les entrées dont la valeur satisfait <code class="paramref">fn</code>.
+    content.vb: Public Shared Function FilterValues(Of TKey, TValue)(dict As IDictionary(Of TKey, TValue), fn As Func(Of TValue, Boolean)) As IDictionary(Of TKey, TValue)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.FilterValues*
+  nameWithType.vb: Dicts.FilterValues(Of TKey, TValue)(IDictionary(Of TKey, TValue), Func(Of TValue, Boolean))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.FilterValues(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Func(Of TValue, Boolean))
+  name.vb: FilterValues(Of TKey, TValue)(IDictionary(Of TKey, TValue), Func(Of TValue, Boolean))
+- uid: Rotomeca.Utils.Dictionaries.Dicts.Invert``2(System.Collections.Generic.IDictionary{``0,``1})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.Invert``2(System.Collections.Generic.IDictionary{``0,``1})
+  id: Invert``2(System.Collections.Generic.IDictionary{``0,``1})
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  langs:
+  - csharp
+  - vb
+  name: Invert<TKey, TValue>(IDictionary<TKey, TValue>)
+  nameWithType: Dicts.Invert<TKey, TValue>(IDictionary<TKey, TValue>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.Invert<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Invert
+    path: Rotomeca.Utils.Core/Dictionnaries/Dicts.cs
+    startLine: 445
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Dictionaries
+  summary: Retourne un nouveau dictionnaire dont les clés et les valeurs sont inversées.
+  remarks: >-
+    Si le dictionnaire source contient des valeurs dupliquées, une exception sera levée
+
+    lors de la construction du dictionnaire résultant (clés dupliquées).
+  example: []
+  syntax:
+    content: 'public static IDictionary<TValue, TKey> Invert<TKey, TValue>(this IDictionary<TKey, TValue> dict) where TKey : notnull where TValue : notnull'
+    parameters:
+    - id: dict
+      type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+      description: Le dictionnaire à inverser.
+    typeParameters:
+    - id: TKey
+      description: Le type des clés sources, qui devient le type des valeurs résultantes.
+    - id: TValue
+      description: Le type des valeurs sources, qui devient le type des clés résultantes.
+    return:
+      type: System.Collections.Generic.IDictionary{{TValue},{TKey}}
+      description: Un nouveau dictionnaire avec les clés et valeurs permutées.
+    content.vb: Public Shared Function Invert(Of TKey, TValue)(dict As IDictionary(Of TKey, TValue)) As IDictionary(Of TValue, TKey)
+  overload: Rotomeca.Utils.Dictionaries.Dicts.Invert*
+  nameWithType.vb: Dicts.Invert(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.Invert(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: Invert(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+references:
+- uid: Rotomeca.Utils.Dictionaries
+  commentId: N:Rotomeca.Utils.Dictionaries
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Dictionaries
+  nameWithType: Rotomeca.Utils.Dictionaries
+  fullName: Rotomeca.Utils.Dictionaries
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Rotomeca.Utils.Dictionaries.Dicts.Pick*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.Pick
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_Pick__2_System_Collections_Generic_IDictionary___0___1____0___
+  name: Pick
+  nameWithType: Dicts.Pick
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.Pick
+- uid: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Generic.IDictionary{``0,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: '{TKey}[]'
+  isExternal: true
+  name: TKey[]
+  nameWithType: TKey[]
+  fullName: TKey[]
+  nameWithType.vb: TKey()
+  fullName.vb: TKey()
+  name.vb: TKey()
+  spec.csharp:
+  - name: TKey
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: TKey
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  href: System.html
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    href: System.html
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    href: System.Collections.html
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    href: System.Collections.Generic.html
+  spec.vb:
+  - uid: System
+    name: System
+    href: System.html
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    href: System.Collections.html
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    href: System.Collections.Generic.html
+- uid: Rotomeca.Utils.Dictionaries.Dicts.Omit*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.Omit
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_Omit__2_System_Collections_Generic_IDictionary___0___1____0___
+  name: Omit
+  nameWithType: Dicts.Omit
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.Omit
+- uid: System.Console.Error
+  commentId: P:System.Console.Error
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.console.error
+  name: Error
+  nameWithType: Console.Error
+  fullName: System.Console.Error
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.DeepClone
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone
+  nameWithType: Dicts.DeepClone
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.IsEmpty*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.IsEmpty
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_IsEmpty__2_System_Collections_Generic_IDictionary___0___1__
+  name: IsEmpty
+  nameWithType: Dicts.IsEmpty
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.IsEmpty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Rotomeca.Utils.Dictionaries.Dicts.MapValues*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.MapValues
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_MapValues__3_System_Collections_Generic_IDictionary___0___1__System_Func___1___0___2__
+  name: MapValues
+  nameWithType: Dicts.MapValues
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.MapValues
+- uid: System.Func{{TValue},{TKey},{TNewValue}}
+  commentId: T:System.Func{``1,``0,``2}
+  parent: System
+  definition: System.Func`3
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<TValue, TKey, TNewValue>
+  nameWithType: Func<TValue, TKey, TNewValue>
+  fullName: System.Func<TValue, TKey, TNewValue>
+  nameWithType.vb: Func(Of TValue, TKey, TNewValue)
+  fullName.vb: System.Func(Of TValue, TKey, TNewValue)
+  name.vb: Func(Of TValue, TKey, TNewValue)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: )
+- uid: System.Collections.Generic.IDictionary{{TKey},{TNewValue}}
+  commentId: T:System.Collections.Generic.IDictionary{``0,``2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TNewValue>
+  nameWithType: IDictionary<TKey, TNewValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TNewValue>
+  nameWithType.vb: IDictionary(Of TKey, TNewValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TNewValue)
+  name.vb: IDictionary(Of TKey, TNewValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TNewValue
+  - name: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.MapKeys*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.MapKeys
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_MapKeys__3_System_Collections_Generic_IDictionary___0___1__System_Func___0___1___2__
+  name: MapKeys
+  nameWithType: Dicts.MapKeys
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.MapKeys
+- uid: System.Func{{TKey},{TValue},{TNewKey}}
+  commentId: T:System.Func{``0,``1,``2}
+  parent: System
+  definition: System.Func`3
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<TKey, TValue, TNewKey>
+  nameWithType: Func<TKey, TValue, TNewKey>
+  fullName: System.Func<TKey, TValue, TNewKey>
+  nameWithType.vb: Func(Of TKey, TValue, TNewKey)
+  fullName.vb: System.Func(Of TKey, TValue, TNewKey)
+  name.vb: Func(Of TKey, TValue, TNewKey)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TNewKey
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TNewKey
+  - name: )
+- uid: System.Collections.Generic.IDictionary{{TNewKey},{TValue}}
+  commentId: T:System.Collections.Generic.IDictionary{``2,``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TNewKey, TValue>
+  nameWithType: IDictionary<TNewKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TNewKey, TValue>
+  nameWithType.vb: IDictionary(Of TNewKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TNewKey, TValue)
+  name.vb: IDictionary(Of TNewKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TNewKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNewKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepMerge*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.DeepMerge
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepMerge__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IDictionary___0___1__
+  name: DeepMerge
+  nameWithType: Dicts.DeepMerge
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepMerge
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.FlattenObject
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_
+  name: FlattenObject
+  nameWithType: Dicts.FlattenObject
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject
+- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<string, object>
+  nameWithType: IDictionary<string, object>
+  fullName: System.Collections.Generic.IDictionary<string, object>
+  nameWithType.vb: IDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IDictionary(Of String, Object)
+  name.vb: IDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+  isExternal: true
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_
+  name: FlattenObject(IDictionary<string, object>, string)
+  nameWithType: Dicts.FlattenObject(IDictionary<string, object>, string)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary<string, object>, string)
+  nameWithType.vb: Dicts.FlattenObject(IDictionary(Of String, Object), String)
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary(Of String, Object), String)
+  name.vb: FlattenObject(IDictionary(Of String, Object), String)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+    name: FlattenObject
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.FlattenObject(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)
+    name: FlattenObject
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FlattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_UnflattenObject_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_
+  name: UnflattenObject
+  nameWithType: Dicts.UnflattenObject
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.UnflattenObject
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FilterKeys*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.FilterKeys
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FilterKeys__2_System_Collections_Generic_IDictionary___0___1__System_Func___0_System_Boolean__
+  name: FilterKeys
+  nameWithType: Dicts.FilterKeys
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FilterKeys
+- uid: System.Func{{TKey},System.Boolean}
+  commentId: T:System.Func{``0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TKey, bool>
+  nameWithType: Func<TKey, bool>
+  fullName: System.Func<TKey, bool>
+  nameWithType.vb: Func(Of TKey, Boolean)
+  fullName.vb: System.Func(Of TKey, Boolean)
+  name.vb: Func(Of TKey, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.FilterValues*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.FilterValues
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_FilterValues__2_System_Collections_Generic_IDictionary___0___1__System_Func___1_System_Boolean__
+  name: FilterValues
+  nameWithType: Dicts.FilterValues
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.FilterValues
+- uid: System.Func{{TValue},System.Boolean}
+  commentId: T:System.Func{``1,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TValue, bool>
+  nameWithType: Func<TValue, bool>
+  fullName: System.Func<TValue, bool>
+  nameWithType.vb: Func(Of TValue, Boolean)
+  fullName.vb: System.Func(Of TValue, Boolean)
+  name.vb: Func(Of TValue, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.Invert*
+  commentId: Overload:Rotomeca.Utils.Dictionaries.Dicts.Invert
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_Invert__2_System_Collections_Generic_IDictionary___0___1__
+  name: Invert
+  nameWithType: Dicts.Invert
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.Invert
+- uid: System.Collections.Generic.IDictionary{{TValue},{TKey}}
+  commentId: T:System.Collections.Generic.IDictionary{``1,``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TValue, TKey>
+  nameWithType: IDictionary<TValue, TKey>
+  fullName: System.Collections.Generic.IDictionary<TValue, TKey>
+  nameWithType.vb: IDictionary(Of TValue, TKey)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TValue, TKey)
+  name.vb: IDictionary(Of TValue, TKey)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )

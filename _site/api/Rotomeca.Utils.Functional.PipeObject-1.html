@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PipeObject&lt;T&gt; | Rotomeca.Utils </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PipeObject&lt;T&gt; | Rotomeca.Utils ">
+      
+      <meta name="description" content="Encapsule une valeur dans un pipeline fonctionnel permettant d&#39;encha&#238;ner des transformations de mani&#232;re fluente.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rotomeca-libs/utils-csharp/new/develop/apiSpec/new?filename=Rotomeca_Utils_Functional_PipeObject_1.md&amp;value=---%0Auid%3A%20Rotomeca.Utils.Functional.PipeObject%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rotomeca.Utils">
+            Rotomeca.Utils
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Rotomeca.Utils.Functional.PipeObject`1">
+
+
+
+  <h1 id="Rotomeca_Utils_Functional_PipeObject_1" data-uid="Rotomeca.Utils.Functional.PipeObject`1" class="text-break">
+Class PipeObject&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Rotomeca.html">Rotomeca</a>.<a class="xref" href="Rotomeca.Utils.html">Utils</a>.<a class="xref" href="Rotomeca.Utils.Functional.html">Functional</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Rotomeca.Utils.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Encapsule une valeur dans un pipeline fonctionnel permettant
+d'enchaîner des transformations de manière fluente.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record PipeObject&lt;T&gt; : IPipeObject&lt;T&gt;, IEquatable&lt;PipeObject&lt;T&gt;&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Type de la valeur encapsulée.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PipeObject&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html">IPipeObject</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__">Dicts.DeepClone&lt;T&gt;(T, Action&lt;string&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__">Dicts.DeepClone&lt;T&gt;(T, Action&lt;string&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__">_____StPipeExtensions.Pipe&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__">_____StPipeExtensions.Pipe&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Rotomeca_Utils_Functional_PipeObject_1_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Cette classe est à usage interne — elle est retournée par
+<a class="xref" href="Rotomeca.Utils.Functional.Pipeline.html#Rotomeca_Utils_Functional_Pipeline_Start__1___0_">Start&lt;T&gt;(T)</a> et par chaque appel à <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html#Rotomeca_Utils_Functional_PipeObject_1_Pipe__1_System_Func__0___0__">Pipe&lt;Y&gt;(Func&lt;T, Y&gt;)</a>.
+Le consommateur interagit avec elle via ces deux points d'entrée.
+</p>
+<p>
+La conversion implicite vers <code class="typeparamref">T</code> permet de récupérer
+la valeur finale sans appel explicite à <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html#Rotomeca_Utils_Functional_PipeObject_1_Unpipe">Unpipe()</a> :
+<pre><code class="lang-csharp">string result = Pipeline.Start("hello").Pipe(s =&gt; s.ToUpper());
+// Équivalent à :
+string result = Pipeline.Start("hello").Pipe(s =&gt; s.ToUpper()).Unpipe();</code></pre>
+
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1__ctor_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.#ctor*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1__ctor__0_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.#ctor(`0)">
+  PipeObject(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Encapsule une valeur dans un pipeline fonctionnel permettant
+d'enchaîner des transformations de manière fluente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PipeObject(T Value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_PipeObject_1__ctor__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Cette classe est à usage interne — elle est retournée par
+<a class="xref" href="Rotomeca.Utils.Functional.Pipeline.html#Rotomeca_Utils_Functional_Pipeline_Start__1___0_">Start&lt;T&gt;(T)</a> et par chaque appel à <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html#Rotomeca_Utils_Functional_PipeObject_1_Pipe__1_System_Func__0___0__">Pipe&lt;Y&gt;(Func&lt;T, Y&gt;)</a>.
+Le consommateur interagit avec elle via ces deux points d'entrée.
+</p>
+<p>
+La conversion implicite vers <code class="typeparamref">T</code> permet de récupérer
+la valeur finale sans appel explicite à <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html#Rotomeca_Utils_Functional_PipeObject_1_Unpipe">Unpipe()</a> :
+<pre><code class="lang-csharp">string result = Pipeline.Start("hello").Pipe(s =&gt; s.ToUpper());
+// Équivalent à :
+string result = Pipeline.Start("hello").Pipe(s =&gt; s.ToUpper()).Unpipe();</code></pre>
+
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Pipeline.html">Pipeline</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_Value_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Value*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_Value" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Value { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_Deconstruct_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Deconstruct*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_Deconstruct__0__" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Deconstruct(`0@)">
+  Deconstruct(out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out T Value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_Equals_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Equals*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_Equals_Rotomeca_Utils_Functional_PipeObject__0__" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Equals(Rotomeca.Utils.Functional.PipeObject{`0})">
+  Equals(PipeObject&lt;T&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PipeObject&lt;T&gt;? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_Equals_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Equals*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_Equals_System_Object_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_GetHashCode_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.GetHashCode*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_GetHashCode" data-uid="Rotomeca.Utils.Functional.PipeObject`1.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_Pipe_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_Pipe__1_System_Func__0___0__" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Pipe``1(System.Func{`0,``0})">
+  Pipe&lt;Y&gt;(Func&lt;T, Y&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applique une fonction de transformation à la valeur courante
+et retourne un nouveau <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject&lt;T&gt;</a> contenant le résultat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PipeObject&lt;Y&gt; Pipe&lt;Y&gt;(Func&lt;T, Y&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, Y&gt;</dt>
+    <dd><p>Fonction de transformation à appliquer à la valeur courante.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;Y&gt;</dt>
+    <dd><p>Un nouveau <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject&lt;T&gt;</a> encapsulant le résultat de <code class="paramref">fn</code>,
+prêt pour une transformation supplémentaire.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Y</code></dt>
+    <dd><p>Type de la valeur produite par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_PipeObject_1_Pipe__1_System_Func__0___0___examples">Examples</h4>
+  <pre><code class="lang-csharp">var result = Pipeline.Start(42)
+                     .Pipe(n =&gt; n * 2)   // PipeObject&lt;int&gt;(84)
+                     .Pipe(n =&gt; $"{n}"); // PipeObject&lt;string&gt;("84")</code></pre>
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_ToString_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.ToString*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_ToString" data-uid="Rotomeca.Utils.Functional.PipeObject`1.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_Unpipe_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Unpipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_Unpipe" data-uid="Rotomeca.Utils.Functional.PipeObject`1.Unpipe">
+  Unpipe()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Termine le pipeline et retourne la valeur encapsulée.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Unpipe()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>La valeur finale après toutes les transformations appliquées.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_PipeObject_1_Unpipe_examples">Examples</h4>
+  <pre><code class="lang-csharp">int result = Pipeline.Start("hello world")
+                     .Pipe(s =&gt; s.Split(' '))
+                     .Pipe(words =&gt; words.Length)
+                     .Unpipe(); // 2</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_PipeObject_1_Unpipe_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Équivalent à un cast implicite vers <code class="typeparamref">T</code>.
+Préférez la conversion implicite lorsque le contexte le permet,
+et réservez <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html#Rotomeca_Utils_Functional_PipeObject_1_Unpipe">Unpipe()</a> aux cas où le type cible est ambigu.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_op_Equality_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.op_Equality*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_op_Equality_Rotomeca_Utils_Functional_PipeObject__0__Rotomeca_Utils_Functional_PipeObject__0__" data-uid="Rotomeca.Utils.Functional.PipeObject`1.op_Equality(Rotomeca.Utils.Functional.PipeObject{`0},Rotomeca.Utils.Functional.PipeObject{`0})">
+  operator ==(PipeObject&lt;T&gt;?, PipeObject&lt;T&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PipeObject&lt;T&gt;? left, PipeObject&lt;T&gt;? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_op_Implicit_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.op_Implicit*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_op_Implicit_Rotomeca_Utils_Functional_PipeObject__0____0" data-uid="Rotomeca.Utils.Functional.PipeObject`1.op_Implicit(Rotomeca.Utils.Functional.PipeObject{`0})~`0">
+  implicit operator T(PipeObject&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convertit implicitement un <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject&lt;T&gt;</a> en <code class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator T(PipeObject&lt;T&gt; pipeObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pipeObject</code> <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;</dt>
+    <dd><p>L'objet pipeline à convertir.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>La valeur encapsulée dans le pipeline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_PipeObject_1_op_Implicit_Rotomeca_Utils_Functional_PipeObject__0____0_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Permet de terminer un pipeline sans appel explicite à <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html#Rotomeca_Utils_Functional_PipeObject_1_Unpipe">Unpipe()</a> :</p>
+<pre><code class="lang-csharp">string result = Pipeline.Start("hello").Pipe(s =&gt; s.ToUpper());</code></pre>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_PipeObject_1_op_Inequality_" data-uid="Rotomeca.Utils.Functional.PipeObject`1.op_Inequality*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_PipeObject_1_op_Inequality_Rotomeca_Utils_Functional_PipeObject__0__Rotomeca_Utils_Functional_PipeObject__0__" data-uid="Rotomeca.Utils.Functional.PipeObject`1.op_Inequality(Rotomeca.Utils.Functional.PipeObject{`0},Rotomeca.Utils.Functional.PipeObject{`0})">
+  operator !=(PipeObject&lt;T&gt;?, PipeObject&lt;T&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Functional/Pipe/PipeObject%7BT%7D.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PipeObject&lt;T&gt;? left, PipeObject&lt;T&gt;? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Rotomeca.Utils.Functional.PipeObject-1.html">PipeObject</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Rotomeca.Utils.Functional.Pipeline.html">Pipeline</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/PipeObject{T}.cs/#L26" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

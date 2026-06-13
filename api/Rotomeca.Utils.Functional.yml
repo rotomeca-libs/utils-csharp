@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Functional
+  commentId: N:Rotomeca.Utils.Functional
+  id: Rotomeca.Utils.Functional
+  children:
+  - Rotomeca.Utils.Functional.Function
+  - Rotomeca.Utils.Functional.PipeObject`1
+  - Rotomeca.Utils.Functional.Pipeline
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Functional
+  nameWithType: Rotomeca.Utils.Functional
+  fullName: Rotomeca.Utils.Functional
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Functional.Function
+  commentId: T:Rotomeca.Utils.Functional.Function
+  href: Rotomeca.Utils.Functional.Function.html
+  name: Function
+  nameWithType: Function
+  fullName: Rotomeca.Utils.Functional.Function
+- uid: Rotomeca.Utils.Functional.Pipeline
+  commentId: T:Rotomeca.Utils.Functional.Pipeline
+  href: Rotomeca.Utils.Functional.Pipeline.html
+  name: Pipeline
+  nameWithType: Pipeline
+  fullName: Rotomeca.Utils.Functional.Pipeline
+- uid: Rotomeca.Utils.Functional.PipeObject`1
+  commentId: T:Rotomeca.Utils.Functional.PipeObject`1
+  parent: Rotomeca.Utils.Functional
+  href: Rotomeca.Utils.Functional.PipeObject-1.html
+  name: PipeObject<T>
+  nameWithType: PipeObject<T>
+  fullName: Rotomeca.Utils.Functional.PipeObject<T>
+  nameWithType.vb: PipeObject(Of T)
+  fullName.vb: Rotomeca.Utils.Functional.PipeObject(Of T)
+  name.vb: PipeObject(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Functional.PipeObject`1
+    name: PipeObject
+    href: Rotomeca.Utils.Functional.PipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Functional.PipeObject`1
+    name: PipeObject
+    href: Rotomeca.Utils.Functional.PipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Functional
+  commentId: N:Rotomeca.Utils.Functional
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Functional
+  nameWithType: Rotomeca.Utils.Functional
+  fullName: Rotomeca.Utils.Functional
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional
+    name: Functional
+    href: Rotomeca.Utils.Functional.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Functional
+    name: Functional
+    href: Rotomeca.Utils.Functional.html

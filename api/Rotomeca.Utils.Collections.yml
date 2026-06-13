@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Collections
+  commentId: N:Rotomeca.Utils.Collections
+  id: Rotomeca.Utils.Collections
+  children:
+  - Rotomeca.Utils.Collections.Arrays
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Collections
+  nameWithType: Rotomeca.Utils.Collections
+  fullName: Rotomeca.Utils.Collections
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Collections.Arrays
+  commentId: T:Rotomeca.Utils.Collections.Arrays
+  parent: Rotomeca.Utils.Collections
+  href: Rotomeca.Utils.Collections.Arrays.html
+  name: Arrays
+  nameWithType: Arrays
+  fullName: Rotomeca.Utils.Collections.Arrays
+- uid: Rotomeca.Utils.Collections
+  commentId: N:Rotomeca.Utils.Collections
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Collections
+  nameWithType: Rotomeca.Utils.Collections
+  fullName: Rotomeca.Utils.Collections
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Collections
+    name: Collections
+    href: Rotomeca.Utils.Collections.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Collections
+    name: Collections
+    href: Rotomeca.Utils.Collections.html

@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Function | Rotomeca.Utils </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Function | Rotomeca.Utils ">
+      
+      <meta name="description" content="Fournit des utilitaires de programmation fonctionnelle.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rotomeca-libs/utils-csharp/new/develop/apiSpec/new?filename=Rotomeca_Utils_Functional_Function.md&amp;value=---%0Auid%3A%20Rotomeca.Utils.Functional.Function%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rotomeca.Utils">
+            Rotomeca.Utils
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Rotomeca.Utils.Functional.Function">
+
+
+
+  <h1 id="Rotomeca_Utils_Functional_Function" data-uid="Rotomeca.Utils.Functional.Function" class="text-break">
+Class Function  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Rotomeca.html">Rotomeca</a>.<a class="xref" href="Rotomeca.Utils.html">Utils</a>.<a class="xref" href="Rotomeca.Utils.Functional.html">Functional</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Rotomeca.Utils.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Fournit des utilitaires de programmation fonctionnelle.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Function</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Function</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Rotomeca_Utils_Functional_Function_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+La classe est <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/partial-method">partial</a> — ses méthodes sont réparties
+sur plusieurs fichiers sources par domaine fonctionnel
+(<code>Function.Pipe.cs</code>, <code>Function.Memoize.cs</code>, etc.).
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Debounce_" data-uid="Rotomeca.Utils.Functional.Function.Debounce*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Debounce_System_Action_System_UInt32_" data-uid="Rotomeca.Utils.Functional.Function.Debounce(System.Action,System.UInt32)">
+  Debounce(Action, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retarde l'exécution d'une action jusqu'à ce qu'un délai se soit écoulé
+sans nouvel appel. Chaque appel remet le timer à zéro.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action Debounce(Action action, uint ms)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>Action à exécuter après le délai.</p>
+</dd>
+    <dt><code>ms</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Délai en millisecondes avant l'exécution de <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>Une nouvelle <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a> qui diffère l'appel à <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Debounce_System_Action_System_UInt32__examples">Examples</h4>
+  <pre><code class="lang-csharp">Action onSearch = Function.Debounce(() =&gt; FetchResults(), 300);
+// Chaque frappe remet le timer à zéro — FetchResults n'est appelé
+// qu'après 300ms sans nouvelle frappe.</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Debounce_System_Action_System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Utile pour limiter les appels sur des événements haute fréquence
+comme la saisie dans un champ de recherche ou le redimensionnement d'une fenêtre.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Throttle_System_Action_System_UInt32_">Throttle(Action, uint)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Identity_" data-uid="Rotomeca.Utils.Functional.Function.Identity*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Identity__1___0_" data-uid="Rotomeca.Utils.Functional.Function.Identity``1(``0)">
+  Identity&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne la valeur reçue sans modification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Identity&lt;T&gt;(T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>Valeur à retourner.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="paramref">value</code> inchangé.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Type de la valeur.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Identity__1___0__examples">Examples</h4>
+  <pre><code class="lang-csharp">var result = Pipeline.Start(42)
+    .Pipe(Function.Identity) // aucune transformation
+    .Pipe(n =&gt; n * 2);       // 84</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Identity__1___0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Utile comme transformateur neutre dans un pipeline ou comme
+valeur par défaut d'un paramètre de type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func&lt;T, TResult&gt;</a>.</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Memoize_" data-uid="Rotomeca.Utils.Functional.Function.Memoize*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Memoize__1_System_Func___0__" data-uid="Rotomeca.Utils.Functional.Function.Memoize``1(System.Func{``0})">
+  Memoize&lt;TResult&gt;(Func&lt;TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Memoize.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version mémoïsée de <code class="paramref">fn</code> sans argument,
+garantissant que la fonction n'est exécutée qu'une seule fois.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TResult&gt; Memoize&lt;TResult&gt;(Func&lt;TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</dt>
+    <dd><p>Fonction pure sans argument à mémoïser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui retourne le résultat mis en cache dès le deuxième appel,
+sans réexécuter <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__1_System_Func___0___examples">Examples</h4>
+  <pre><code class="lang-csharp">var getConfig = Function.Memoize(() =&gt; LoadConfigFromDisk());
+getConfig(); // chargement effectué, résultat mis en cache
+getConfig(); // retourné depuis le cache, LoadConfigFromDisk() n'est plus appelé</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__1_System_Func___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Contrairement aux surcharges avec arguments, aucun dictionnaire n'est nécessaire —
+le résultat est unique et stocké directement dans un <span class="xref">Rotomeca.Core.Optionals.MayBe&lt;T&gt;</span>.
+C'est essentiellement un pattern de <b>lazy singleton</b>.
+</p>
+<p>
+Ne pas utiliser avec des fonctions impures (<code>DateTime.Now</code>, <code>Random</code>,
+effets de bord) : le premier résultat sera retourné indéfiniment.
+</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Memoize_" data-uid="Rotomeca.Utils.Functional.Function.Memoize*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Memoize__2_System_Func___0___1__" data-uid="Rotomeca.Utils.Functional.Function.Memoize``2(System.Func{``0,``1})">
+  Memoize&lt;TArg1, TResult&gt;(Func&lt;TArg1, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Memoize.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version mémoïsée de <code class="paramref">fn</code> qui met en cache
+ses résultats selon l'argument reçu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TArg1, TResult&gt; Memoize&lt;TArg1, TResult&gt;(Func&lt;TArg1, TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TArg1, TResult&gt;</dt>
+    <dd><p>Fonction pure à mémoïser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TArg1, TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui retourne le résultat depuis le cache si l'argument
+a déjà été rencontré, ou invoque <code class="paramref">fn</code> et met le résultat en cache sinon.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg1</code></dt>
+    <dd><p>Type de l'argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__2_System_Func___0___1___examples">Examples</h4>
+  <pre><code class="lang-csharp">var expensiveCalc = Function.Memoize((int n) =&gt; Fibonacci(n));
+expensiveCalc(40); // calcul effectué, résultat mis en cache
+expensiveCalc(40); // retourné depuis le cache
+expensiveCalc(41); // nouveau calcul</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__2_System_Func___0___1___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Le cache est thread-safe — implémenté via <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary&lt;TKey, TValue&gt;</a>.
+</p>
+<p>
+Les arguments <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> sont supportés et mis en cache séparément
+du dictionnaire principal.
+</p>
+<p>
+Ne pas utiliser avec des fonctions impures (<code>DateTime.Now</code>, <code>Random</code>,
+effets de bord) : le cache retournerait indéfiniment le premier résultat obtenu.
+</p>
+<p>
+Le cache est illimité — ne pas utiliser avec un nombre élevé de valeurs d'entrées
+distinctes sous peine de pression mémoire.
+</p>
+<p>
+Sur .NET 5 et supérieur, l'argument <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> est géré via un tableau
+dédié d'un élément, et les clés non nulles sont stockées directement dans le
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary&lt;TKey, TValue&gt;</a> sans surcoût de wrapping.
+Sur <code>netstandard2.0</code> et <code>netstandard2.1</code>, toutes les clés — y compris
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> — sont encapsulées dans <span class="xref">Rotomeca.Core.Optionals.MayBe&lt;T&gt;</span> via
+<code>GetOrAddLegacy</code>.
+</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Memoize_" data-uid="Rotomeca.Utils.Functional.Function.Memoize*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Memoize__3_System_Func___0___1___2__" data-uid="Rotomeca.Utils.Functional.Function.Memoize``3(System.Func{``0,``1,``2})">
+  Memoize&lt;TArg1, TArg2, TResult&gt;(Func&lt;TArg1, TArg2, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Memoize.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version mémoïsée de <code class="paramref">fn</code> qui met en cache
+ses résultats selon les 2 arguments reçus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TArg1, TArg2, TResult&gt; Memoize&lt;TArg1, TArg2, TResult&gt;(Func&lt;TArg1, TArg2, TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TArg1, TArg2, TResult&gt;</dt>
+    <dd><p>Fonction pure à mémoïser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TArg1, TArg2, TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui retourne le résultat depuis le cache si la combinaison
+d'arguments a déjà été rencontrée, ou invoque <code class="paramref">fn</code> et met le résultat en cache sinon.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg1</code></dt>
+    <dd><p>Type du premier argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TArg2</code></dt>
+    <dd><p>Type du deuxième argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__3_System_Func___0___1___2___examples">Examples</h4>
+  <pre><code class="lang-csharp">var add = Function.Memoize((int a, int b) =&gt; a + b);
+add(1, 2); // calcul effectué, résultat mis en cache
+add(1, 2); // retourné depuis le cache
+add(1, 3); // nouveau calcul</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__3_System_Func___0___1___2___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Le cache est thread-safe — implémenté via <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary&lt;TKey, TValue&gt;</a>.
+</p>
+<p>
+Les arguments sont combinés en un tuple struct comme clé,
+garantissant l'absence d'allocation heap par appel et satisfaisant nativement
+la contrainte <code>notnull</code> du dictionnaire — même si les arguments individuels
+sont <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+</p>
+<p>
+Sur <code>netstandard2.0</code> et <code>netstandard2.1</code>, chaque argument est encapsulé
+dans <span class="xref">Rotomeca.Core.Optionals.MayBe&lt;T&gt;</span> pour un support uniforme des valeurs <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+</p>
+<p>
+Le cache est illimité — ne pas utiliser avec un grand nombre de combinaisons
+d'arguments distinctes sous peine de pression mémoire.
+</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Memoize_" data-uid="Rotomeca.Utils.Functional.Function.Memoize*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Memoize__4_System_Func___0___1___2___3__" data-uid="Rotomeca.Utils.Functional.Function.Memoize``4(System.Func{``0,``1,``2,``3})">
+  Memoize&lt;TArg1, TArg2, TArg3, TResult&gt;(Func&lt;TArg1, TArg2, TArg3, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Memoize.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version mémoïsée de <code class="paramref">fn</code> qui met en cache
+ses résultats selon les 3 arguments reçus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TArg1, TArg2, TArg3, TResult&gt; Memoize&lt;TArg1, TArg2, TArg3, TResult&gt;(Func&lt;TArg1, TArg2, TArg3, TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;TArg1, TArg2, TArg3, TResult&gt;</dt>
+    <dd><p>Fonction pure à mémoïser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;TArg1, TArg2, TArg3, TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui retourne le résultat depuis le cache si la combinaison
+d'arguments a déjà été rencontrée, ou invoque <code class="paramref">fn</code> et met le résultat en cache sinon.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg1</code></dt>
+    <dd><p>Type du premier argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TArg2</code></dt>
+    <dd><p>Type du deuxième argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TArg3</code></dt>
+    <dd><p>Type du troisième argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__4_System_Func___0___1___2___3___examples">Examples</h4>
+  <pre><code class="lang-csharp">var combine = Function.Memoize((string a, string b, string sep) =&gt; a + sep + b);
+combine("hello", "world", " "); // calcul effectué, résultat mis en cache
+combine("hello", "world", " "); // retourné depuis le cache
+combine("hello", "world", "-"); // nouveau calcul</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Memoize__4_System_Func___0___1___2___3___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Le cache est thread-safe — implémenté via <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary&lt;TKey, TValue&gt;</a>.
+</p>
+<p>
+Les arguments sont combinés en un tuple struct comme clé,
+garantissant l'absence d'allocation heap par appel et satisfaisant nativement
+la contrainte <code>notnull</code> du dictionnaire — même si les arguments individuels
+sont <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+</p>
+<p>
+Sur <code>netstandard2.0</code> et <code>netstandard2.1</code>, chaque argument est encapsulé
+dans <span class="xref">Rotomeca.Core.Optionals.MayBe&lt;T&gt;</span> pour un support uniforme des valeurs <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+</p>
+<p>
+Le cache est illimité — ne pas utiliser avec un grand nombre de combinaisons
+d'arguments distinctes sous peine de pression mémoire.
+</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Noop_" data-uid="Rotomeca.Utils.Functional.Function.Noop*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Noop" data-uid="Rotomeca.Utils.Functional.Function.Noop">
+  Noop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ne fait rien.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Noop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Noop_examples">Examples</h4>
+  <pre><code class="lang-csharp">Action callback = condition ? DoSomething : Function.Noop;
+callback();</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Noop_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Utile comme callback vide, placeholder ou implémentation neutre
+là où une méthode est syntaxiquement requise.</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Once_" data-uid="Rotomeca.Utils.Functional.Function.Once*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Once__1_System_Func___0__" data-uid="Rotomeca.Utils.Functional.Function.Once``1(System.Func{``0})">
+  Once&lt;TResult&gt;(Func&lt;TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Once.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version de <code class="paramref">fn</code> qui ne s'exécute qu'une seule fois.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TResult&gt; Once&lt;TResult&gt;(Func&lt;TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</dt>
+    <dd><p>Fonction à n'exécuter qu'une seule fois.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui délègue à <code class="paramref">fn</code> uniquement au premier appel,
+puis retourne le résultat mis en cache pour tous les appels suivants.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Once__1_System_Func___0___examples">Examples</h4>
+  <pre><code class="lang-csharp">var initApp = Function.Once(() =&gt; {
+    Console.WriteLine("Initialisation...");
+    return CreateApp();
+});
+
+initApp(); // exécute fn → "Initialisation..."
+initApp(); // retourne le même résultat, fn n'est plus appelée</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Once__1_System_Func___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Implémenté via <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.lazy-1">Lazy&lt;T&gt;</a> avec <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.lazythreadsafetymode#system-threading-lazythreadsafetymode-executionandpublication">ExecutionAndPublication</a> —
+thread-safe et libère automatiquement la référence à <code class="paramref">fn</code> après le premier appel.
+</p>
+<p>
+Contrairement à <a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Memoize__1_System_Func___0__">Memoize&lt;TResult&gt;(Func&lt;TResult&gt;)</a> qui partage la même sémantique
+pour les fonctions sans argument, <a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Once__1_System_Func___0__">Once&lt;TResult&gt;(Func&lt;TResult&gt;)</a> est l'expression d'une intention
+différente : initialisation unique plutôt que mise en cache de résultats.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Memoize__1_System_Func___0__">Memoize&lt;TResult&gt;(Func&lt;TResult&gt;)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Once_" data-uid="Rotomeca.Utils.Functional.Function.Once*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Once__2_System_Func___0___1__" data-uid="Rotomeca.Utils.Functional.Function.Once``2(System.Func{``0,``1})">
+  Once&lt;TArg1, TResult&gt;(Func&lt;TArg1, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Once.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version de <code class="paramref">fn</code> qui ne s'exécute qu'une seule fois,
+quel que soit l'argument passé aux appels suivants.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TArg1, TResult&gt; Once&lt;TArg1, TResult&gt;(Func&lt;TArg1, TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TArg1, TResult&gt;</dt>
+    <dd><p>Fonction à n'exécuter qu'une seule fois.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TArg1, TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui exécute <code class="paramref">fn</code> au premier appel
+et retourne ce résultat pour tous les appels suivants.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg1</code></dt>
+    <dd><p>Type de l'argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Once__2_System_Func___0___1___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Délègue à <code>_Once&lt;TArg1, Unit, Unit, TResult&gt;</code> en passant des arguments
+<span class="xref">Rotomeca.Utils.Functional.Unit</span> (struct vide) pour les positions inutilisées.
+Le JIT élimine ces paramètres fantômes — surcoût nul à l'appel.
+</p>
+<p>
+Les deux closures de wrapping (<code>(a,_,_) =&gt; fn(a)</code> et <code>a =&gt; inner(a, default, default)</code>)
+sont allouées <b>une seule fois</b> lors de l'appel à <code>Once(fn)</code>, jamais lors des invocations.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Once__1_System_Func___0__">Once&lt;TResult&gt;(Func&lt;TResult&gt;)</a></div>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Memoize__2_System_Func___0___1__">Memoize&lt;TArg1, TResult&gt;(Func&lt;TArg1, TResult&gt;)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Once_" data-uid="Rotomeca.Utils.Functional.Function.Once*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Once__3_System_Func___0___1___2__" data-uid="Rotomeca.Utils.Functional.Function.Once``3(System.Func{``0,``1,``2})">
+  Once&lt;TArg1, TArg2, TResult&gt;(Func&lt;TArg1, TArg2, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Once.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version de <code class="paramref">fn</code> qui ne s'exécute qu'une seule fois,
+quels que soient les arguments passés aux appels suivants.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TArg1, TArg2, TResult&gt; Once&lt;TArg1, TArg2, TResult&gt;(Func&lt;TArg1, TArg2, TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TArg1, TArg2, TResult&gt;</dt>
+    <dd><p>Fonction à n'exécuter qu'une seule fois.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TArg1, TArg2, TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui exécute <code class="paramref">fn</code> au premier appel
+et retourne ce résultat pour tous les appels suivants.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg1</code></dt>
+    <dd><p>Type du premier argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TArg2</code></dt>
+    <dd><p>Type du deuxième argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Once__3_System_Func___0___1___2___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Délègue à <code>_Once&lt;TArg1, TArg2, Unit, TResult&gt;</code>.
+Surcoût d'une closure de wrapping allouée uniquement à la création.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Once__1_System_Func___0__">Once&lt;TResult&gt;(Func&lt;TResult&gt;)</a></div>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Memoize__3_System_Func___0___1___2__">Memoize&lt;TArg1, TArg2, TResult&gt;(Func&lt;TArg1, TArg2, TResult&gt;)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Once_" data-uid="Rotomeca.Utils.Functional.Function.Once*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Once__4_System_Func___0___1___2___3__" data-uid="Rotomeca.Utils.Functional.Function.Once``4(System.Func{``0,``1,``2,``3})">
+  Once&lt;TArg1, TArg2, TArg3, TResult&gt;(Func&lt;TArg1, TArg2, TArg3, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.Once.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne une version de <code class="paramref">fn</code> qui ne s'exécute qu'une seule fois,
+quels que soient les arguments passés aux appels suivants.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;TArg1, TArg2, TArg3, TResult&gt; Once&lt;TArg1, TArg2, TArg3, TResult&gt;(Func&lt;TArg1, TArg2, TArg3, TResult&gt; fn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;TArg1, TArg2, TArg3, TResult&gt;</dt>
+    <dd><p>Fonction à n'exécuter qu'une seule fois.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;TArg1, TArg2, TArg3, TResult&gt;</dt>
+    <dd><p>Une nouvelle fonction qui exécute <code class="paramref">fn</code> au premier appel
+et retourne ce résultat pour tous les appels suivants.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg1</code></dt>
+    <dd><p>Type du premier argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TArg2</code></dt>
+    <dd><p>Type du deuxième argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TArg3</code></dt>
+    <dd><p>Type du troisième argument de <code class="paramref">fn</code>.</p>
+</dd>
+    <dt><code>TResult</code></dt>
+    <dd><p>Type du résultat retourné par <code class="paramref">fn</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Once__4_System_Func___0___1___2___3___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Délègue directement à <code>_Once</code> sans wrapping supplémentaire —
+c'est la surcharge la plus efficace à la création.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Once__1_System_Func___0__">Once&lt;TResult&gt;(Func&lt;TResult&gt;)</a></div>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Memoize__4_System_Func___0___1___2___3__">Memoize&lt;TArg1, TArg2, TArg3, TResult&gt;(Func&lt;TArg1, TArg2, TArg3, TResult&gt;)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__10___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__System_Func___4___5__System_Func___5___6__System_Func___6___7__System_Func___7___8__System_Func___8___9__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``10(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4},System.Func{``4,``5},System.Func{``5,``6},System.Func{``6,``7},System.Func{``7,``8},System.Func{``8,``9})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7, TResult8, TResult9&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;, Func&lt;TResult4, TResult5&gt;, Func&lt;TResult5, TResult6&gt;, Func&lt;TResult6, TResult7&gt;, Func&lt;TResult7, TResult8&gt;, Func&lt;TResult8, TResult9&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 9 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult9 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7, TResult8, TResult9&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4, Func&lt;TResult4, TResult5&gt; func5, Func&lt;TResult5, TResult6&gt; func6, Func&lt;TResult6, TResult7&gt; func7, Func&lt;TResult7, TResult8&gt; func8, Func&lt;TResult8, TResult9&gt; func9)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+    <dt><code>func5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult4, TResult5&gt;</dt>
+    <dd><p>Cinquième fonction à appliquer.</p>
+</dd>
+    <dt><code>func6</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult5, TResult6&gt;</dt>
+    <dd><p>Sixième fonction à appliquer.</p>
+</dd>
+    <dt><code>func7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult6, TResult7&gt;</dt>
+    <dd><p>Septième fonction à appliquer.</p>
+</dd>
+    <dt><code>func8</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult7, TResult8&gt;</dt>
+    <dd><p>Huitième fonction à appliquer.</p>
+</dd>
+    <dt><code>func9</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult8, TResult9&gt;</dt>
+    <dd><p>Neuvième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult9</span></dt>
+    <dd><p>Résultat de la 9ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat de la fonction 4.</p>
+</dd>
+    <dt><code>TResult5</code></dt>
+    <dd><p>Type du résultat de la fonction 5.</p>
+</dd>
+    <dt><code>TResult6</code></dt>
+    <dd><p>Type du résultat de la fonction 6.</p>
+</dd>
+    <dt><code>TResult7</code></dt>
+    <dd><p>Type du résultat de la fonction 7.</p>
+</dd>
+    <dt><code>TResult8</code></dt>
+    <dd><p>Type du résultat de la fonction 8.</p>
+</dd>
+    <dt><code>TResult9</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__11___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__System_Func___4___5__System_Func___5___6__System_Func___6___7__System_Func___7___8__System_Func___8___9__System_Func___9___10__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``11(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4},System.Func{``4,``5},System.Func{``5,``6},System.Func{``6,``7},System.Func{``7,``8},System.Func{``8,``9},System.Func{``9,``10})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7, TResult8, TResult9, TResult10&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;, Func&lt;TResult4, TResult5&gt;, Func&lt;TResult5, TResult6&gt;, Func&lt;TResult6, TResult7&gt;, Func&lt;TResult7, TResult8&gt;, Func&lt;TResult8, TResult9&gt;, Func&lt;TResult9, TResult10&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 10 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult10 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7, TResult8, TResult9, TResult10&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4, Func&lt;TResult4, TResult5&gt; func5, Func&lt;TResult5, TResult6&gt; func6, Func&lt;TResult6, TResult7&gt; func7, Func&lt;TResult7, TResult8&gt; func8, Func&lt;TResult8, TResult9&gt; func9, Func&lt;TResult9, TResult10&gt; func10)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+    <dt><code>func5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult4, TResult5&gt;</dt>
+    <dd><p>Cinquième fonction à appliquer.</p>
+</dd>
+    <dt><code>func6</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult5, TResult6&gt;</dt>
+    <dd><p>Sixième fonction à appliquer.</p>
+</dd>
+    <dt><code>func7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult6, TResult7&gt;</dt>
+    <dd><p>Septième fonction à appliquer.</p>
+</dd>
+    <dt><code>func8</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult7, TResult8&gt;</dt>
+    <dd><p>Huitième fonction à appliquer.</p>
+</dd>
+    <dt><code>func9</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult8, TResult9&gt;</dt>
+    <dd><p>Neuvième fonction à appliquer.</p>
+</dd>
+    <dt><code>func10</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult9, TResult10&gt;</dt>
+    <dd><p>Dixième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult10</span></dt>
+    <dd><p>Résultat de la 10ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat de la fonction 4.</p>
+</dd>
+    <dt><code>TResult5</code></dt>
+    <dd><p>Type du résultat de la fonction 5.</p>
+</dd>
+    <dt><code>TResult6</code></dt>
+    <dd><p>Type du résultat de la fonction 6.</p>
+</dd>
+    <dt><code>TResult7</code></dt>
+    <dd><p>Type du résultat de la fonction 7.</p>
+</dd>
+    <dt><code>TResult8</code></dt>
+    <dd><p>Type du résultat de la fonction 8.</p>
+</dd>
+    <dt><code>TResult9</code></dt>
+    <dd><p>Type du résultat de la fonction 9.</p>
+</dd>
+    <dt><code>TResult10</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__2___0_System_Func___0___1__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``2(``0,System.Func{``0,``1})">
+  Pipe&lt;TSource, TResult1&gt;(TSource, Func&lt;TSource, TResult1&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applique une fonction à une valeur et retourne le résultat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult1 Pipe&lt;TSource, TResult1&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult1</span></dt>
+    <dd><p>Résultat de la fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__3___0_System_Func___0___1__System_Func___1___2__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``3(``0,System.Func{``0,``1},System.Func{``1,``2})">
+  Pipe&lt;TSource, TResult1, TResult2&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 2 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult2 Pipe&lt;TSource, TResult1, TResult2&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult2</span></dt>
+    <dd><p>Résultat de la 2ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__4___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``4(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 3 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult3 Pipe&lt;TSource, TResult1, TResult2, TResult3&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult3</span></dt>
+    <dd><p>Résultat de la 3ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__5___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``5(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 4 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult4 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult4</span></dt>
+    <dd><p>Résultat de la 4ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__6___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__System_Func___4___5__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``6(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4},System.Func{``4,``5})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;, Func&lt;TResult4, TResult5&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 5 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult5 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4, Func&lt;TResult4, TResult5&gt; func5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+    <dt><code>func5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult4, TResult5&gt;</dt>
+    <dd><p>Cinquième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult5</span></dt>
+    <dd><p>Résultat de la 5ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat de la fonction 4.</p>
+</dd>
+    <dt><code>TResult5</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__7___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__System_Func___4___5__System_Func___5___6__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``7(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4},System.Func{``4,``5},System.Func{``5,``6})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;, Func&lt;TResult4, TResult5&gt;, Func&lt;TResult5, TResult6&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 6 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult6 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4, Func&lt;TResult4, TResult5&gt; func5, Func&lt;TResult5, TResult6&gt; func6)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+    <dt><code>func5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult4, TResult5&gt;</dt>
+    <dd><p>Cinquième fonction à appliquer.</p>
+</dd>
+    <dt><code>func6</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult5, TResult6&gt;</dt>
+    <dd><p>Sixième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult6</span></dt>
+    <dd><p>Résultat de la 6ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat de la fonction 4.</p>
+</dd>
+    <dt><code>TResult5</code></dt>
+    <dd><p>Type du résultat de la fonction 5.</p>
+</dd>
+    <dt><code>TResult6</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__8___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__System_Func___4___5__System_Func___5___6__System_Func___6___7__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``8(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4},System.Func{``4,``5},System.Func{``5,``6},System.Func{``6,``7})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;, Func&lt;TResult4, TResult5&gt;, Func&lt;TResult5, TResult6&gt;, Func&lt;TResult6, TResult7&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 7 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult7 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4, Func&lt;TResult4, TResult5&gt; func5, Func&lt;TResult5, TResult6&gt; func6, Func&lt;TResult6, TResult7&gt; func7)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+    <dt><code>func5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult4, TResult5&gt;</dt>
+    <dd><p>Cinquième fonction à appliquer.</p>
+</dd>
+    <dt><code>func6</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult5, TResult6&gt;</dt>
+    <dd><p>Sixième fonction à appliquer.</p>
+</dd>
+    <dt><code>func7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult6, TResult7&gt;</dt>
+    <dd><p>Septième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult7</span></dt>
+    <dd><p>Résultat de la 7ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat de la fonction 4.</p>
+</dd>
+    <dt><code>TResult5</code></dt>
+    <dd><p>Type du résultat de la fonction 5.</p>
+</dd>
+    <dt><code>TResult6</code></dt>
+    <dd><p>Type du résultat de la fonction 6.</p>
+</dd>
+    <dt><code>TResult7</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Pipe_" data-uid="Rotomeca.Utils.Functional.Function.Pipe*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Pipe__9___0_System_Func___0___1__System_Func___1___2__System_Func___2___3__System_Func___3___4__System_Func___4___5__System_Func___5___6__System_Func___6___7__System_Func___7___8__" data-uid="Rotomeca.Utils.Functional.Function.Pipe``9(``0,System.Func{``0,``1},System.Func{``1,``2},System.Func{``2,``3},System.Func{``3,``4},System.Func{``4,``5},System.Func{``5,``6},System.Func{``6,``7},System.Func{``7,``8})">
+  Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7, TResult8&gt;(TSource, Func&lt;TSource, TResult1&gt;, Func&lt;TResult1, TResult2&gt;, Func&lt;TResult2, TResult3&gt;, Func&lt;TResult3, TResult4&gt;, Func&lt;TResult4, TResult5&gt;, Func&lt;TResult5, TResult6&gt;, Func&lt;TResult6, TResult7&gt;, Func&lt;TResult7, TResult8&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enchaîne 8 fonctions en appliquant chaque fonction au résultat de la précédente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult8 Pipe&lt;TSource, TResult1, TResult2, TResult3, TResult4, TResult5, TResult6, TResult7, TResult8&gt;(TSource source, Func&lt;TSource, TResult1&gt; func1, Func&lt;TResult1, TResult2&gt; func2, Func&lt;TResult2, TResult3&gt; func3, Func&lt;TResult3, TResult4&gt; func4, Func&lt;TResult4, TResult5&gt; func5, Func&lt;TResult5, TResult6&gt; func6, Func&lt;TResult6, TResult7&gt; func7, Func&lt;TResult7, TResult8&gt; func8)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <span class="xref">TSource</span></dt>
+    <dd><p>Valeur initiale.</p>
+</dd>
+    <dt><code>func1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TResult1&gt;</dt>
+    <dd><p>Première fonction à appliquer.</p>
+</dd>
+    <dt><code>func2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult1, TResult2&gt;</dt>
+    <dd><p>Deuxième fonction à appliquer.</p>
+</dd>
+    <dt><code>func3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult2, TResult3&gt;</dt>
+    <dd><p>Troisième fonction à appliquer.</p>
+</dd>
+    <dt><code>func4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult3, TResult4&gt;</dt>
+    <dd><p>Quatrième fonction à appliquer.</p>
+</dd>
+    <dt><code>func5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult4, TResult5&gt;</dt>
+    <dd><p>Cinquième fonction à appliquer.</p>
+</dd>
+    <dt><code>func6</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult5, TResult6&gt;</dt>
+    <dd><p>Sixième fonction à appliquer.</p>
+</dd>
+    <dt><code>func7</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult6, TResult7&gt;</dt>
+    <dd><p>Septième fonction à appliquer.</p>
+</dd>
+    <dt><code>func8</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TResult7, TResult8&gt;</dt>
+    <dd><p>Huitième fonction à appliquer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResult8</span></dt>
+    <dd><p>Résultat de la 8ème fonction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd><p>Type de la valeur d'entrée.</p>
+</dd>
+    <dt><code>TResult1</code></dt>
+    <dd><p>Type du résultat de la fonction 1.</p>
+</dd>
+    <dt><code>TResult2</code></dt>
+    <dd><p>Type du résultat de la fonction 2.</p>
+</dd>
+    <dt><code>TResult3</code></dt>
+    <dd><p>Type du résultat de la fonction 3.</p>
+</dd>
+    <dt><code>TResult4</code></dt>
+    <dd><p>Type du résultat de la fonction 4.</p>
+</dd>
+    <dt><code>TResult5</code></dt>
+    <dd><p>Type du résultat de la fonction 5.</p>
+</dd>
+    <dt><code>TResult6</code></dt>
+    <dd><p>Type du résultat de la fonction 6.</p>
+</dd>
+    <dt><code>TResult7</code></dt>
+    <dd><p>Type du résultat de la fonction 7.</p>
+</dd>
+    <dt><code>TResult8</code></dt>
+    <dd><p>Type du résultat final.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Functional_Function_Throttle_" data-uid="Rotomeca.Utils.Functional.Function.Throttle*"></a>
+
+  <h3 id="Rotomeca_Utils_Functional_Function_Throttle_System_Action_System_UInt32_" data-uid="Rotomeca.Utils.Functional.Function.Throttle(System.Action,System.UInt32)">
+  Throttle(Action, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Function.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Garantit qu'une action ne s'exécute pas plus d'une fois par tranche
+de temps donnée, quel que soit le nombre d'appels reçus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action Throttle(Action action, uint ms)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>Action dont la fréquence d'exécution est à limiter.</p>
+</dd>
+    <dt><code>ms</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Intervalle minimal en millisecondes entre deux exécutions.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>Une nouvelle <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a> dont la fréquence d'appel est limitée.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Throttle_System_Action_System_UInt32__examples">Examples</h4>
+  <pre><code class="lang-csharp">Action onScroll = Function.Throttle(() =&gt; UpdateScrollbar(), 100);
+// UpdateScrollbar ne s'exécute qu'une fois toutes les 100ms,
+// même si l'événement scroll se déclenche des centaines de fois.</code></pre>
+
+
+  <h4 class="section" id="Rotomeca_Utils_Functional_Function_Throttle_System_Action_System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Contrairement à <a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Debounce_System_Action_System_UInt32_">Debounce(Action, uint)</a>, le premier appel s'exécute immédiatement.
+Les appels suivants sont ignorés jusqu'à l'expiration de l'intervalle.
+</p>
+<p>
+Sur .NET 5 et supérieur, utilise <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable&lt;T&gt;</a> nativement.
+Sur <code>netstandard2.0</code> et <code>netstandard2.1</code>, utilise <span class="xref">Rotomeca.Core.Optionals.MayBe&lt;T&gt;</span>
+en raison de comportements incompatibles/étranges avec <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable&lt;T&gt;</a> sur ces targets.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Rotomeca.Utils.Functional.Function.html#Rotomeca_Utils_Functional_Function_Debounce_System_Action_System_UInt32_">Debounce(Action, uint)</a></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Functional/Pipe/Function.Pipe.cs/#L3" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

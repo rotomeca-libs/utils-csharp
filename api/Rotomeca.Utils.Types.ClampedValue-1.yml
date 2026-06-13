@@ -1,0 +1,1768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Types.ClampedValue`1
+  commentId: T:Rotomeca.Utils.Types.ClampedValue`1
+  id: ClampedValue`1
+  parent: Rotomeca.Utils.Types
+  children:
+  - Rotomeca.Utils.Types.ClampedValue`1.#ctor(`0,`0,`0)
+  - Rotomeca.Utils.Types.ClampedValue`1.Deconstruct(`0@,`0@,`0@)
+  - Rotomeca.Utils.Types.ClampedValue`1.Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+  - Rotomeca.Utils.Types.ClampedValue`1.Equals(System.Object)
+  - Rotomeca.Utils.Types.ClampedValue`1.GetHashCode
+  - Rotomeca.Utils.Types.ClampedValue`1.Max
+  - Rotomeca.Utils.Types.ClampedValue`1.Min
+  - Rotomeca.Utils.Types.ClampedValue`1.ToString
+  - Rotomeca.Utils.Types.ClampedValue`1.Value
+  - Rotomeca.Utils.Types.ClampedValue`1.WithValue(`0)
+  - Rotomeca.Utils.Types.ClampedValue`1.op_Equality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  - Rotomeca.Utils.Types.ClampedValue`1.op_Implicit(Rotomeca.Utils.Types.ClampedValue{`0})~`0
+  - Rotomeca.Utils.Types.ClampedValue`1.op_Inequality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  langs:
+  - csharp
+  - vb
+  name: ClampedValue<T>
+  nameWithType: ClampedValue<T>
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>
+  type: Struct
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: ClampedValue
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 29
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Valeur immuable contrainte dans un intervalle [<xref href="Rotomeca.Utils.Types.ClampedValue%601.Min" data-throw-if-not-resolved="false"></xref>, <xref href="Rotomeca.Utils.Types.ClampedValue%601.Max" data-throw-if-not-resolved="false"></xref>].
+  remarks: >-
+    <p>
+
+    Implémenté en <code>readonly struct</code> — aucune allocation heap,
+
+    sémantique par valeur, pas de GC.
+
+    </p>
+
+    <p>
+
+    Toute tentative d'assigner une valeur hors intervalle est silencieusement
+
+    clampée au minimum ou au maximum, jamais levée comme exception.
+
+    </p>
+  example:
+  - >-
+    <pre><code class="lang-csharp">var speed = new ClampedValue&lt;int&gt;(0, 100, 150);
+
+    Console.WriteLine(speed.Value); // 100 — clampée au max
+
+
+    var faster = speed.WithValue(80);
+
+    Console.WriteLine(faster.Value); // 80
+
+
+    int raw = speed; // conversion implicite → 100</code></pre>
+  syntax:
+    content: 'public readonly struct ClampedValue<T> : IEquatable<ClampedValue<T>>, IClampedValue<T> where T : IComparable<T>'
+    typeParameters:
+    - id: T
+      description: Type de la valeur. Doit implémenter <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Structure ClampedValue(Of T As IComparable(Of T)) Implements IEquatable(Of ClampedValue(Of T)), IClampedValue(Of T)
+  implements:
+  - System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}
+  - Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Rotomeca.Utils.Types.ClampedValue`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Types.ClampedValue`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Types.ClampedValue`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Types.ClampedValue{{T}},{TResult}})
+  - Rotomeca.Utils.Types.ClampedValue`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Types.ClampedValue{{T}},{TResult}})
+  nameWithType.vb: ClampedValue(Of T)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T)
+  name.vb: ClampedValue(Of T)
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Min
+  commentId: P:Rotomeca.Utils.Types.ClampedValue`1.Min
+  id: Min
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Min
+  nameWithType: ClampedValue<T>.Min
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Min
+  type: Property
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Min
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 33
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Borne inférieure de l'intervalle.
+  example: []
+  syntax:
+    content: public T Min { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Min As T
+  overload: Rotomeca.Utils.Types.ClampedValue`1.Min*
+  implements:
+  - Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.Min
+  nameWithType.vb: ClampedValue(Of T).Min
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Min
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Max
+  commentId: P:Rotomeca.Utils.Types.ClampedValue`1.Max
+  id: Max
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Max
+  nameWithType: ClampedValue<T>.Max
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Max
+  type: Property
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Max
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 36
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Borne supérieure de l'intervalle.
+  example: []
+  syntax:
+    content: public T Max { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Max As T
+  overload: Rotomeca.Utils.Types.ClampedValue`1.Max*
+  implements:
+  - Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.Max
+  nameWithType.vb: ClampedValue(Of T).Max
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Max
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Value
+  commentId: P:Rotomeca.Utils.Types.ClampedValue`1.Value
+  id: Value
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ClampedValue<T>.Value
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Value
+  type: Property
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Value
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 41
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Valeur courante, garantie dans [<xref href="Rotomeca.Utils.Types.ClampedValue%601.Min" data-throw-if-not-resolved="false"></xref>, <xref href="Rotomeca.Utils.Types.ClampedValue%601.Max" data-throw-if-not-resolved="false"></xref>].
+  example: []
+  syntax:
+    content: public T Value { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Value As T
+  overload: Rotomeca.Utils.Types.ClampedValue`1.Value*
+  implements:
+  - Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.Value
+  nameWithType.vb: ClampedValue(Of T).Value
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Value
+- uid: Rotomeca.Utils.Types.ClampedValue`1.#ctor(`0,`0,`0)
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.#ctor(`0,`0,`0)
+  id: '#ctor(`0,`0,`0)'
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: ClampedValue(T, T, T)
+  nameWithType: ClampedValue<T>.ClampedValue(T, T, T)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.ClampedValue(T, T, T)
+  type: Constructor
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: .ctor
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 53
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Crée une valeur contrainte dans [<code class="paramref">min</code>, <code class="paramref">max</code>].
+
+    <code class="paramref">value</code> est clampée silencieusement si hors intervalle.
+  example: []
+  syntax:
+    content: public ClampedValue(T min, T max, T value)
+    parameters:
+    - id: min
+      type: '{T}'
+      description: Borne inférieure.
+    - id: max
+      type: '{T}'
+      description: Borne supérieure.
+    - id: value
+      type: '{T}'
+      description: Valeur initiale, clampée si nécessaire.
+    content.vb: Public Sub New(min As T, max As T, value As T)
+  overload: Rotomeca.Utils.Types.ClampedValue`1.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Levée si <code class="paramref">min</code> est supérieur à <code class="paramref">max</code>.
+  nameWithType.vb: ClampedValue(Of T).New(T, T, T)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).New(T, T, T)
+  name.vb: New(T, T, T)
+- uid: Rotomeca.Utils.Types.ClampedValue`1.WithValue(`0)
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.WithValue(`0)
+  id: WithValue(`0)
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: WithValue(T)
+  nameWithType: ClampedValue<T>.WithValue(T)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.WithValue(T)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: WithValue
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 74
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Retourne une nouvelle instance avec <code class="paramref">newValue</code> clampée
+
+    dans le même intervalle [<xref href="Rotomeca.Utils.Types.ClampedValue%601.Min" data-throw-if-not-resolved="false"></xref>, <xref href="Rotomeca.Utils.Types.ClampedValue%601.Max" data-throw-if-not-resolved="false"></xref>].
+  example: []
+  syntax:
+    content: public IClampedValue<T> WithValue(T newValue)
+    parameters:
+    - id: newValue
+      type: '{T}'
+      description: Nouvelle valeur à appliquer.
+    return:
+      type: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+      description: Nouvelle instance avec la valeur mise à jour.
+    content.vb: Public Function WithValue(newValue As T) As IClampedValue(Of T)
+  overload: Rotomeca.Utils.Types.ClampedValue`1.WithValue*
+  implements:
+  - Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.WithValue({T})
+  nameWithType.vb: ClampedValue(Of T).WithValue(T)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).WithValue(T)
+- uid: Rotomeca.Utils.Types.ClampedValue`1.op_Implicit(Rotomeca.Utils.Types.ClampedValue{`0})~`0
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.op_Implicit(Rotomeca.Utils.Types.ClampedValue{`0})~`0
+  id: op_Implicit(Rotomeca.Utils.Types.ClampedValue{`0})~`0
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: implicit operator T(ClampedValue<T>)
+  nameWithType: ClampedValue<T>.implicit operator T(ClampedValue<T>)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.implicit operator T(Rotomeca.Utils.Types.ClampedValue<T>)
+  type: Operator
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: op_Implicit
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 80
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: >-
+    Convertit implicitement en <code class="typeparamref">T</code>.
+
+    Retourne <xref href="Rotomeca.Utils.Types.ClampedValue%601.Value" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static implicit operator T(ClampedValue<T> c)
+    parameters:
+    - id: c
+      type: Rotomeca.Utils.Types.ClampedValue`1
+    return:
+      type: '{T}'
+    content.vb: Public Shared Widening Operator CType(c As ClampedValue(Of T)) As T
+  overload: Rotomeca.Utils.Types.ClampedValue`1.op_Implicit*
+  nameWithType.vb: ClampedValue(Of T).CType(ClampedValue(Of T))
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).CType(Rotomeca.Utils.Types.ClampedValue(Of T))
+  name.vb: CType(ClampedValue(Of T))
+- uid: Rotomeca.Utils.Types.ClampedValue`1.op_Equality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.op_Equality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  id: op_Equality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: operator ==(ClampedValue<T>, ClampedValue<T>)
+  nameWithType: ClampedValue<T>.operator ==(ClampedValue<T>, ClampedValue<T>)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.operator ==(Rotomeca.Utils.Types.ClampedValue<T>, Rotomeca.Utils.Types.ClampedValue<T>)
+  type: Operator
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: op_Equality
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 83
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Détermine si deux instances sont égales.
+  example: []
+  syntax:
+    content: public static bool operator ==(ClampedValue<T> left, ClampedValue<T> right)
+    parameters:
+    - id: left
+      type: Rotomeca.Utils.Types.ClampedValue`1
+    - id: right
+      type: Rotomeca.Utils.Types.ClampedValue`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As ClampedValue(Of T), right As ClampedValue(Of T)) As Boolean
+  overload: Rotomeca.Utils.Types.ClampedValue`1.op_Equality*
+  nameWithType.vb: ClampedValue(Of T).=(ClampedValue(Of T), ClampedValue(Of T))
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).=(Rotomeca.Utils.Types.ClampedValue(Of T), Rotomeca.Utils.Types.ClampedValue(Of T))
+  name.vb: =(ClampedValue(Of T), ClampedValue(Of T))
+- uid: Rotomeca.Utils.Types.ClampedValue`1.op_Inequality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.op_Inequality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  id: op_Inequality(Rotomeca.Utils.Types.ClampedValue{`0},Rotomeca.Utils.Types.ClampedValue{`0})
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: operator !=(ClampedValue<T>, ClampedValue<T>)
+  nameWithType: ClampedValue<T>.operator !=(ClampedValue<T>, ClampedValue<T>)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.operator !=(Rotomeca.Utils.Types.ClampedValue<T>, Rotomeca.Utils.Types.ClampedValue<T>)
+  type: Operator
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: op_Inequality
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 86
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Détermine si deux instances sont différentes.
+  example: []
+  syntax:
+    content: public static bool operator !=(ClampedValue<T> left, ClampedValue<T> right)
+    parameters:
+    - id: left
+      type: Rotomeca.Utils.Types.ClampedValue`1
+    - id: right
+      type: Rotomeca.Utils.Types.ClampedValue`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As ClampedValue(Of T), right As ClampedValue(Of T)) As Boolean
+  overload: Rotomeca.Utils.Types.ClampedValue`1.op_Inequality*
+  nameWithType.vb: ClampedValue(Of T).<>(ClampedValue(Of T), ClampedValue(Of T))
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).<>(Rotomeca.Utils.Types.ClampedValue(Of T), Rotomeca.Utils.Types.ClampedValue(Of T))
+  name.vb: <>(ClampedValue(Of T), ClampedValue(Of T))
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+  id: Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(ClampedValue<T>)
+  nameWithType: ClampedValue<T>.Equals(ClampedValue<T>)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Equals(Rotomeca.Utils.Types.ClampedValue<T>)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Equals
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 93
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  remarks: >-
+    Deux instances sont égales si <xref href="Rotomeca.Utils.Types.ClampedValue%601.Min" data-throw-if-not-resolved="false"></xref>, <xref href="Rotomeca.Utils.Types.ClampedValue%601.Max" data-throw-if-not-resolved="false"></xref>
+
+    et <xref href="Rotomeca.Utils.Types.ClampedValue%601.Value" data-throw-if-not-resolved="false"></xref> sont identiques.
+  example: []
+  syntax:
+    content: public bool Equals(ClampedValue<T> other)
+    parameters:
+    - id: other
+      type: Rotomeca.Utils.Types.ClampedValue`1
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As ClampedValue(Of T)) As Boolean
+  overload: Rotomeca.Utils.Types.ClampedValue`1.Equals*
+  implements:
+  - System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}.Equals(Rotomeca.Utils.Types.ClampedValue{{T}})
+  nameWithType.vb: ClampedValue(Of T).Equals(ClampedValue(Of T))
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Equals(Rotomeca.Utils.Types.ClampedValue(Of T))
+  name.vb: Equals(ClampedValue(Of T))
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Equals(System.Object)
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: ClampedValue<T>.Equals(object?)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Equals
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 99
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Rotomeca.Utils.Types.ClampedValue`1.Equals*
+  nameWithType.vb: ClampedValue(Of T).Equals(Object)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Equals(Object)
+  name.vb: Equals(Object)
+- uid: Rotomeca.Utils.Types.ClampedValue`1.GetHashCode
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.GetHashCode
+  id: GetHashCode
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ClampedValue<T>.GetHashCode()
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: GetHashCode
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 102
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Rotomeca.Utils.Types.ClampedValue`1.GetHashCode*
+  nameWithType.vb: ClampedValue(Of T).GetHashCode()
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).GetHashCode()
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Deconstruct(`0@,`0@,`0@)
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.Deconstruct(`0@,`0@,`0@)
+  id: Deconstruct(`0@,`0@,`0@)
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out T, out T, out T)
+  nameWithType: ClampedValue<T>.Deconstruct(out T, out T, out T)
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Deconstruct(out T, out T, out T)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Deconstruct
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 129
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  summary: Déconstruit l'instance en ses trois composantes.
+  example:
+  - <pre><code class="lang-csharp">var (min, max, value) = new ClampedValue&lt;int&gt;(0, 100, 50);</code></pre>
+  syntax:
+    content: public void Deconstruct(out T min, out T max, out T value)
+    parameters:
+    - id: min
+      type: '{T}'
+      description: Borne inférieure.
+    - id: max
+      type: '{T}'
+      description: Borne supérieure.
+    - id: value
+      type: '{T}'
+      description: Valeur courante.
+    content.vb: Public Sub Deconstruct(min As T, max As T, value As T)
+  overload: Rotomeca.Utils.Types.ClampedValue`1.Deconstruct*
+  nameWithType.vb: ClampedValue(Of T).Deconstruct(T, T, T)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Deconstruct(T, T, T)
+  name.vb: Deconstruct(T, T, T)
+- uid: Rotomeca.Utils.Types.ClampedValue`1.ToString
+  commentId: M:Rotomeca.Utils.Types.ClampedValue`1.ToString
+  id: ToString
+  parent: Rotomeca.Utils.Types.ClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ClampedValue<T>.ToString()
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.ToString()
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: ToString
+    path: Rotomeca.Utils.Core/Types/ClampedValue{T}.cs
+    startLine: 137
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Types
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Rotomeca.Utils.Types.ClampedValue`1.ToString*
+  nameWithType.vb: ClampedValue(Of T).ToString()
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).ToString()
+references:
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Min
+  commentId: P:Rotomeca.Utils.Types.ClampedValue`1.Min
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Min
+  name: Min
+  nameWithType: ClampedValue<T>.Min
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Min
+  nameWithType.vb: ClampedValue(Of T).Min
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Min
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Max
+  commentId: P:Rotomeca.Utils.Types.ClampedValue`1.Max
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Max
+  name: Max
+  nameWithType: ClampedValue<T>.Max
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Max
+  nameWithType.vb: ClampedValue(Of T).Max
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Max
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types
+  commentId: N:Rotomeca.Utils.Types
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Types
+  nameWithType: Rotomeca.Utils.Types
+  fullName: Rotomeca.Utils.Types
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+- uid: System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}
+  commentId: T:System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ClampedValue<T>>
+  nameWithType: IEquatable<ClampedValue<T>>
+  fullName: System.IEquatable<Rotomeca.Utils.Types.ClampedValue<T>>
+  nameWithType.vb: IEquatable(Of ClampedValue(Of T))
+  fullName.vb: System.IEquatable(Of Rotomeca.Utils.Types.ClampedValue(Of T))
+  name.vb: IEquatable(Of ClampedValue(Of T))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+  commentId: T:Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}
+  parent: Rotomeca.Utils.Types.Interfaces
+  definition: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  name: IClampedValue<T>
+  nameWithType: IClampedValue<T>
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>
+  nameWithType.vb: IClampedValue(Of T)
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T)
+  name.vb: IClampedValue(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+    name: IClampedValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+    name: IClampedValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  definition: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<ClampedValue<T>>(ClampedValue<T>, Action<string>)
+  nameWithType: Dicts.DeepClone<ClampedValue<T>>(ClampedValue<T>, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<Rotomeca.Utils.Types.ClampedValue<T>>(Rotomeca.Utils.Types.ClampedValue<T>, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of ClampedValue(Of T))(ClampedValue(Of T), Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of Rotomeca.Utils.Types.ClampedValue(Of T))(Rotomeca.Utils.Types.ClampedValue(Of T), System.Action(Of String))
+  name.vb: DeepClone(Of ClampedValue(Of T))(ClampedValue(Of T), Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Types.ClampedValue{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Types.ClampedValue{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Types.ClampedValue{{T}},{TResult}})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  parent: Rotomeca.Utils._____StPipeExtensions
+  definition: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<ClampedValue<T>, TResult>(ClampedValue<T>, Func<ClampedValue<T>, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<ClampedValue<T>, TResult>(ClampedValue<T>, Func<ClampedValue<T>, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<Rotomeca.Utils.Types.ClampedValue<T>, TResult>(Rotomeca.Utils.Types.ClampedValue<T>, System.Func<Rotomeca.Utils.Types.ClampedValue<T>, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of ClampedValue(Of T), TResult)(ClampedValue(Of T), Func(Of ClampedValue(Of T), TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of Rotomeca.Utils.Types.ClampedValue(Of T), TResult)(Rotomeca.Utils.Types.ClampedValue(Of T), System.Func(Of Rotomeca.Utils.Types.ClampedValue(Of T), TResult))
+  name.vb: Pipe(Of ClampedValue(Of T), TResult)(ClampedValue(Of T), Func(Of ClampedValue(Of T), TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Types.ClampedValue{`0},System.Func{Rotomeca.Utils.Types.ClampedValue{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Types.ClampedValue{`0},System.Func{Rotomeca.Utils.Types.ClampedValue{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+  commentId: T:Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+  parent: Rotomeca.Utils.Types.Interfaces
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  name: IClampedValue<T>
+  nameWithType: IClampedValue<T>
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>
+  nameWithType.vb: IClampedValue(Of T)
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T)
+  name.vb: IClampedValue(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+    name: IClampedValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+    name: IClampedValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.Interfaces
+  commentId: N:Rotomeca.Utils.Types.Interfaces
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Types.Interfaces
+  nameWithType: Rotomeca.Utils.Types.Interfaces
+  fullName: Rotomeca.Utils.Types.Interfaces
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  - name: .
+  - uid: Rotomeca.Utils.Types.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Types.Interfaces.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  - name: .
+  - uid: Rotomeca.Utils.Types.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Types.Interfaces.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  isExternal: true
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<T>(T, Action<string>)
+  nameWithType: Dicts.DeepClone<T>(T, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<T>(T, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of T)(T, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of T)(T, System.Action(Of String))
+  name.vb: DeepClone(Of T)(T, Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts
+  commentId: T:Rotomeca.Utils.Dictionaries.Dicts
+  parent: Rotomeca.Utils.Dictionaries
+  href: Rotomeca.Utils.Dictionaries.Dicts.html
+  name: Dicts
+  nameWithType: Dicts
+  fullName: Rotomeca.Utils.Dictionaries.Dicts
+- uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<T, TResult>(T, Func<T, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<T, TResult>(T, Func<T, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<T, TResult>(T, System.Func<T, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of T, TResult)(T, System.Func(Of T, TResult))
+  name.vb: Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils._____StPipeExtensions
+  commentId: T:Rotomeca.Utils._____StPipeExtensions
+  parent: Rotomeca.Utils
+  href: Rotomeca.Utils._____StPipeExtensions.html
+  name: _____StPipeExtensions
+  nameWithType: _____StPipeExtensions
+  fullName: Rotomeca.Utils._____StPipeExtensions
+- uid: Rotomeca.Utils.Dictionaries
+  commentId: N:Rotomeca.Utils.Dictionaries
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Dictionaries
+  nameWithType: Rotomeca.Utils.Dictionaries
+  fullName: Rotomeca.Utils.Dictionaries
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+- uid: Rotomeca.Utils
+  commentId: N:Rotomeca.Utils
+  href: Rotomeca.html
+  name: Rotomeca.Utils
+  nameWithType: Rotomeca.Utils
+  fullName: Rotomeca.Utils
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Min*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.Min
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Min
+  name: Min
+  nameWithType: ClampedValue<T>.Min
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Min
+  nameWithType.vb: ClampedValue(Of T).Min
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Min
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.Min
+  commentId: P:Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}.Min
+  parent: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+  definition: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Min
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_Min
+  name: Min
+  nameWithType: IClampedValue<T>.Min
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.Min
+  nameWithType.vb: IClampedValue(Of T).Min
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).Min
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Min
+  commentId: P:Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Min
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_Min
+  name: Min
+  nameWithType: IClampedValue<T>.Min
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.Min
+  nameWithType.vb: IClampedValue(Of T).Min
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).Min
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Max*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.Max
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Max
+  name: Max
+  nameWithType: ClampedValue<T>.Max
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Max
+  nameWithType.vb: ClampedValue(Of T).Max
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Max
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.Max
+  commentId: P:Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}.Max
+  parent: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+  definition: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Max
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_Max
+  name: Max
+  nameWithType: IClampedValue<T>.Max
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.Max
+  nameWithType.vb: IClampedValue(Of T).Max
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).Max
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Max
+  commentId: P:Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Max
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_Max
+  name: Max
+  nameWithType: IClampedValue<T>.Max
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.Max
+  nameWithType.vb: IClampedValue(Of T).Max
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).Max
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Value*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.Value
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Value
+  name: Value
+  nameWithType: ClampedValue<T>.Value
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Value
+  nameWithType.vb: ClampedValue(Of T).Value
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Value
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.Value
+  commentId: P:Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}.Value
+  parent: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+  definition: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Value
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_Value
+  name: Value
+  nameWithType: IClampedValue<T>.Value
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.Value
+  nameWithType.vb: IClampedValue(Of T).Value
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).Value
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Value
+  commentId: P:Rotomeca.Utils.Types.Interfaces.IClampedValue`1.Value
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_Value
+  name: Value
+  nameWithType: IClampedValue<T>.Value
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.Value
+  nameWithType.vb: IClampedValue(Of T).Value
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).Value
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Rotomeca.Utils.Types.ClampedValue`1.#ctor*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.#ctor
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1__ctor__0__0__0_
+  name: ClampedValue
+  nameWithType: ClampedValue<T>.ClampedValue
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.ClampedValue
+  nameWithType.vb: ClampedValue(Of T).New
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).New
+  name.vb: New
+- uid: Rotomeca.Utils.Types.ClampedValue`1.WithValue*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.WithValue
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_WithValue__0_
+  name: WithValue
+  nameWithType: ClampedValue<T>.WithValue
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.WithValue
+  nameWithType.vb: ClampedValue(Of T).WithValue
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).WithValue
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}.WithValue({T})
+  commentId: M:Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}.WithValue(`0)
+  parent: Rotomeca.Utils.Types.Interfaces.IClampedValue{{T}}
+  definition: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.WithValue(`0)
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_WithValue__0_
+  name: WithValue(T)
+  nameWithType: IClampedValue<T>.WithValue(T)
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.WithValue(T)
+  nameWithType.vb: IClampedValue(Of T).WithValue(T)
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).WithValue(T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}.WithValue(`0)
+    name: WithValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_WithValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue{`0}.WithValue(`0)
+    name: WithValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_WithValue__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.WithValue(`0)
+  commentId: M:Rotomeca.Utils.Types.Interfaces.IClampedValue`1.WithValue(`0)
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_WithValue__0_
+  name: WithValue(T)
+  nameWithType: IClampedValue<T>.WithValue(T)
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>.WithValue(T)
+  nameWithType.vb: IClampedValue(Of T).WithValue(T)
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T).WithValue(T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.WithValue(`0)
+    name: WithValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_WithValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1.WithValue(`0)
+    name: WithValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html#Rotomeca_Utils_Types_Interfaces_IClampedValue_1_WithValue__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Value
+  commentId: P:Rotomeca.Utils.Types.ClampedValue`1.Value
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Value
+  name: Value
+  nameWithType: ClampedValue<T>.Value
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Value
+  nameWithType.vb: ClampedValue(Of T).Value
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Value
+- uid: Rotomeca.Utils.Types.ClampedValue`1.op_Implicit*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.op_Implicit
+  name: implicit operator
+  nameWithType: ClampedValue<T>.implicit operator
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.implicit operator
+  nameWithType.vb: ClampedValue(Of T).CType
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: Rotomeca.Utils.Types.ClampedValue`1
+  commentId: T:Rotomeca.Utils.Types.ClampedValue`1
+  parent: Rotomeca.Utils.Types
+  href: Rotomeca.Utils.Types.ClampedValue-1.html
+  name: ClampedValue<T>
+  nameWithType: ClampedValue<T>
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>
+  nameWithType.vb: ClampedValue(Of T)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T)
+  name.vb: ClampedValue(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.ClampedValue`1.op_Equality*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.op_Equality
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_op_Equality_Rotomeca_Utils_Types_ClampedValue__0__Rotomeca_Utils_Types_ClampedValue__0__
+  name: operator ==
+  nameWithType: ClampedValue<T>.operator ==
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.operator ==
+  nameWithType.vb: ClampedValue(Of T).=
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Rotomeca.Utils.Types.ClampedValue`1.op_Equality*
+    name: ==
+    href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_op_Equality_Rotomeca_Utils_Types_ClampedValue__0__Rotomeca_Utils_Types_ClampedValue__0__
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Rotomeca.Utils.Types.ClampedValue`1.op_Inequality*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.op_Inequality
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_op_Inequality_Rotomeca_Utils_Types_ClampedValue__0__Rotomeca_Utils_Types_ClampedValue__0__
+  name: operator !=
+  nameWithType: ClampedValue<T>.operator !=
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.operator !=
+  nameWithType.vb: ClampedValue(Of T).<>
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Rotomeca.Utils.Types.ClampedValue`1.op_Inequality*
+    name: '!='
+    href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_op_Inequality_Rotomeca_Utils_Types_ClampedValue__0__Rotomeca_Utils_Types_ClampedValue__0__
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Equals*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.Equals
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Equals_Rotomeca_Utils_Types_ClampedValue__0__
+  name: Equals
+  nameWithType: ClampedValue<T>.Equals
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Equals
+  nameWithType.vb: ClampedValue(Of T).Equals
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Equals
+- uid: System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}.Equals(Rotomeca.Utils.Types.ClampedValue{{T}})
+  commentId: M:System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}.Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+  parent: System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(ClampedValue<T>)
+  nameWithType: IEquatable<ClampedValue<T>>.Equals(ClampedValue<T>)
+  fullName: System.IEquatable<Rotomeca.Utils.Types.ClampedValue<T>>.Equals(Rotomeca.Utils.Types.ClampedValue<T>)
+  nameWithType.vb: IEquatable(Of ClampedValue(Of T)).Equals(ClampedValue(Of T))
+  fullName.vb: System.IEquatable(Of Rotomeca.Utils.Types.ClampedValue(Of T)).Equals(Rotomeca.Utils.Types.ClampedValue(Of T))
+  name.vb: Equals(ClampedValue(Of T))
+  spec.csharp:
+  - uid: System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}.Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Rotomeca.Utils.Types.ClampedValue`1}.Equals(Rotomeca.Utils.Types.ClampedValue{`0})
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Rotomeca.Utils.Types.ClampedValue`1.GetHashCode*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.GetHashCode
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_GetHashCode
+  name: GetHashCode
+  nameWithType: ClampedValue<T>.GetHashCode
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.GetHashCode
+  nameWithType.vb: ClampedValue(Of T).GetHashCode
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Rotomeca.Utils.Types.ClampedValue`1.Deconstruct*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.Deconstruct
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_Deconstruct__0___0___0__
+  name: Deconstruct
+  nameWithType: ClampedValue<T>.Deconstruct
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.Deconstruct
+  nameWithType.vb: ClampedValue(Of T).Deconstruct
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).Deconstruct
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Rotomeca.Utils.Types.ClampedValue`1.ToString*
+  commentId: Overload:Rotomeca.Utils.Types.ClampedValue`1.ToString
+  href: Rotomeca.Utils.Types.ClampedValue-1.html#Rotomeca_Utils_Types_ClampedValue_1_ToString
+  name: ToString
+  nameWithType: ClampedValue<T>.ToString
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>.ToString
+  nameWithType.vb: ClampedValue(Of T).ToString
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T).ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+  commentId: T:Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+  id: IAggregable`1
+  parent: Rotomeca.Utils.Collections.Interfaces
+  children:
+  - Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Add(`0)
+  langs:
+  - csharp
+  - vb
+  name: IAggregable<T>
+  nameWithType: IAggregable<T>
+  fullName: Rotomeca.Utils.Collections.Interfaces.IAggregable<T>
+  type: Interface
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Collection/interfaces/IAggregable.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IAggregable
+    path: Rotomeca.Utils.Core/Collection/interfaces/IAggregable.cs
+    startLine: 15
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Collections.Interfaces
+  summary: Définit le contrat d'agrégation pour les types qui peuvent s'additionner entre eux.
+  remarks: >-
+    Utilisé comme contrainte de type dans les surcharges pre-.NET 7 de
+
+    <code>Arrays.Sum</code>, en remplacement de <code>INumber&lt;T&gt;</code>
+
+    qui n'est pas disponible sur NETSTANDARD2.0.
+  example: []
+  syntax:
+    content: public interface IAggregable<T>
+    typeParameters:
+    - id: T
+      description: Le type qui implémente l'addition.
+    content.vb: Public Interface IAggregable(Of T)
+  extensionMethods:
+  - Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  - Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Collections.Interfaces.IAggregable{{T}},{TResult}})
+  - Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Collections.Interfaces.IAggregable{{T}},{TResult}})
+  nameWithType.vb: IAggregable(Of T)
+  fullName.vb: Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T)
+  name.vb: IAggregable(Of T)
+- uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Add(`0)
+  commentId: M:Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Add(`0)
+  id: Add(`0)
+  parent: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+  langs:
+  - csharp
+  - vb
+  name: Add(T)
+  nameWithType: IAggregable<T>.Add(T)
+  fullName: Rotomeca.Utils.Collections.Interfaces.IAggregable<T>.Add(T)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Collection/interfaces/IAggregable.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: Add
+    path: Rotomeca.Utils.Core/Collection/interfaces/IAggregable.cs
+    startLine: 22
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Collections.Interfaces
+  summary: Additionne la valeur courante avec <code class="paramref">b</code> et retourne le résultat.
+  example: []
+  syntax:
+    content: T Add(T b)
+    parameters:
+    - id: b
+      type: '{T}'
+      description: La valeur à additionner.
+    return:
+      type: '{T}'
+      description: Le résultat de l'addition.
+    content.vb: Function Add(b As T) As T
+  overload: Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Add*
+  nameWithType.vb: IAggregable(Of T).Add(T)
+  fullName.vb: Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T).Add(T)
+references:
+- uid: Rotomeca.Utils.Collections.Interfaces
+  commentId: N:Rotomeca.Utils.Collections.Interfaces
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Collections.Interfaces
+  nameWithType: Rotomeca.Utils.Collections.Interfaces
+  fullName: Rotomeca.Utils.Collections.Interfaces
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Collections
+    name: Collections
+    href: Rotomeca.Utils.Collections.html
+  - name: .
+  - uid: Rotomeca.Utils.Collections.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Collections.Interfaces.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Collections
+    name: Collections
+    href: Rotomeca.Utils.Collections.html
+  - name: .
+  - uid: Rotomeca.Utils.Collections.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Collections.Interfaces.html
+- uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  parent: Rotomeca.Utils.Dictionaries.Dicts
+  definition: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<IAggregable<T>>(IAggregable<T>, Action<string>)
+  nameWithType: Dicts.DeepClone<IAggregable<T>>(IAggregable<T>, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<Rotomeca.Utils.Collections.Interfaces.IAggregable<T>>(Rotomeca.Utils.Collections.Interfaces.IAggregable<T>, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of IAggregable(Of T))(IAggregable(Of T), Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T))(Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T), System.Action(Of String))
+  name.vb: DeepClone(Of IAggregable(Of T))(IAggregable(Of T), Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Collections.Interfaces.IAggregable{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(Rotomeca.Utils.Collections.Interfaces.IAggregable{`0},System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Rotomeca.Utils._____StPipeExtensions.Pipe``2(System.Func{Rotomeca.Utils.Collections.Interfaces.IAggregable{{T}},{TResult}})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  parent: Rotomeca.Utils._____StPipeExtensions
+  definition: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<IAggregable<T>, TResult>(IAggregable<T>, Func<IAggregable<T>, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<IAggregable<T>, TResult>(IAggregable<T>, Func<IAggregable<T>, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<Rotomeca.Utils.Collections.Interfaces.IAggregable<T>, TResult>(Rotomeca.Utils.Collections.Interfaces.IAggregable<T>, System.Func<Rotomeca.Utils.Collections.Interfaces.IAggregable<T>, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of IAggregable(Of T), TResult)(IAggregable(Of T), Func(Of IAggregable(Of T), TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T), TResult)(Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T), System.Func(Of Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T), TResult))
+  name.vb: Pipe(Of IAggregable(Of T), TResult)(IAggregable(Of T), Func(Of IAggregable(Of T), TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Collections.Interfaces.IAggregable{`0},System.Func{Rotomeca.Utils.Collections.Interfaces.IAggregable{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(Rotomeca.Utils.Collections.Interfaces.IAggregable{`0},System.Func{Rotomeca.Utils.Collections.Interfaces.IAggregable{`0},``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1
+    name: IAggregable
+    href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  commentId: M:Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+  isExternal: true
+  href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  name: DeepClone<T>(T, Action<string>)
+  nameWithType: Dicts.DeepClone<T>(T, Action<string>)
+  fullName: Rotomeca.Utils.Dictionaries.Dicts.DeepClone<T>(T, System.Action<string>)
+  nameWithType.vb: Dicts.DeepClone(Of T)(T, Action(Of String))
+  fullName.vb: Rotomeca.Utils.Dictionaries.Dicts.DeepClone(Of T)(T, System.Action(Of String))
+  name.vb: DeepClone(Of T)(T, Action(Of String))
+  spec.csharp:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils.Dictionaries.Dicts.DeepClone``1(``0,System.Action{System.String})
+    name: DeepClone
+    href: Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils.Dictionaries.Dicts
+  commentId: T:Rotomeca.Utils.Dictionaries.Dicts
+  parent: Rotomeca.Utils.Dictionaries
+  href: Rotomeca.Utils.Dictionaries.Dicts.html
+  name: Dicts
+  nameWithType: Dicts
+  fullName: Rotomeca.Utils.Dictionaries.Dicts
+- uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  commentId: M:Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+  isExternal: true
+  href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  name: Pipe<T, TResult>(T, Func<T, TResult>)
+  nameWithType: _____StPipeExtensions.Pipe<T, TResult>(T, Func<T, TResult>)
+  fullName: Rotomeca.Utils._____StPipeExtensions.Pipe<T, TResult>(T, System.Func<T, TResult>)
+  nameWithType.vb: _____StPipeExtensions.Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  fullName.vb: Rotomeca.Utils._____StPipeExtensions.Pipe(Of T, TResult)(T, System.Func(Of T, TResult))
+  name.vb: Pipe(Of T, TResult)(T, Func(Of T, TResult))
+  spec.csharp:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Rotomeca.Utils._____StPipeExtensions.Pipe``2(``0,System.Func{``0,``1})
+    name: Pipe
+    href: Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: Rotomeca.Utils._____StPipeExtensions
+  commentId: T:Rotomeca.Utils._____StPipeExtensions
+  parent: Rotomeca.Utils
+  href: Rotomeca.Utils._____StPipeExtensions.html
+  name: _____StPipeExtensions
+  nameWithType: _____StPipeExtensions
+  fullName: Rotomeca.Utils._____StPipeExtensions
+- uid: Rotomeca.Utils.Dictionaries
+  commentId: N:Rotomeca.Utils.Dictionaries
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Dictionaries
+  nameWithType: Rotomeca.Utils.Dictionaries
+  fullName: Rotomeca.Utils.Dictionaries
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Dictionaries
+    name: Dictionaries
+    href: Rotomeca.Utils.Dictionaries.html
+- uid: Rotomeca.Utils
+  commentId: N:Rotomeca.Utils
+  href: Rotomeca.html
+  name: Rotomeca.Utils
+  nameWithType: Rotomeca.Utils
+  fullName: Rotomeca.Utils
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+- uid: Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Add*
+  commentId: Overload:Rotomeca.Utils.Collections.Interfaces.IAggregable`1.Add
+  href: Rotomeca.Utils.Collections.Interfaces.IAggregable-1.html#Rotomeca_Utils_Collections_Interfaces_IAggregable_1_Add__0_
+  name: Add
+  nameWithType: IAggregable<T>.Add
+  fullName: Rotomeca.Utils.Collections.Interfaces.IAggregable<T>.Add
+  nameWithType.vb: IAggregable(Of T).Add
+  fullName.vb: Rotomeca.Utils.Collections.Interfaces.IAggregable(Of T).Add
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

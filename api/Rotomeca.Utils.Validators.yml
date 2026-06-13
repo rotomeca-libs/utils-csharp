@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Validators
+  commentId: N:Rotomeca.Utils.Validators
+  id: Rotomeca.Utils.Validators
+  children:
+  - Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Validators
+  nameWithType: Rotomeca.Utils.Validators
+  fullName: Rotomeca.Utils.Validators
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Validators.StringValidators
+  commentId: T:Rotomeca.Utils.Validators.StringValidators
+  href: Rotomeca.Utils.Validators.StringValidators.html
+  name: StringValidators
+  nameWithType: StringValidators
+  fullName: Rotomeca.Utils.Validators.StringValidators

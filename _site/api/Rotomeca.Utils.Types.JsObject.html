@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JsObject | Rotomeca.Utils </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JsObject | Rotomeca.Utils ">
+      
+      <meta name="description" content="Repr&#233;sente un objet dynamique &#224; la mani&#232;re d&#39;un objet JavaScript : collection de propri&#233;t&#233;s nomm&#233;es (string) &#224; valeurs de types quelconques.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rotomeca-libs/utils-csharp/new/develop/apiSpec/new?filename=Rotomeca_Utils_Types_JsObject.md&amp;value=---%0Auid%3A%20Rotomeca.Utils.Types.JsObject%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Rotomeca.Utils">
+            Rotomeca.Utils
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Rotomeca.Utils.Types.JsObject">
+
+
+
+  <h1 id="Rotomeca_Utils_Types_JsObject" data-uid="Rotomeca.Utils.Types.JsObject" class="text-break">
+Class JsObject  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Rotomeca.html">Rotomeca</a>.<a class="xref" href="Rotomeca.Utils.html">Utils</a>.<a class="xref" href="Rotomeca.Utils.Types.html">Types</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Rotomeca.Utils.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Représente un objet dynamique à la manière d'un objet JavaScript :
+collection de propriétés nommées (<code>string</code>) à valeurs de types quelconques.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JsObject : DynamicObject, IDynamicMetaObjectProvider, IEnumerable&lt;KeyValuePair&lt;string, object?&gt;&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><span class="xref">JsObject</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__">Dicts.DeepClone&lt;T&gt;(T, Action&lt;string&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Dictionaries.Dicts.html#Rotomeca_Utils_Dictionaries_Dicts_DeepClone__1___0_System_Action_System_String__">Dicts.DeepClone&lt;T&gt;(T, Action&lt;string&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__">_____StPipeExtensions.Pipe&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils._____StPipeExtensions.html#Rotomeca_Utils______StPipeExtensions_Pipe__2___0_System_Func___0___1__">_____StPipeExtensions.Pipe&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Difference__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">Arrays.Difference&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Drop__1_System_Collections_Generic_IEnumerable___0__System_UInt32_">Arrays.Drop&lt;T&gt;(IEnumerable&lt;T&gt;, uint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_GroupTo__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__">Arrays.GroupTo&lt;TKey, T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Intersection__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">Arrays.Intersection&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_MaxBy__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Int64__">Arrays.MaxBy&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, long&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_MinBy__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Int64__">Arrays.MinBy&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, long&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_PartitionToObject__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">Arrays.PartitionToObject&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Partition__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Boolean__">Arrays.Partition&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Shuffle__1_System_Collections_Generic_IEnumerable___0__">Arrays.Shuffle&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_SortBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">Arrays.SortBy&lt;T, TSort&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TSort&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Take__1_System_Collections_Generic_IEnumerable___0__System_UInt32_">Arrays.Take&lt;T&gt;(IEnumerable&lt;T&gt;, uint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_UniqueBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">Arrays.UniqueBy&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_Unique__1_System_Collections_Generic_IEnumerable___0__">Arrays.Unique&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Rotomeca.Utils.Collections.Arrays.html#Rotomeca_Utils_Collections_Arrays_FlattenDeep__1_System_Collections_IEnumerable_">Arrays.FlattenDeep&lt;T&gt;(IEnumerable)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Rotomeca_Utils_Types_JsObject_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Supporte la syntaxe pointée via <code>dynamic</code> :
+<pre><code class="lang-csharp">dynamic obj = new JsObject { ["a"] = 5 };
+obj.a = 58;</code></pre>
+
+<p>
+Trois stratégies de cache sont employées :
+<ol><li>
+    <b>Cache de types</b> : le <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> de chaque valeur est mémorisé à l'écriture,
+    évitant tout appel à <code>GetType()</code> lors des accès typés.
+  </li><li>
+    <b>Cache de représentations string</b> : le résultat de <code>ToString()</code> est mémorisé
+    par clé et invalidé uniquement à la prochaine écriture sur cette clé.
+  </li><li>
+    <b>Snapshot figé (NET8+)</b> : <code>Freeze</code> convertit le store interne en
+    <code>FrozenDictionary</code>, optimisé pour les lectures intensives.
+    Toute écriture ultérieure invalide automatiquement le snapshot.
+  </li></ol>
+
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Rotomeca_Utils_Types_JsObject__ctor_" data-uid="Rotomeca.Utils.Types.JsObject.#ctor*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject__ctor_System_Int32_" data-uid="Rotomeca.Utils.Types.JsObject.#ctor(System.Int32)">
+  JsObject(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialise un nouvel objet vide avec une capacité initiale optionnelle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsObject(int capacity = 4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Capacité initiale du store. Défaut : <code>4</code> (taille typique d'un petit objet JS).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Count_" data-uid="Rotomeca.Utils.Types.JsObject.Count*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Count" data-uid="Rotomeca.Utils.Types.JsObject.Count">
+  Count
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Nombre de propriétés dans l'objet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Item_" data-uid="Rotomeca.Utils.Types.JsObject.Item*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Item_System_String_" data-uid="Rotomeca.Utils.Types.JsObject.Item(System.String)">
+  this[string]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtient ou définit la valeur associée à la clé <code class="paramref">key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? this[string key] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nom de la propriété.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>La valeur associée, ou <code>null</code> si la clé est absente
+(comportement identique à JavaScript).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Add_" data-uid="Rotomeca.Utils.Types.JsObject.Add*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Add_System_String_System_Object_" data-uid="Rotomeca.Utils.Types.JsObject.Add(System.String,System.Object)">
+  Add(string, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ajoute ou met à jour la propriété <code class="paramref">key</code>.
+Alias de l'indexeur, requis pour le support de la syntaxe d'initialisation de collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(string key, object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Delete_" data-uid="Rotomeca.Utils.Types.JsObject.Delete*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Delete_System_String_" data-uid="Rotomeca.Utils.Types.JsObject.Delete(System.String)">
+  Delete(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supprime la propriété <code class="paramref">key</code> et invalide ses entrées de cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Delete(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nom de la propriété à supprimer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> si la propriété existait ; sinon <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Entries_" data-uid="Rotomeca.Utils.Types.JsObject.Entries*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Entries" data-uid="Rotomeca.Utils.Types.JsObject.Entries">
+  Entries()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne les paires <code>(clé, valeur)</code> de toutes les propriétés.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RArray&lt;(string Key, object? Value)&gt; Entries()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RArray</span>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.object-.key">Key</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.object-.value">Value</a>)&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Freeze_" data-uid="Rotomeca.Utils.Types.JsObject.Freeze*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Freeze" data-uid="Rotomeca.Utils.Types.JsObject.Freeze">
+  Freeze()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/6db139eebae8e3f3d4b861e6765050b6528733f1/Rotomeca.Utils.Core/Types/JsObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fige l'état courant de l'objet dans un <code>FrozenDictionary</code>
+pour optimiser les lectures intensives en lecture seule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Freeze()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Types_JsObject_Freeze_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Le snapshot est automatiquement invalidé dès la prochaine écriture
+(<a class="xref" href="Rotomeca.Utils.Types.JsObject.html#Rotomeca_Utils_Types_JsObject_Item_System_String_">this[string]</a> set, <a class="xref" href="Rotomeca.Utils.Types.JsObject.html#Rotomeca_Utils_Types_JsObject_Delete_System_String_">Delete(string)</a>).</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_From_" data-uid="Rotomeca.Utils.Types.JsObject.From*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_From_System_ValueTuple_System_String_System_Object____" data-uid="Rotomeca.Utils.Types.JsObject.From(System.ValueTuple{System.String,System.Object}[])">
+  From(params (string Key, object? Value)[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Crée un <a class="xref" href="Rotomeca.Utils.Types.JsObject.html">JsObject</a> à partir d'une liste de paires <code>(clé, valeur)</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsObject From(params (string Key, object? Value)[] entries)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entries</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.object-.key">Key</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.object-.value">Value</a>)[]</dt>
+    <dd><p>Propriétés initiales.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Rotomeca.Utils.Types.JsObject.html">JsObject</a></dt>
+    <dd><p>Nouvelle instance initialisée.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Types_JsObject_From_System_ValueTuple_System_String_System_Object_____examples">Examples</h4>
+  <pre><code class="lang-csharp">var obj = JsObject.From(("a", 5), ("b", "string"));</code></pre>
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_GetDynamicMemberNames_" data-uid="Rotomeca.Utils.Types.JsObject.GetDynamicMemberNames*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_GetDynamicMemberNames" data-uid="Rotomeca.Utils.Types.JsObject.GetDynamicMemberNames">
+  GetDynamicMemberNames()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;string&gt; GetDynamicMemberNames()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_GetEnumerator_" data-uid="Rotomeca.Utils.Types.JsObject.GetEnumerator*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_GetEnumerator" data-uid="Rotomeca.Utils.Types.JsObject.GetEnumerator">
+  GetEnumerator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;string, object?&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Get_" data-uid="Rotomeca.Utils.Types.JsObject.Get*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Get__1_System_String_" data-uid="Rotomeca.Utils.Types.JsObject.Get``1(System.String)">
+  Get&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne la valeur associée à <code class="paramref">key</code> castée en <code class="typeparamref">T</code>,
+ou <code>default</code> si la clé est absente ou le type incompatible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T? Get&lt;T&gt;(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nom de la propriété.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Type attendu de la valeur.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Has_" data-uid="Rotomeca.Utils.Types.JsObject.Has*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Has_System_String_" data-uid="Rotomeca.Utils.Types.JsObject.Has(System.String)">
+  Has(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indique si la propriété <code class="paramref">key</code> existe dans l'objet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Has(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Keys_" data-uid="Rotomeca.Utils.Types.JsObject.Keys*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Keys" data-uid="Rotomeca.Utils.Types.JsObject.Keys">
+  Keys()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne les noms de toutes les propriétés.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RArray&lt;string&gt; Keys()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Stringify_" data-uid="Rotomeca.Utils.Types.JsObject.Stringify*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Stringify_System_String_" data-uid="Rotomeca.Utils.Types.JsObject.Stringify(System.String)">
+  Stringify(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne la représentation string de la valeur associée à <code class="paramref">key</code>,
+depuis le cache string si disponible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Stringify(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nom de la propriété.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>La chaîne mise en cache, ou <code>null</code> si la valeur est nulle ou la clé absente.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_TryDeleteMember_" data-uid="Rotomeca.Utils.Types.JsObject.TryDeleteMember*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_TryDeleteMember_System_Dynamic_DeleteMemberBinder_" data-uid="Rotomeca.Utils.Types.JsObject.TryDeleteMember(System.Dynamic.DeleteMemberBinder)">
+  TryDeleteMember(DeleteMemberBinder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryDeleteMember(DeleteMemberBinder binder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.deletememberbinder">DeleteMemberBinder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Types_JsObject_TryDeleteMember_System_Dynamic_DeleteMemberBinder__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Permet la suppression d'une propriété via <code>dynamic</code>.</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_TryGetMember_" data-uid="Rotomeca.Utils.Types.JsObject.TryGetMember*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_TryGetMember_System_Dynamic_GetMemberBinder_System_Object__" data-uid="Rotomeca.Utils.Types.JsObject.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+  TryGetMember(GetMemberBinder, out object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryGetMember(GetMemberBinder binder, out object? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.getmemberbinder">GetMemberBinder</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Types_JsObject_TryGetMember_System_Dynamic_GetMemberBinder_System_Object___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Permet <code>dynamic obj = new JsObject(); var x = obj.a;</code>.
+Retourne toujours <code>true</code> — comme JS, une propriété absente vaut <code>null</code>.</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_TrySetMember_" data-uid="Rotomeca.Utils.Types.JsObject.TrySetMember*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_TrySetMember_System_Dynamic_SetMemberBinder_System_Object_" data-uid="Rotomeca.Utils.Types.JsObject.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)">
+  TrySetMember(SetMemberBinder, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TrySetMember(SetMemberBinder binder, object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.setmemberbinder">SetMemberBinder</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Rotomeca_Utils_Types_JsObject_TrySetMember_System_Dynamic_SetMemberBinder_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Permet <code>obj.a = 58;</code>.</p>
+</div>
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_TypeOf_" data-uid="Rotomeca.Utils.Types.JsObject.TypeOf*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_TypeOf_System_String_" data-uid="Rotomeca.Utils.Types.JsObject.TypeOf(System.String)">
+  TypeOf(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne le <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> de la valeur associée à <code class="paramref">key</code>
+depuis le cache de types, sans appel à <code>GetType()</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type? TypeOf(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nom de la propriété.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>Le type mis en cache, ou <code>null</code> si la clé est absente ou la valeur nulle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Rotomeca_Utils_Types_JsObject_Values_" data-uid="Rotomeca.Utils.Types.JsObject.Values*"></a>
+
+  <h3 id="Rotomeca_Utils_Types_JsObject_Values" data-uid="Rotomeca.Utils.Types.JsObject.Values">
+  Values()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retourne les valeurs de toutes les propriétés.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RArray&lt;object?&gt; Values()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rotomeca-libs/utils-csharp/blob/develop/Rotomeca.Utils.Core/Types/JsObject.cs/#L76" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

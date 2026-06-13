@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Types
+  commentId: N:Rotomeca.Utils.Types
+  id: Rotomeca.Utils.Types
+  children:
+  - Rotomeca.Utils.Types.ClampedValue`1
+  - Rotomeca.Utils.Types.JsObject
+  - Rotomeca.Utils.Types.Random
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Types
+  nameWithType: Rotomeca.Utils.Types
+  fullName: Rotomeca.Utils.Types
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Types.ClampedValue`1
+  commentId: T:Rotomeca.Utils.Types.ClampedValue`1
+  parent: Rotomeca.Utils.Types
+  href: Rotomeca.Utils.Types.ClampedValue-1.html
+  name: ClampedValue<T>
+  nameWithType: ClampedValue<T>
+  fullName: Rotomeca.Utils.Types.ClampedValue<T>
+  nameWithType.vb: ClampedValue(Of T)
+  fullName.vb: Rotomeca.Utils.Types.ClampedValue(Of T)
+  name.vb: ClampedValue(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.ClampedValue`1
+    name: ClampedValue
+    href: Rotomeca.Utils.Types.ClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.JsObject
+  commentId: T:Rotomeca.Utils.Types.JsObject
+  parent: Rotomeca.Utils.Types
+  href: Rotomeca.Utils.Types.JsObject.html
+  name: JsObject
+  nameWithType: JsObject
+  fullName: Rotomeca.Utils.Types.JsObject
+- uid: Rotomeca.Utils.Types.Random
+  commentId: T:Rotomeca.Utils.Types.Random
+  parent: Rotomeca.Utils.Types
+  href: Rotomeca.Utils.Types.Random.html
+  name: Random
+  nameWithType: Random
+  fullName: Rotomeca.Utils.Types.Random
+- uid: Rotomeca.Utils.Types
+  commentId: N:Rotomeca.Utils.Types
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Types
+  nameWithType: Rotomeca.Utils.Types
+  fullName: Rotomeca.Utils.Types
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html

@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Types.Interfaces
+  commentId: N:Rotomeca.Utils.Types.Interfaces
+  id: Rotomeca.Utils.Types.Interfaces
+  children:
+  - Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Types.Interfaces
+  nameWithType: Rotomeca.Utils.Types.Interfaces
+  fullName: Rotomeca.Utils.Types.Interfaces
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+  commentId: T:Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+  parent: Rotomeca.Utils.Types.Interfaces
+  href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  name: IClampedValue<T>
+  nameWithType: IClampedValue<T>
+  fullName: Rotomeca.Utils.Types.Interfaces.IClampedValue<T>
+  nameWithType.vb: IClampedValue(Of T)
+  fullName.vb: Rotomeca.Utils.Types.Interfaces.IClampedValue(Of T)
+  name.vb: IClampedValue(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+    name: IClampedValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Types.Interfaces.IClampedValue`1
+    name: IClampedValue
+    href: Rotomeca.Utils.Types.Interfaces.IClampedValue-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Rotomeca.Utils.Types.Interfaces
+  commentId: N:Rotomeca.Utils.Types.Interfaces
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Types.Interfaces
+  nameWithType: Rotomeca.Utils.Types.Interfaces
+  fullName: Rotomeca.Utils.Types.Interfaces
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  - name: .
+  - uid: Rotomeca.Utils.Types.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Types.Interfaces.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Types
+    name: Types
+    href: Rotomeca.Utils.Types.html
+  - name: .
+  - uid: Rotomeca.Utils.Types.Interfaces
+    name: Interfaces
+    href: Rotomeca.Utils.Types.Interfaces.html

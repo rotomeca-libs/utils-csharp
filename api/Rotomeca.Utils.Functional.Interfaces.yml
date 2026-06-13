@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Functional.Interfaces
+  commentId: N:Rotomeca.Utils.Functional.Interfaces
+  id: Rotomeca.Utils.Functional.Interfaces
+  children:
+  - Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  langs:
+  - csharp
+  - vb
+  name: Rotomeca.Utils.Functional.Interfaces
+  nameWithType: Rotomeca.Utils.Functional.Interfaces
+  fullName: Rotomeca.Utils.Functional.Interfaces
+  type: Namespace
+  assemblies:
+  - Rotomeca.Utils.Core
+references:
+- uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  commentId: T:Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+  href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  name: IPipeObject<T>
+  nameWithType: IPipeObject<T>
+  fullName: Rotomeca.Utils.Functional.Interfaces.IPipeObject<T>
+  nameWithType.vb: IPipeObject(Of T)
+  fullName.vb: Rotomeca.Utils.Functional.Interfaces.IPipeObject(Of T)
+  name.vb: IPipeObject(Of T)
+  spec.csharp:
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Rotomeca.Utils.Functional.Interfaces.IPipeObject`1
+    name: IPipeObject
+    href: Rotomeca.Utils.Functional.Interfaces.IPipeObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

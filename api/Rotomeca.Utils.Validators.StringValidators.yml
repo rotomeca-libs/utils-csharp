@@ -1,0 +1,634 @@
+### YamlMime:ManagedReference
+items:
+- uid: Rotomeca.Utils.Validators.StringValidators
+  commentId: T:Rotomeca.Utils.Validators.StringValidators
+  id: StringValidators
+  parent: Rotomeca.Utils.Validators
+  children:
+  - Rotomeca.Utils.Validators.StringValidators.IsAlpha(System.String)
+  - Rotomeca.Utils.Validators.StringValidators.IsEmail(System.String)
+  - Rotomeca.Utils.Validators.StringValidators.IsHexColor(System.String)
+  - Rotomeca.Utils.Validators.StringValidators.IsNumeric(System.String)
+  - Rotomeca.Utils.Validators.StringValidators.IsUUID(System.String)
+  - Rotomeca.Utils.Validators.StringValidators.IsUrl(System.String)
+  langs:
+  - csharp
+  - vb
+  name: StringValidators
+  nameWithType: StringValidators
+  fullName: Rotomeca.Utils.Validators.StringValidators
+  type: Class
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: StringValidators
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 10
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: Fournit des méthodes d'extension de validation pour les chaînes de caractères.
+  example: []
+  syntax:
+    content: public static class StringValidators
+    content.vb: Public Module StringValidators
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Rotomeca.Utils.Validators.StringValidators.IsEmail(System.String)
+  commentId: M:Rotomeca.Utils.Validators.StringValidators.IsEmail(System.String)
+  id: IsEmail(System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: IsEmail(string)
+  nameWithType: StringValidators.IsEmail(string)
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsEmail(string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsEmail
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 21
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: Vérifie que la chaîne respecte le format minimal d'une adresse email.
+  remarks: >-
+    Validation intentionnellement permissive — ne couvre pas l'intégralité de la RFC 5322.
+
+    Pour une validation stricte, préférer une vérification côté serveur ou un envoi de confirmation.
+  example: []
+  syntax:
+    content: public static bool IsEmail(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: La chaîne à valider.
+    return:
+      type: System.Boolean
+      description: <code>true</code> si la chaîne ressemble à une adresse email valide ; <code>false</code> sinon.
+    content.vb: Public Shared Function IsEmail(str As String) As Boolean
+  overload: Rotomeca.Utils.Validators.StringValidators.IsEmail*
+  nameWithType.vb: StringValidators.IsEmail(String)
+  fullName.vb: Rotomeca.Utils.Validators.StringValidators.IsEmail(String)
+  name.vb: IsEmail(String)
+- uid: Rotomeca.Utils.Validators.StringValidators.IsUrl(System.String)
+  commentId: M:Rotomeca.Utils.Validators.StringValidators.IsUrl(System.String)
+  id: IsUrl(System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: IsUrl(string)
+  nameWithType: StringValidators.IsUrl(string)
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsUrl(string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsUrl
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 31
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: Vérifie que la chaîne est une URL absolue valide avec un schéma HTTP ou HTTPS.
+  example: []
+  syntax:
+    content: public static bool IsUrl(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: La chaîne à valider.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> si la chaîne est une URL absolue dont le schéma est <code>http</code> ou <code>https</code> ;
+
+        <code>false</code> sinon.
+    content.vb: Public Shared Function IsUrl(str As String) As Boolean
+  overload: Rotomeca.Utils.Validators.StringValidators.IsUrl*
+  nameWithType.vb: StringValidators.IsUrl(String)
+  fullName.vb: Rotomeca.Utils.Validators.StringValidators.IsUrl(String)
+  name.vb: IsUrl(String)
+- uid: Rotomeca.Utils.Validators.StringValidators.IsUUID(System.String)
+  commentId: M:Rotomeca.Utils.Validators.StringValidators.IsUUID(System.String)
+  id: IsUUID(System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: IsUUID(string)
+  nameWithType: StringValidators.IsUUID(string)
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsUUID(string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsUUID
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 39
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: >-
+    Vérifie que la chaîne respecte le format standard d'un UUID (toutes versions).
+
+    Format attendu : <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> (insensible à la casse).
+  example: []
+  syntax:
+    content: public static bool IsUUID(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: La chaîne à valider.
+    return:
+      type: System.Boolean
+      description: <code>true</code> si la chaîne est un UUID valide ; <code>false</code> sinon.
+    content.vb: Public Shared Function IsUUID(str As String) As Boolean
+  overload: Rotomeca.Utils.Validators.StringValidators.IsUUID*
+  nameWithType.vb: StringValidators.IsUUID(String)
+  fullName.vb: Rotomeca.Utils.Validators.StringValidators.IsUUID(String)
+  name.vb: IsUUID(String)
+- uid: Rotomeca.Utils.Validators.StringValidators.IsNumeric(System.String)
+  commentId: M:Rotomeca.Utils.Validators.StringValidators.IsNumeric(System.String)
+  id: IsNumeric(System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: IsNumeric(string)
+  nameWithType: StringValidators.IsNumeric(string)
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsNumeric(string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsNumeric
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 50
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: Vérifie que la chaîne représente un nombre décimal valide.
+  remarks: >-
+    Utilise <xref href="System.Globalization.CultureInfo.InvariantCulture" data-throw-if-not-resolved="false"></xref> : le séparateur décimal attendu est toujours <code>.</code>,
+
+    indépendamment des paramètres régionaux du système.
+  example: []
+  syntax:
+    content: public static bool IsNumeric(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: La chaîne à valider.
+    return:
+      type: System.Boolean
+      description: <code>true</code> si la chaîne est un nombre décimal valide ; <code>false</code> sinon.
+    content.vb: Public Shared Function IsNumeric(str As String) As Boolean
+  overload: Rotomeca.Utils.Validators.StringValidators.IsNumeric*
+  nameWithType.vb: StringValidators.IsNumeric(String)
+  fullName.vb: Rotomeca.Utils.Validators.StringValidators.IsNumeric(String)
+  name.vb: IsNumeric(String)
+- uid: Rotomeca.Utils.Validators.StringValidators.IsAlpha(System.String)
+  commentId: M:Rotomeca.Utils.Validators.StringValidators.IsAlpha(System.String)
+  id: IsAlpha(System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: IsAlpha(string)
+  nameWithType: StringValidators.IsAlpha(string)
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsAlpha(string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsAlpha
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 58
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: >-
+    Vérifie que la chaîne ne contient que des lettres,
+
+    y compris les caractères latins accentués (plage <code>À-ÿ</code>).
+  example: []
+  syntax:
+    content: public static bool IsAlpha(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: La chaîne à valider.
+    return:
+      type: System.Boolean
+      description: <code>true</code> si la chaîne est entièrement alphabétique ; <code>false</code> sinon.
+    content.vb: Public Shared Function IsAlpha(str As String) As Boolean
+  overload: Rotomeca.Utils.Validators.StringValidators.IsAlpha*
+  nameWithType.vb: StringValidators.IsAlpha(String)
+  fullName.vb: Rotomeca.Utils.Validators.StringValidators.IsAlpha(String)
+  name.vb: IsAlpha(String)
+- uid: Rotomeca.Utils.Validators.StringValidators.IsHexColor(System.String)
+  commentId: M:Rotomeca.Utils.Validators.StringValidators.IsHexColor(System.String)
+  id: IsHexColor(System.String)
+  isExtensionMethod: true
+  parent: Rotomeca.Utils.Validators.StringValidators
+  langs:
+  - csharp
+  - vb
+  name: IsHexColor(string)
+  nameWithType: StringValidators.IsHexColor(string)
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsHexColor(string)
+  type: Method
+  source:
+    remote:
+      path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+      branch: develop
+      repo: https://github.com/rotomeca-libs/utils-csharp
+    id: IsHexColor
+    path: Rotomeca.Utils.Core/Validators/StringValidators.cs
+    startLine: 67
+  assemblies:
+  - Rotomeca.Utils.Core
+  namespace: Rotomeca.Utils.Validators
+  summary: >-
+    Vérifie que la chaîne représente une couleur hexadécimale valide.
+
+    Accepte les formats court <code>#fff</code> et long <code>#ffffff</code>,
+
+    avec ou sans <code>#</code> (insensible à la casse).
+  example: []
+  syntax:
+    content: public static bool IsHexColor(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: La chaîne à valider.
+    return:
+      type: System.Boolean
+      description: <code>true</code> si la chaîne est une couleur hexadécimale valide ; <code>false</code> sinon.
+    content.vb: Public Shared Function IsHexColor(str As String) As Boolean
+  overload: Rotomeca.Utils.Validators.StringValidators.IsHexColor*
+  nameWithType.vb: StringValidators.IsHexColor(String)
+  fullName.vb: Rotomeca.Utils.Validators.StringValidators.IsHexColor(String)
+  name.vb: IsHexColor(String)
+references:
+- uid: Rotomeca.Utils.Validators
+  commentId: N:Rotomeca.Utils.Validators
+  href: Rotomeca.html
+  name: Rotomeca.Utils.Validators
+  nameWithType: Rotomeca.Utils.Validators
+  fullName: Rotomeca.Utils.Validators
+  spec.csharp:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Validators
+    name: Validators
+    href: Rotomeca.Utils.Validators.html
+  spec.vb:
+  - uid: Rotomeca
+    name: Rotomeca
+    href: Rotomeca.html
+  - name: .
+  - uid: Rotomeca.Utils
+    name: Utils
+    href: Rotomeca.Utils.html
+  - name: .
+  - uid: Rotomeca.Utils.Validators
+    name: Validators
+    href: Rotomeca.Utils.Validators.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Rotomeca.Utils.Validators.StringValidators.IsEmail*
+  commentId: Overload:Rotomeca.Utils.Validators.StringValidators.IsEmail
+  href: Rotomeca.Utils.Validators.StringValidators.html#Rotomeca_Utils_Validators_StringValidators_IsEmail_System_String_
+  name: IsEmail
+  nameWithType: StringValidators.IsEmail
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsEmail
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Rotomeca.Utils.Validators.StringValidators.IsUrl*
+  commentId: Overload:Rotomeca.Utils.Validators.StringValidators.IsUrl
+  href: Rotomeca.Utils.Validators.StringValidators.html#Rotomeca_Utils_Validators_StringValidators_IsUrl_System_String_
+  name: IsUrl
+  nameWithType: StringValidators.IsUrl
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsUrl
+- uid: Rotomeca.Utils.Validators.StringValidators.IsUUID*
+  commentId: Overload:Rotomeca.Utils.Validators.StringValidators.IsUUID
+  href: Rotomeca.Utils.Validators.StringValidators.html#Rotomeca_Utils_Validators_StringValidators_IsUUID_System_String_
+  name: IsUUID
+  nameWithType: StringValidators.IsUUID
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsUUID
+- uid: System.Globalization.CultureInfo.InvariantCulture
+  commentId: P:System.Globalization.CultureInfo.InvariantCulture
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture
+  name: InvariantCulture
+  nameWithType: CultureInfo.InvariantCulture
+  fullName: System.Globalization.CultureInfo.InvariantCulture
+- uid: Rotomeca.Utils.Validators.StringValidators.IsNumeric*
+  commentId: Overload:Rotomeca.Utils.Validators.StringValidators.IsNumeric
+  href: Rotomeca.Utils.Validators.StringValidators.html#Rotomeca_Utils_Validators_StringValidators_IsNumeric_System_String_
+  name: IsNumeric
+  nameWithType: StringValidators.IsNumeric
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsNumeric
+- uid: Rotomeca.Utils.Validators.StringValidators.IsAlpha*
+  commentId: Overload:Rotomeca.Utils.Validators.StringValidators.IsAlpha
+  href: Rotomeca.Utils.Validators.StringValidators.html#Rotomeca_Utils_Validators_StringValidators_IsAlpha_System_String_
+  name: IsAlpha
+  nameWithType: StringValidators.IsAlpha
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsAlpha
+- uid: Rotomeca.Utils.Validators.StringValidators.IsHexColor*
+  commentId: Overload:Rotomeca.Utils.Validators.StringValidators.IsHexColor
+  href: Rotomeca.Utils.Validators.StringValidators.html#Rotomeca_Utils_Validators_StringValidators_IsHexColor_System_String_
+  name: IsHexColor
+  nameWithType: StringValidators.IsHexColor
+  fullName: Rotomeca.Utils.Validators.StringValidators.IsHexColor

@@ -7,6 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rotomeca.Utils.Core", "Roto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rotomeca.Utils.Tests", "Rotomeca.Utils.Tests\Rotomeca.Utils.Tests.csproj", "{E9CB165F-4F23-8B16-C0B0-5D1C7F39D2EE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{49AFC896-3C4A-440C-8E58-EBED109D50EE}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		docfx.json = docfx.json
+		index.md = index.md
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		toc.yml = toc.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
