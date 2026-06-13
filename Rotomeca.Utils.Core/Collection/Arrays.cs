@@ -25,8 +25,8 @@ namespace Rotomeca.Utils.Collections
         /// </returns>
         /// <example>
         /// <code>
-        /// int[] source = [1, 2, 3, 4, 5];
-        /// int[][] chunks = Array.Chunck(source, 2);
+        /// var source = new RArray&lt;int&gt;(1, 2, 3, 4, 5);
+        /// RArray&lt;RArray&lt;int&gt;&gt; chunks = source.Chunck(2);
         /// // chunks => [[1, 2], [3, 4], [5]]
         /// </code>
         /// </example>
@@ -77,7 +77,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// int[] source = [1, 2, 2, 3, 1, 4];
-        /// int[] unique = Array.Unique(source);
+        /// RArray&lt;int&gt; unique = source.Unique();
         /// // unique => [1, 2, 3, 4]
         /// </code>
         /// </example>
@@ -106,7 +106,7 @@ namespace Rotomeca.Utils.Collections
         ///     new Person("Alice", 42),
         /// };
         ///
-        /// Person[] unique = Array.UniqueBy(people, p => p.Name);
+        /// RArray&lt;Person&gt; unique = people.UniqueBy(p => p.Name);
         /// // unique => [{ "Alice", 30 }, { "Bob", 25 }]
         /// </code>
         /// </example>
@@ -180,10 +180,11 @@ namespace Rotomeca.Utils.Collections
         /// </returns>
         /// <example>
         /// <code>
-        /// int[] filled = [10, 20, 30];
+        /// RArray&lt;int&gt; filled = new (10, 20, 30);
         /// MayBe&lt;int&gt; first = filled.First(); // HasValue = true, Value = 10
+        /// int implicitFirst = first; // Cast implicit
         ///
-        /// int[] empty = [];
+        /// RArray&lt;int&gt; empty = new ();
         /// MayBe&lt;int&gt; none = empty.First(); // HasValue = false
         /// </code>
         /// </example>
@@ -205,10 +206,11 @@ namespace Rotomeca.Utils.Collections
         /// </returns>
         /// <example>
         /// <code>
-        /// int[] filled = [10, 20, 30];
+        /// RArray&lt;int&gt; filled = new (10, 20, 30);
         /// MayBe&lt;int&gt; last = filled.Last(); // HasValue = true, Value = 30
+        /// int implicitLast = last; // Cast implicit
         ///
-        /// int[] empty = [];
+        /// RArray&lt;int&gt; empty = new ();
         /// MayBe&lt;int&gt; none = empty.Last(); // HasValue = false
         /// </code>
         /// </example>
