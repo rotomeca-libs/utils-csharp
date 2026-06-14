@@ -364,3 +364,7 @@ FodyWeavers.xsd
 
 .vscode
 
+# DocFX documentation generator
+_site/
+api/
+docs
