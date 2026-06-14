@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
 
 # Permissions requises pour déployer sur GitHub Pages via Actions
 permissions:

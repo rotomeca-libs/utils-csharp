@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		docfx.json = docfx.json
+		.github\workflows\docs.yml = .github\workflows\docs.yml
 		index.md = index.md
 		README.md = README.md
 		toc.yml = toc.yml
