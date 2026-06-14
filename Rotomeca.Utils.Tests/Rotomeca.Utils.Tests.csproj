@@ -16,6 +16,6 @@
     <PackageReference Include="Rotomeca.Core" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Rotomeca.Utils\Rotomeca.Utils.Core\Rotomeca.Utils.Core.csproj" />
+      <ProjectReference Include="..\Rotomeca.Utils.Core\Rotomeca.Utils.Core.csproj" />
   </ItemGroup>
 </Project>

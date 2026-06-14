@@ -226,7 +226,7 @@ public class ArraysTests
     [Fact]
     public void Take_ReturnsFirstNElements()
     {
-        var result = new[] { 1, 2, 3, 4, 5 }.Take(3u).ToList();
+        var result = new[] { 1, 2, 3, 4, 5 }.ToRArray().Take(3u).ToList();
         Assert.Equal([1, 2, 3], result);
     }
 
@@ -240,7 +240,7 @@ public class ArraysTests
     [Fact]
     public void Take_MoreThanLength_ReturnsAll()
     {
-        var result = new[] { 1, 2 }.Take(100u).ToList();
+        var result = new[] { 1, 2 }.ToRArray().Take(100u).ToList();
         Assert.Equal([1, 2], result);
     }
 
