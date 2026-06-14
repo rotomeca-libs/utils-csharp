@@ -18,29 +18,36 @@
 
         <!-- Métadonnées NuGet -->
         <PackageId>Rotomeca.Utils</PackageId>
+        <PackageIcon>icon.png</PackageIcon>
         <Version>1.0.0</Version>
         <Authors>Rotomeca</Authors>
         <Copyright>© Rotomeca</Copyright>
-        <Description>.</Description>
-        <PackageTags></PackageTags>
+        <Description>
+            Utility library for C# — a collection of pure functions, extension methods and types
+            to cover everyday development needs without pulling in external dependencies.
+            Includes async helpers (Retry, Sleep, SetTimeout/ClearTimeout, WithTimeout),
+            functional utilities (Debounce, Throttle, Memoize, Once, Pipe), collection extensions
+            (Chunk, Flatten, Partition, Zip...), dictionary helpers (Pick, Omit, DeepMerge...),
+            string validators, precompiled regexes and a few handy types (ClampedValue, JsObject, Random).
+            Targets netstandard2.0, netstandard2.1, net8, net9 and net10.
+        </Description>
+        <PackageTags>utils utilities extensions helpers async functional collections linq validators regex debounce throttle memoize pipe csharp dotnet netstandard zero-dependency</PackageTags>
         <PackageLicenseExpression>ISC</PackageLicenseExpression>
-        <PackageProjectUrl></PackageProjectUrl>
-        <RepositoryUrl></RepositoryUrl>
+        <PackageProjectUrl>https://github.com/rotomeca-libs/utils-csharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/rotomeca-libs/utils-csharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReadmeFile>README.nuget.md</PackageReadmeFile>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
-    <!--<ItemGroup>
-        --><!-- README affiché sur NuGet.org --><!--
-        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-    </ItemGroup>-->
+    <ItemGroup>
+        <None Include="..\README.nuget.md" Pack="true" PackagePath="\" />
+        <None Include="assets\icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-        <!--<ProjectReference Include="..\Rotomeca.Rop.Generators\Rotomeca.Rop.Generators.csproj"
-          OutputItemType="Analyzer"
-          ReferenceOutputAssembly="false" />-->
+        <PackageReference Include="Rotomeca.Core" Version="1.0.0" />
     </ItemGroup>
 </Project>

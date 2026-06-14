@@ -17,12 +17,12 @@ namespace Rotomeca.Utils.Async.Internal
     /// sur des threads du pool.
     /// </para>
     /// <para>
-    /// Cette classe est à usage interne uniquement. Utilisez <see cref="Rotomeca.Utils.Async.Async"/>
+    /// Cette classe est à usage interne uniquement. Utilisez <see cref="Rotomeca.Utils.Async.Asynchronous"/>
     /// pour accéder aux fonctionnalités exposées publiquement.
     /// </para>
     /// </remarks>
-    /// <seealso cref="Rotomeca.Utils.Async.Async"/>
-    internal sealed class SetTimeout
+    /// <seealso cref="Rotomeca.Utils.Async.Asynchronous"/>
+    internal sealed class SetTimeout: IDisposable
     {
         /// <summary>
         /// Dictionnaire thread-safe associant chaque identifiant de timeout à son timer.
@@ -57,7 +57,7 @@ namespace Rotomeca.Utils.Async.Internal
         /// <param name="delay">Délai en millisecondes avant l'exécution de <paramref name="fn"/>.</param>
         /// <returns>
         /// Identifiant unique du timeout, utilisable pour l'annuler via
-        /// <see cref="ClearTimeOut"/>.
+        /// <see cref="ClearTimeout"/>.
         /// </returns>
         /// <remarks>
         /// <para>
@@ -76,7 +76,7 @@ namespace Rotomeca.Utils.Async.Internal
         /// </remarks>
         /// <example>
         /// <code>
-        /// int id = Async.SetTimeout(() => Console.WriteLine("Timeout !"), 1000);
+        /// int id = Asynchronous.SetTimeout(() => Console.WriteLine("Timeout !"), 1000);
         /// </code>
         /// </example>
         public int Start(Action fn, uint delay)
@@ -115,17 +115,28 @@ namespace Rotomeca.Utils.Async.Internal
         /// </remarks>
         /// <example>
         /// <code>
-        /// uint id = Async.SetTimeout(() => Console.WriteLine("Ne s'affichera pas"), 5000);
-        /// Async.ClearTimeout(id); // Annulation avant déclenchement
+        /// uint id = Asynchronous.SetTimeout(() => Console.WriteLine("Ne s'affichera pas"), 5000);
+        /// Asynchronous.ClearTimeout(id); // Annulation avant déclenchement
         /// </code>
         /// </example>
-        public void ClearTimeOut(int number)
+        public void ClearTimeout(int number)
         {
             if (_timeOuts.TryRemove(number, out var timer))
             {
                 timer.Stop();
                 timer.Dispose();
             }
+        }
+
+        public void Dispose()
+        {
+            foreach (var timer in _timeOuts)
+            {
+                timer.Value.Stop();
+                timer.Value.Dispose();
+            }
+
+            _timeOuts.Clear();
         }
     }
 }

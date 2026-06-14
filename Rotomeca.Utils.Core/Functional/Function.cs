@@ -1,5 +1,5 @@
-﻿using Rotomeca.Utils.Types;
-using static Rotomeca.Utils.Async.Async;
+using static Rotomeca.Utils.Async.Asynchronous;
+using Rotomeca.Core.Optionals;
 
 namespace Rotomeca.Utils.Functional
 {
@@ -32,7 +32,7 @@ namespace Rotomeca.Utils.Functional
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action onSearch = Async.Debounce(() => FetchResults(), 300);
+        /// Action onSearch = Function.Debounce(() => FetchResults(), 300);
         /// // Chaque frappe remet le timer à zéro — FetchResults n'est appelé
         /// // qu'après 300ms sans nouvelle frappe.
         /// </code>
@@ -70,7 +70,7 @@ namespace Rotomeca.Utils.Functional
         /// </remarks>
         /// <example>
         /// <code>
-        /// Action onScroll = Async.Throttle(() => UpdateScrollbar(), 100);
+        /// Action onScroll = Function.Throttle(() => UpdateScrollbar(), 100);
         /// // UpdateScrollbar ne s'exécute qu'une fois toutes les 100ms,
         /// // même si l'événement scroll se déclenche des centaines de fois.
         /// </code>
@@ -98,5 +98,41 @@ namespace Rotomeca.Utils.Functional
                 }
             };
         }
+
+        /// <summary>
+        /// Ne fait rien.
+        /// </summary>
+        /// <remarks>
+        /// Utile comme callback vide, placeholder ou implémentation neutre
+        /// là où une méthode est syntaxiquement requise.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// Action callback = condition ? DoSomething : Function.Noop;
+        /// callback();
+        /// </code>
+        /// </example>
+        public static void Noop() { }
+
+        /// <summary>
+        /// Retourne la valeur reçue sans modification.
+        /// </summary>
+        /// <typeparam name="T">Type de la valeur.</typeparam>
+        /// <param name="value">Valeur à retourner.</param>
+        /// <returns>
+        /// <paramref name="value"/> inchangé.
+        /// </returns>
+        /// <remarks>
+        /// Utile comme transformateur neutre dans un pipeline ou comme
+        /// valeur par défaut d'un paramètre de type <see cref="Func{T, TResult}"/>.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// var result = Pipeline.Start(42)
+        ///     .Pipe(Function.Identity) // aucune transformation
+        ///     .Pipe(n => n * 2);       // 84
+        /// </code>
+        /// </example>
+        public static T Identity<T>(T value) => value;
     }
 }

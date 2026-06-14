@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "./Rotomeca.Utils.Core",
+          "files": [
+            "**/bin/Release/net10.0/Rotomeca.*.dll",
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "Rotomeca.Utils",
+      "_appTitle": "Rotomeca.Utils",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

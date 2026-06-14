@@ -74,7 +74,7 @@ namespace Rotomeca.Utils.Functional
         /// Sur les cibles antérieures, utilise un <see langword="object"/> standard.
         /// </para>
         /// </remarks>
-         private static Func<TArg1, TArg2, TArg3, TResult> _Once<TArg1, TArg2, TArg3, TResult>(
+        private static Func<TArg1, TArg2, TArg3, TResult> _Once<TArg1, TArg2, TArg3, TResult>(
         Func<TArg1, TArg2, TArg3, TResult> fn)
 #else
         /// <summary>
@@ -115,7 +115,7 @@ namespace Rotomeca.Utils.Functional
 #if NET9_0_OR_GREATER
             Lock _lock = new();
 #else
-    object _lock = new();
+            object _lock = new();
 #endif
 
             return (TArg1 a, TArg2 b, TArg3 c) =>
