@@ -28,23 +28,17 @@
         <PackageProjectUrl></PackageProjectUrl>
         <RepositoryUrl>https://github.com/rotomeca-libs/utils-csharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReadmeFile>README.nuget.md</PackageReadmeFile>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
-    <!--<ItemGroup>
-        --><!-- README
-    affiché sur NuGet.org --><!--
-        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-    </ItemGroup>-->
+    <ItemGroup>
+        <None Include="..\README.nuget.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
         <PackageReference Include="Rotomeca.Core" Version="1.0.0" />
-        <!--<ProjectReference
-        Include="..\Rotomeca.Rop.Generators\Rotomeca.Rop.Generators.csproj"
-          OutputItemType="Analyzer"
-          ReferenceOutputAssembly="false" />-->
     </ItemGroup>
 </Project>

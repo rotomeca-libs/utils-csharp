@@ -290,7 +290,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// int[][] nested = [[1, 2], [3, 4], [5]];
-        /// int[] flat = nested.Flatten();
+        /// RArray&lt;int&gt; flat = nested.Flatten();
         /// // flat => [1, 2, 3, 4, 5]
         /// </code>
         /// </example>
@@ -308,7 +308,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// object[] nested = [1, new object[] { 2, new object[] { 3, 4 } }, 5];
-        /// int[] flat = nested.FlattenDeep&lt;int&gt;();
+        /// RArray&lt;int&gt; flat = nested.FlattenDeep&lt;int&gt;();
         /// // flat => [1, 2, 3, 4, 5]
         /// </code>
         /// </example>
@@ -334,7 +334,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// string?[] source = ["hello", null, "world", null];
-        /// string[] compact = source.Compact();
+        /// RArray&lt;string&gt; compact = source.Compact();
         /// // compact => ["hello", "world"]
         /// </code>
         /// </example>
@@ -351,7 +351,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// MayBe&lt;int&gt;[] source = [MayBe&lt;int&gt;.Null, 1, MayBe&lt;int&gt;.Null, 2, 3];
-        /// int[] compact = source.Compact();
+        /// RArray&lt;int&gt; compact = source.Compact();
         /// // compact => [1, 2, 3]
         /// </code>
         /// </example>
@@ -425,7 +425,7 @@ namespace Rotomeca.Utils.Collections
         /// <code>
         /// int[] a = [1, 2, 3, 4];
         /// int[] b = [3, 4, 5, 6];
-        /// int[] inter = a.Intersection(b);
+        /// RArray&lt;int&gt; inter = a.Intersection(b);
         /// // inter => [3, 4]
         /// </code>
         /// </example>
@@ -444,7 +444,7 @@ namespace Rotomeca.Utils.Collections
         /// <code>
         /// int[] a = [1, 2, 3, 4];
         /// int[] b = [3, 4, 5, 6];
-        /// int[] diff = a.Difference(b);
+        /// RArray&lt;int&gt; diff = a.Difference(b);
         /// // diff => [1, 2]
         /// </code>
         /// </example>
@@ -461,9 +461,9 @@ namespace Rotomeca.Utils.Collections
         /// <returns>Un tableau contenant tous les éléments uniques des deux séquences.</returns>
         /// <example>
         /// <code>
-        /// int[] a = [1, 2, 3];
+        /// RArray&lt;int&gt; a = new (1, 2, 3);
         /// int[] b = [3, 4, 5];
-        /// int[] union = a.Union(b);
+        /// RArray&lt;int&gt; union = a.Union(b);
         /// // union => [1, 2, 3, 4, 5]
         /// </code>
         /// </example>
@@ -484,7 +484,7 @@ namespace Rotomeca.Utils.Collections
         /// </returns>
         /// <example>
         /// <code>
-        /// int[]    nums  = [1, 2, 3];
+        /// RArray&lt;int&gt; nums  = [1, 2, 3];
         /// string[] words = ["un", "deux"];
         /// var zipped = nums.Zip(words);
         /// // zipped => [(1, "un"), (2, "deux")]
@@ -507,7 +507,7 @@ namespace Rotomeca.Utils.Collections
         /// </returns>
         /// <example>
         /// <code>
-        /// int[]    nums  = [1, 2, 3];
+        /// RArray&lt;int&gt; nums  = [1, 2, 3];
         /// string[] words = ["un", "deux"];
         /// var zipped = nums.Zip(words);
         /// // zipped => [(1, "un"), (2, "deux")]
@@ -529,12 +529,12 @@ namespace Rotomeca.Utils.Collections
         /// </returns>
         /// <example>
         /// <code>
-        /// int[] nums = [1, 2, 3, 4, 5];
-        /// int[] first3 = nums.Take(3);
+        /// RArray&lt;int&gt; nums = new (1, 2, 3, 4, 5);
+        /// RArray&lt;int&gt; first3 = nums.Take(3);
         /// // first3 => [1, 2, 3]
         /// </code>
         /// </example>
-        public static RArray<T> Take<T>(this IEnumerable<T> a, uint nb) => Enumerable.Take(a, (int)nb).ToRArray();
+        public static RArray<T> Take<T>(this RArray<T> a, uint nb) => Enumerable.Take(a, (int)nb).ToRArray();
 
         /// <summary>
         /// Ignore les <paramref name="nb"/> premiers éléments de la séquence
@@ -550,7 +550,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// int[] nums = [1, 2, 3, 4, 5];
-        /// int[] tail = nums.Drop(2);
+        /// RArray&lt;int&gt; tail = nums.Drop(2);
         /// // tail => [3, 4, 5]
         /// </code>
         /// </example>
@@ -566,7 +566,7 @@ namespace Rotomeca.Utils.Collections
         /// <example>
         /// <code>
         /// int[] nums = [1, 2, 3, 4, 5];
-        /// int[] shuffled = nums.Shuffle();
+        /// RArray&lt;int&gt; shuffled = nums.Shuffle();
         /// // shuffled => [3, 1, 5, 2, 4] (ordre aléatoire)
         /// </code>
         /// </example>
