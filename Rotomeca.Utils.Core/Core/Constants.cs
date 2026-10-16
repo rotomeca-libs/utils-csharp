@@ -28,5 +28,21 @@
         /// via <see cref="StringExtensions"/>.
         /// </remarks>
         public const string SPACE = " ";
+
+        /// <summary>
+        /// Représente un saut de ligne (<c>"\n"</c>).
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Contrairement à <see cref="Environment.NewLine"/>, la valeur est
+        /// toujours <c>"\n"</c>, quelle que soit la plateforme.
+        /// </para>
+        /// <para>
+        /// Sur .NET 10 et supérieur, préférez <c>string.EndOfLine</c>
+        /// via <see cref="StringExtensions"/>, ou <c>char.EndOfLine</c>
+        /// via <see cref="CharExtensions"/>.
+        /// </para>
+        /// </remarks>
+        public const string END_OF_LINE = "\n";
     }
 }

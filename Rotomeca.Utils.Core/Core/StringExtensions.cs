@@ -21,6 +21,26 @@ namespace Rotomeca.Utils
             /// </code>
             /// </example>
             public static string Space => Constants.SPACE;
+
+            /// <summary>
+            /// Représente un saut de ligne (<c>"\n"</c>).
+            /// </summary>
+            /// <remarks>
+            /// <para>
+            /// Accessible directement sur le type <see cref="string"/> à partir de .NET 10.
+            /// Pour les versions antérieures, utilisez <see cref="Constants.END_OF_LINE"/>.
+            /// </para>
+            /// <para>
+            /// Contrairement à <see cref="Environment.NewLine"/>, la valeur est
+            /// toujours <c>"\n"</c>, quelle que soit la plateforme.
+            /// </para>
+            /// </remarks>
+            /// <example>
+            /// <code>
+            /// var result = "hello" + string.EndOfLine + "world"; // "hello\nworld"
+            /// </code>
+            /// </example>
+            public static string EndOfLine => Constants.END_OF_LINE;
         }
 #endif
     }
