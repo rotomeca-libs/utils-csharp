@@ -49,6 +49,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Rotomeca.Core" Version="1.0.0" />
+        <PackageReference Include="Rotomeca.Core" Version="1.0.2" />
     </ItemGroup>
 </Project>
