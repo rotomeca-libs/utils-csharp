@@ -10,7 +10,7 @@
         <WarningsAsErrors />
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 
-        <!-- Source Link — navigation vers le code depuis le débogueur -->
+        <!-- Source Link — navigation vers le code depuis le débogueur (intégré au SDK .NET 8+) -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
@@ -19,7 +19,7 @@
         <!-- Métadonnées NuGet -->
         <PackageId>Rotomeca.Utils</PackageId>
         <PackageIcon>icon.png</PackageIcon>
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
         <Authors>Rotomeca</Authors>
         <Copyright>© Rotomeca</Copyright>
         <Description>
@@ -29,9 +29,11 @@
             functional utilities (Debounce, Throttle, Memoize, Once, Pipe), collection extensions
             (Chunk, Flatten, Partition, Zip...), dictionary helpers (Pick, Omit, DeepMerge...),
             string validators, precompiled regexes and a few handy types (ClampedValue, JsObject, Random).
+            On .NET 8+, also provides safe unsigned integers (RByte, RUshort, RUint, RUlong, RUint128,
+            RNuint) that throw on overflow instead of wrapping, with generic math support.
             Targets netstandard2.0, netstandard2.1, net8, net9 and net10.
         </Description>
-        <PackageTags>utils utilities extensions helpers async functional collections linq validators regex debounce throttle memoize pipe csharp dotnet netstandard zero-dependency</PackageTags>
+        <PackageTags>utils utilities extensions helpers async functional collections linq validators regex debounce throttle memoize pipe unsigned overflow checked-arithmetic generic-math csharp dotnet netstandard zero-dependency</PackageTags>
         <PackageLicenseExpression>ISC</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/rotomeca-libs/utils-csharp</PackageProjectUrl>
         <RepositoryUrl>https://github.com/rotomeca-libs/utils-csharp</RepositoryUrl>
@@ -47,7 +49,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
         <PackageReference Include="Rotomeca.Core" Version="1.0.0" />
     </ItemGroup>
 </Project>
