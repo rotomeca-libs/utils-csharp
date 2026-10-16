@@ -1,0 +1,75 @@
+name: Release
+
+# Publication sur NuGet à chaque tag de version (ex. : git tag v1.1.0 && git push --tags).
+# Authentification par Trusted Publishing (OIDC) : aucune clé API stockée.
+# Prérequis :
+#   - règle Trusted Publishing sur nuget.org (owner rotomeca-libs, repo utils-csharp, workflow release.yml) ;
+#   - variable de dépôt NUGET_USER (Settings > Secrets and variables > Actions > Variables) contenant le nom de profil nuget.org (pas l'e-mail).
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write  # requis pour obtenir le jeton OIDC
+
+jobs:
+  publish:
+    name: Pack & Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # requis par Source Link pour les métadonnées git
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            9.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release -p:Version=${GITHUB_REF_NAME#v}
+
+      # Le projet de test n'est pas dans la solution : il est ciblé explicitement.
+      - name: Test
+        run: dotnet test Rotomeca.Utils.Tests --configuration Release -p:Version=${GITHUB_REF_NAME#v}
+
+      # La version du package est déduite du tag (v1.1.0 -> 1.1.0).
+      - name: Pack
+        run: >
+          dotnet pack Rotomeca.Utils.Core
+          --no-build
+          --configuration Release
+          --output ./artifacts
+          -p:Version=${GITHUB_REF_NAME#v}
+
+      # Échange le jeton OIDC de GitHub contre une clé API temporaire (~1 h, usage unique).
+      - name: NuGet login (OIDC)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ vars.NUGET_USER }}
+
+      # Le .snupkg placé à côté du .nupkg est envoyé automatiquement.
+      - name: Push to NuGet
+        run: >
+          dotnet nuget push ./artifacts/*.nupkg
+          --api-key ${{ steps.login.outputs.NUGET_API_KEY }}
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate
+
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-packages
+          path: ./artifacts/*
+          retention-days: 30
