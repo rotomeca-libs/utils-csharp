@@ -19,7 +19,7 @@
         <!-- Métadonnées NuGet -->
         <PackageId>Rotomeca.Utils</PackageId>
         <PackageIcon>icon.png</PackageIcon>
-        <Version>1.1.0</Version>
+        <Version>1.1.1</Version>
         <Authors>Rotomeca</Authors>
         <Copyright>© Rotomeca</Copyright>
         <Description>
@@ -49,6 +49,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Rotomeca.Core" Version="1.0.0" />
+        <PackageReference Include="Rotomeca.Core" Version="1.0.2" />
     </ItemGroup>
 </Project>
